@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+     <OutputPath>..\..\lib</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stride.Core.Mathematics" Version="4.1.0.1838" />
+    <PackageReference Include="VL.Core" Version="2023.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VL.IO.OpenVR.Core\VL.IO.OpenVR.Core.csproj" />
+  </ItemGroup>
+
+</Project>

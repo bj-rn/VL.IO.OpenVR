@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VL.IO.OpenVR.Core", "VL.IO.OpenVR.Core\VL.IO.OpenVR.Core.csproj", "{6C68A7BA-5AEC-4E84-B799-8D524B647968}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VL.IO.OpenVR.Nodes", "VL.IO.OpenVR.Nodes\VL.IO.OpenVR.Nodes.csproj", "{D16D6048-6FE4-4FAA-9071-837899C2BE73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C68A7BA-5AEC-4E84-B799-8D524B647968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C68A7BA-5AEC-4E84-B799-8D524B647968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C68A7BA-5AEC-4E84-B799-8D524B647968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C68A7BA-5AEC-4E84-B799-8D524B647968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16D6048-6FE4-4FAA-9071-837899C2BE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16D6048-6FE4-4FAA-9071-837899C2BE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16D6048-6FE4-4FAA-9071-837899C2BE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16D6048-6FE4-4FAA-9071-837899C2BE73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {275083B5-3FBF-43CE-B331-BEF1D2CD3B4A}
+	EndGlobalSection
+EndGlobal

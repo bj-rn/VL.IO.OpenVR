@@ -1,0 +1,4 @@
+[submodule "src/OpenVR-SDK"]
+	path = src/OpenVR-SDK
+	url = https://github.com/ValveSoftware/openvr.git
+	branch = master
