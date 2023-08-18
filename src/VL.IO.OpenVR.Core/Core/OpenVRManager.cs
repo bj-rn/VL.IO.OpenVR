@@ -7,37 +7,39 @@ using Stride.Core.Mathematics;
 
 namespace VL.IO.ValveOpenVR
 {
-    public static class OpenVRManager
+    public class OpenVRManager: IDisposable
     {
-        public static CVRSystem System
+        public CVRSystem System
         {
             get;
             private set;
         }
 
-        public static string ErrorMessage
+        public string ErrorMessage
         {
             get;
             private set;
         }
 
-        public static Int2 RecommendedRenderTargetSize
+        public Int2 RecommendedRenderTargetSize
         {
             get;
             private set;
         }
 
-        static OpenVRManager()
+        public OpenVRManager()
         {
             //Load openvr_api.dll
             LoadDllFile(CoreAssemblyNativeDir, "openvr_api.dll");
+
+            InitOpenVR();
         }
 
         /// <summary>
         /// Initializes the open vr system and sets the static System field.
         /// </summary>
         /// <returns>The created system class or null</returns>
-        public static CVRSystem InitOpenVR()
+        private CVRSystem InitOpenVR()
         {
             if (System == null)
             {
@@ -58,7 +60,7 @@ namespace VL.IO.ValveOpenVR
                     uint sizeY = 0;
                     System.GetRecommendedRenderTargetSize(ref sizeX, ref sizeY);
                     RecommendedRenderTargetSize = new Int2((int)sizeX, (int)sizeY);
-                } 
+                }
             }
 
             return System;
@@ -76,7 +78,7 @@ namespace VL.IO.ValveOpenVR
             set;
         }
 
-        static void SetStatus(object toString)
+        private void SetStatus(object toString)
         {
             if (toString is EVRInitError)
                 ErrorMessage = OpenVR.GetStringForHmdError((EVRInitError)toString);
@@ -84,7 +86,7 @@ namespace VL.IO.ValveOpenVR
                 ErrorMessage = toString.ToString();
         }
 
-        public static void ShutDownOpenVR()
+        public void Dispose()
         {
             OpenVR.Shutdown();
         }
@@ -101,7 +103,7 @@ namespace VL.IO.ValveOpenVR
             public static extern IntPtr LoadLibrary(string librayName);
         }
 
-        public static string CoreAssemblyNativeDir
+        private string CoreAssemblyNativeDir
         {
             get
             {
@@ -114,7 +116,7 @@ namespace VL.IO.ValveOpenVR
             }
         }
 
-        public static void LoadDllFile(string dllfolder, string libname)
+        private void LoadDllFile(string dllfolder, string libname)
         {
             var currentpath = new StringBuilder(255);
             var length = UnsafeNativeMethods.GetDllDirectory(currentpath.Length, currentpath);
