@@ -8,125 +8,87 @@ namespace VL.IO.ValveOpenVR
 {
     public class OpenVRPoser : OpenVRConsumerBase
     {
-        private bool FWaitForSync = false;
-        public bool WaitForSync { set => FWaitForSync = value; }
+        
+        private bool _refreshSerials = false;
+        public bool RefreshSerials { set => _refreshSerials = value; }
+
+        private Matrix _hmdPose;
+        public Matrix HMDPose { get => _hmdPose; }
         
 
-        private bool FRefreshSerials = false;
-        public bool RefreshSerials { set => FRefreshSerials = value; }
-    
-        
-        private bool FGetTiming = false;
-        public bool GetTiming { set => FGetTiming = value; }
+        private SpreadBuilder<Matrix> _lighthousePoses;
+        public Spread<Matrix> LighthousePoses { get => _lighthousePoses.ToSpread(); }
         
 
-        private Matrix FHMDPose;
-        public Matrix HMDPose { get => FHMDPose; }
+        private SpreadBuilder<Matrix> _controllerPoses;
+        public Spread<Matrix> ControllerPoses { get => _controllerPoses.ToSpread(); }
+
+
+        private SpreadBuilder<Matrix> _trackerPoses;
+        public Spread<Matrix> TrackerPoses { get => _trackerPoses.ToSpread(); }
+
+
+        private SpreadBuilder<Matrix> _renderPoses;
+        public Spread<Matrix> RenderPoses { get => _renderPoses.ToSpread(); }
+
+
+        private SpreadBuilder<Matrix> _gamePoses;
+        public Spread<Matrix> GamePoses { get => _gamePoses.ToSpread(); }
+
+
+        private SpreadBuilder<string> _trackerSerials;
+        public Spread<string> TrackerSerials { get => _trackerSerials.ToSpread(); }
+
+
+        private SpreadBuilder<string> _deviceClasses;
+        public Spread<string> DeviceClasses { get => _deviceClasses.ToSpread(); }
+
+
+        private SpreadBuilder<string> _deviceSerials;
+        public Spread<string> DeviceSerials { get => _deviceSerials.ToSpread(); }
+
+
+        private float _remainingTimePre;
+        public float RemainingTimePre { get => _remainingTimePre; }
         
 
-        private SpreadBuilder<Matrix> FLighthousePoses;
-        public Spread<Matrix> LighthousePoses { get => FLighthousePoses.ToSpread(); }
-        
-
-        private SpreadBuilder<Matrix> FControllerPoses;
-        public Spread<Matrix> ControllerPoses { get => FControllerPoses.ToSpread(); }
-
-
-        private SpreadBuilder<Matrix> FTrackerPoses;
-        public Spread<Matrix> TrackerPoses { get => FTrackerPoses.ToSpread(); }
-
-
-        private SpreadBuilder<Matrix> FRenderPoses;
-        public Spread<Matrix> RenderPoses { get => FRenderPoses.ToSpread(); }
-
-
-        private SpreadBuilder<Matrix> FGamePoses;
-        public Spread<Matrix> GamePoses { get => FGamePoses.ToSpread(); }
-
-
-        private SpreadBuilder<string> FTrackerSerials;
-        public Spread<string> TrackerSerials { get => FTrackerSerials.ToSpread(); }
-
-
-        private SpreadBuilder<string> FDeviceClasses;
-        public Spread<string> DeviceClasses { get => FDeviceClasses.ToSpread(); }
-
-
-        private SpreadBuilder<string> FDeviceSerials;
-        public Spread<string> DeviceSerials { get => FDeviceSerials.ToSpread(); }
-
-
-        private float FRemainingTimePre;
-        public float RemainingTimePre { get => FRemainingTimePre; }
-        
-
-        private float FRemainingTimePost;
-        public float RemainingTimePost { get => FRemainingTimePost; }
+        private float _remainingTimePost;
+        public float RemainingTimePost { get => _remainingTimePost; }
 
 
 
         public OpenVRPoser()
         {
-            FLighthousePoses = new SpreadBuilder<Matrix>();
-            FControllerPoses = new SpreadBuilder<Matrix>();
-            FTrackerPoses = new SpreadBuilder<Matrix>();
-            FRenderPoses = new SpreadBuilder<Matrix>();
-            FGamePoses = new SpreadBuilder<Matrix>();
-            FTrackerSerials = new SpreadBuilder<string>();
-            FDeviceClasses = new SpreadBuilder<string>();
-            FDeviceSerials = new SpreadBuilder<string>();
+            _lighthousePoses = new SpreadBuilder<Matrix>();
+            _controllerPoses = new SpreadBuilder<Matrix>();
+            _trackerPoses = new SpreadBuilder<Matrix>();
+            _renderPoses = new SpreadBuilder<Matrix>();
+            _gamePoses = new SpreadBuilder<Matrix>();
+            _trackerSerials = new SpreadBuilder<string>();
+            _deviceClasses = new SpreadBuilder<string>();
+            _deviceSerials = new SpreadBuilder<string>();
         }
 
-        void GetPoses()
-        {
-            //poses
-            var poseCount = (int)OpenVR.k_unMaxTrackedDeviceCount;
-            var renderPoses = new TrackedDevicePose_t[poseCount];
-            var gamePoses = new TrackedDevicePose_t[poseCount];
-
-            if (FGetTiming)
-                FRemainingTimePre = OpenVR.Compositor.GetFrameTimeRemaining();
-            else
-                FRemainingTimePre = 0;
-
-            var error = default(EVRCompositorError);
-
-            if (FWaitForSync)
-                error = OpenVR.Compositor.WaitGetPoses(renderPoses, gamePoses);
-            else
-                error = OpenVR.Compositor.GetLastPoses(renderPoses, gamePoses);
-
-            SetStatus(error);
-            if (error != EVRCompositorError.None) return;
-
-            if (FGetTiming)
-                FRemainingTimePost = OpenVR.Compositor.GetFrameTimeRemaining();
-            else
-                FRemainingTimePost = 0;
-
-            OpenVRManager.RenderPoses = renderPoses;
-            OpenVRManager.GamePoses = gamePoses;
-        }
 
         string GetSerial(int i)
         {
             var error = ETrackedPropertyError.TrackedProp_Success;
-            FSerialBuilder.Clear();
-            FSystem.GetStringTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_SerialNumber_String, FSerialBuilder, CSerialBuilderSize, ref error);
+            _serialBuilder.Clear();
+
+            _system.GetStringTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_SerialNumber_String, _serialBuilder, CSerialBuilderSize, ref error);
+            
             if (error == ETrackedPropertyError.TrackedProp_Success)
-                return FSerialBuilder.ToString();
+                return _serialBuilder.ToString();
             else
                 return "";
         }
 
         const int CSerialBuilderSize = 64;
         
-        private StringBuilder FSerialBuilder = new StringBuilder(CSerialBuilderSize);
+        private StringBuilder _serialBuilder = new StringBuilder(CSerialBuilderSize);
 
         public override void Update()
         {
-
-            GetPoses();
 
             if (OpenVRManager.RenderPoses == null)
                 return;
@@ -135,48 +97,50 @@ namespace VL.IO.ValveOpenVR
             var poseCount = (int)OpenVR.k_unMaxTrackedDeviceCount;
             var renderPoses = OpenVRManager.RenderPoses;
             var gamePoses = OpenVRManager.GamePoses;
-            var refreshSerials = FRefreshSerials || FFirstFrame;
+            var refreshSerials = _refreshSerials || _firstFrame;
 
-            FRenderPoses.Clear();
-            FGamePoses.Clear();
-            FDeviceClasses.Clear();
-            FDeviceSerials.Clear();
-            FLighthousePoses.Clear();
-            FControllerPoses.Clear();
-            FTrackerPoses.Clear();
+            _renderPoses.Clear();
+            _gamePoses.Clear();
+            _deviceClasses.Clear();
+            _deviceSerials.Clear();
+            _lighthousePoses.Clear();
+            _controllerPoses.Clear();
+            _trackerPoses.Clear();
 
             if (refreshSerials)
-                FTrackerSerials.Clear();
+                _trackerSerials.Clear();
 
             for (int i = 0; i < poseCount; i++)
             {
-                FRenderPoses.Add(renderPoses[i].mDeviceToAbsoluteTracking.ToMatrix());
-                FGamePoses.Add(gamePoses[i].mDeviceToAbsoluteTracking.ToMatrix());
-                var deviceClass = FSystem.GetTrackedDeviceClass((uint)i);
-                FDeviceClasses.Add(deviceClass.ToString());
+                _renderPoses.Add(renderPoses[i].mDeviceToAbsoluteTracking.ToMatrix());
+                _gamePoses.Add(gamePoses[i].mDeviceToAbsoluteTracking.ToMatrix());
+                
+                var deviceClass = _system.GetTrackedDeviceClass((uint)i);
+                
+                _deviceClasses.Add(deviceClass.ToString());
 
                 if (refreshSerials)
-                    FDeviceSerials.Add(GetSerial(i));
+                    _deviceSerials.Add(GetSerial(i));
 
                 if (deviceClass == ETrackedDeviceClass.TrackingReference)
                 {
-                    FLighthousePoses.Add(FGamePoses[i]);
+                    _lighthousePoses.Add(_gamePoses[i]);
                 }
 
                 if (deviceClass == ETrackedDeviceClass.Controller)
                 {
-                    FControllerPoses.Add(FGamePoses[i]);
+                    _controllerPoses.Add(_gamePoses[i]);
                 }
 
                 if (deviceClass == ETrackedDeviceClass.GenericTracker)
                 {
-                    FTrackerPoses.Add(FGamePoses[i]);
+                    _trackerPoses.Add(_gamePoses[i]);
                     if (refreshSerials)
-                        FTrackerSerials.Add(FDeviceSerials[i]);
+                        _trackerSerials.Add(_deviceSerials[i]);
                 }
             }
 
-            FHMDPose = FRenderPoses[0];
+            _hmdPose = _renderPoses[0];
         }
 
     }

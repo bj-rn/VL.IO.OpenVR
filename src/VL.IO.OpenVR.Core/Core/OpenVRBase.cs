@@ -7,47 +7,46 @@ namespace VL.IO.ValveOpenVR
     public abstract class OpenVRBase
     {
         
-        private String FError;
-        public string Error { get => FError; }
+        private String error;
+        public string Error { get => error; }
 
         public abstract void Update();
 
         protected void SetStatus(object toString)
         {
             if (toString is EVRInitError)
-                FError = OpenVR.GetStringForHmdError((EVRInitError)toString);
+                error = OpenVR.GetStringForHmdError((EVRInitError)toString);
             else if (toString is EVRCompositorError)
             {
-                var error = (EVRCompositorError)toString;
+                var e = (EVRCompositorError)toString;
 
-                if (error == EVRCompositorError.TextureIsOnWrongDevice)
-                    FError = "Texture on wrong device. Set your graphics driver to use the same video card for vvvv as the headset is plugged into.";
-                else if (error == EVRCompositorError.TextureUsesUnsupportedFormat)
-                    FError = "Unsupported texture format. Make sure texture uses RGBA, is not compressed and has no mipmaps.";
+                if (e == EVRCompositorError.TextureIsOnWrongDevice)
+                    error = "Texture on wrong device. Set your graphics driver to use the same video card for vvvv as the headset is plugged into.";
+                else if (e == EVRCompositorError.TextureUsesUnsupportedFormat)
+                    error = "Unsupported texture format. Make sure texture uses RGBA, is not compressed and has no mipmaps.";
                 else
-                    FError = error.ToString();
+                    error = e.ToString();
             }
             else
-                FError = toString.ToString();
+                error = toString.ToString();
         }
     }
 
 
     public abstract class OpenVRConsumerBase : OpenVRBase
     {
-        protected bool FFirstFrame = true;
+        protected bool _firstFrame = true;
 
-        protected CVRSystem FSystem;
+        protected CVRSystem _system;
 
 
         public void Update(CVRSystem system)
         {
             if (system != null)
             {
-               FSystem = system;
+               _system = system;
                Update();
-               FFirstFrame = false;
-
+               _firstFrame = false;
             }
             else
             {
@@ -56,6 +55,5 @@ namespace VL.IO.ValveOpenVR
             
         }
     }
-
 
 }
