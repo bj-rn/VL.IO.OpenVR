@@ -2,7 +2,461 @@
 <Document xmlns:p="property" xmlns:r="reflection" Id="K3521NEArwbMJxEmuExsNG" LanguageVersion="2023.5.2" Version="0.128">
   <NugetDependency Id="UnnOAd16o5BMbyS44xA6Qz" Location="VL.CoreLib" Version="2023.5.2" />
   <Patch Id="OpnFRvHGSgcQYhpU8miz3b">
-    <Canvas Id="J6mzMCO6IkmOPckoNNxi6M" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="J6mzMCO6IkmOPckoNNxi6M" DefaultCategory="VL.IO.OpenVR" CanvasType="FullCategory">
+      <!--
+
+    ************************ Manager (Advanced) ************************
+
+-->
+      <Node Name="Manager (Advanced)" Bounds="115,133" Id="AgvswLf2YIcMmwAo6ZeVmc">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="F7vw44aoxdkNRQ11QZ03sT">
+          <Canvas Id="UO83cCM3wVxON1FQsMxfSs" CanvasType="Group">
+            <Node Bounds="201,145,104,95" Id="AQw7aTR7kggPOLSSVtYS2t">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+                <Choice Kind="OperationCallFlag" Name="SingleInstance" />
+              </p:NodeReference>
+              <Pin Id="ECYNixgdtfaOTlADFz19ao" Name="Force New Instance" Kind="InputPin" />
+              <Pin Id="A0udjHnW6BHLB4pRS5jDPi" Name="On Stop" Kind="InputPin" />
+              <Pin Id="CCaW4Hxs58OMO5z5NATdyv" Name="Singleton" Kind="OutputPin" />
+              <Patch Id="JvugIv0eSGZLEpAv6BCIri" Name="Producer" ManuallySortedPins="true">
+                <Pin Id="HrY2YCvkgA0QRnlS6N5ITm" Name="Result" Kind="OutputPin" />
+                <ControlPoint Id="ImMVzqbbmHsPs9U2tOXit1" Bounds="215,233" />
+                <Node Bounds="213,168,80,19" Id="HcZHDOLgEQqQTscZ8dCzJ2">
+                  <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRManager" LastDependency="VL.IO.OpenVR.Core.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="OpenVRManager" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="LSGA07zfmUAQLd6jLMDift" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <Pad Id="BuaYVY0bOFqLCldT8yVzkn" Comment="On Stop" Bounds="301,119,117,17" ShowValueBox="true" isIOBox="true" Value="Keep">
+              <p:TypeAnnotation LastCategoryFullName="VL.Core" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="SingleInstanceBehaviorOnStop" />
+              </p:TypeAnnotation>
+            </Pad>
+            <ControlPoint Id="DjqtyhX2DS6ORXSW5UbJ6k" Bounds="203,280" />
+          </Canvas>
+          <Patch Id="RvwRWaKuF6yMdXteGPWOni" Name="Create" />
+          <Patch Id="UXJuV6olxhvNaNhYmmdDWm" Name="Update">
+            <Pin Id="TIDldfXgX0GK9b1W9IcjhD" Name="Output" Kind="OutputPin" Bounds="199,310" />
+          </Patch>
+          <ProcessDefinition Id="DoGyJCQrrMOMUBfe7yJGgU">
+            <Fragment Id="S5rTT5dCG7ELfncvTP9boC" Patch="RvwRWaKuF6yMdXteGPWOni" Enabled="true" />
+            <Fragment Id="KxTS5xfMMF5OKuWel8T3ai" Patch="UXJuV6olxhvNaNhYmmdDWm" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="K3ehEcJCFPQN53g14e96vO" Ids="ImMVzqbbmHsPs9U2tOXit1,HrY2YCvkgA0QRnlS6N5ITm" IsHidden="true" />
+          <Link Id="Pze0wcgukXaN2xz382j7NC" Ids="BuaYVY0bOFqLCldT8yVzkn,A0udjHnW6BHLB4pRS5jDPi" />
+          <Link Id="Qs66qvjbosKN61DZCb5Yy9" Ids="LSGA07zfmUAQLd6jLMDift,ImMVzqbbmHsPs9U2tOXit1" />
+          <Link Id="UgvnGevGSECOmq1lrzT6ef" Ids="CCaW4Hxs58OMO5z5NATdyv,DjqtyhX2DS6ORXSW5UbJ6k" />
+          <Link Id="BZEgGmUpaRRQa7rakuk4Eo" Ids="DjqtyhX2DS6ORXSW5UbJ6k,TIDldfXgX0GK9b1W9IcjhD" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ System (Advanced) ************************
+
+-->
+      <Node Name="System (Advanced)" Bounds="116,226" Id="EIZVw8sPyNXNVNDBnaa1fm">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="Ar91tRfoSC2P53DUg4nCZS">
+          <Canvas Id="Ur9cZBDuq4oLXGyikXLl5a" CanvasType="Group">
+            <Node Bounds="165,142,140,84" Id="Qo7VuvD2lMuP67Do7nqwda">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+                <Choice Kind="ProcessAppFlag" Name="SingleInstance (PerApp)" />
+              </p:NodeReference>
+              <Pin Id="PKyw9O0Dw1GLr6bzlSPqJT" Name="Value" Kind="OutputPin" />
+              <Patch Id="ViuGcDlWXwNNf7srUVn01z" Name="Producer" ManuallySortedPins="true">
+                <Pin Id="R0ZbAmNJZnkPdITTK7NvPl" Name="Result" Kind="OutputPin" />
+                <ControlPoint Id="E2dVD3kxsGTL70JMwPAT0W" Bounds="254,219" />
+                <Node Bounds="177,165,80,19" Id="KiGoW9X9zhZNNoTNQYyegD">
+                  <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRManager" LastDependency="VL.IO.OpenVR.Core.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="OpenVRManager" NeedsToBeDirectParent="true" />
+                    <Choice Kind="OperationCallFlag" Name="System" />
+                  </p:NodeReference>
+                  <Pin Id="CDvWXQrUAScN60qI5tNMtR" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="JSRe8GXWAujOP13FBRbzsD" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="MEMrKcuAPPHNe2gCtnXx0v" Name="System" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <Node Bounds="177,96,55,19" Id="DnFX2eqGLBzNKrR9DRfOG5">
+              <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="Manager" />
+              </p:NodeReference>
+              <Pin Id="PewnrSUCqGAMuCd8cLvlK0" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="ExkzVFFFOPtM5mSY39SqNG" Bounds="167,274" />
+          </Canvas>
+          <Patch Id="UcnhcmJ68cRPD97o01KMV5" Name="Create" />
+          <Patch Id="ShpnDUsPZDcNLN70raLLTr" Name="Update">
+            <Pin Id="Rf55RLUTfDQP3p5a6xMa7Z" Name="System" Kind="OutputPin" Bounds="255,435" />
+          </Patch>
+          <ProcessDefinition Id="SDA4tLb0gL1OOheN97pup1">
+            <Fragment Id="J2aXBso0kjiPdaWfRZct6s" Patch="UcnhcmJ68cRPD97o01KMV5" Enabled="true" />
+            <Fragment Id="InogOX00Tj6O3yPbfiesRC" Patch="ShpnDUsPZDcNLN70raLLTr" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="RirTQ8feynJLhK4YVZKx9Y" Ids="E2dVD3kxsGTL70JMwPAT0W,R0ZbAmNJZnkPdITTK7NvPl" IsHidden="true" />
+          <Link Id="JKFVNl7puEVMMfNRzJGeVI" Ids="PewnrSUCqGAMuCd8cLvlK0,CDvWXQrUAScN60qI5tNMtR" />
+          <Link Id="VQpHQDtUkOJPoIDRzHB5vg" Ids="MEMrKcuAPPHNe2gCtnXx0v,E2dVD3kxsGTL70JMwPAT0W" />
+          <Link Id="Mz7hu7rXLWvMYjenMvxXy1" Ids="PKyw9O0Dw1GLr6bzlSPqJT,ExkzVFFFOPtM5mSY39SqNG" />
+          <Link Id="QzHVMucdciALGASJzBdwid" Ids="ExkzVFFFOPtM5mSY39SqNG,Rf55RLUTfDQP3p5a6xMa7Z" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ Poser ************************
+
+-->
+      <Node Name="Poser" Bounds="417,130" Id="Hm7E0Rs89CdLF7r0ewKcAR">
+        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="LpI2IhSuOWvNqnPonRbs49">
+          <Canvas Id="BkBiX6sGLIWPrwIP1coPEQ" CanvasType="Group">
+            <Node Bounds="267,106,49,19" Id="QZ2NwI9k8RQOuBN6SvYHch">
+              <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="OpenVR" NeedsToBeDirectParent="true" />
+                <Choice Kind="ProcessAppFlag" Name="System" />
+              </p:NodeReference>
+              <Pin Id="QBRweus2YdZM3mKakdobOj" Name="System" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="159,-110,64,26" Id="VEBWFrT44AYN4tOMy0oIUV">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="Gmnny6j8esQNl7zzzadgiP" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="RF3bv4YUePTOI8Lo7pmJK9" SlotId="DMHsXWCvIKXOCDaSAnwT8p" Bounds="161,-40" />
+            <Pad Id="M0gRnQUlnNvLAW9HStjBz1" SlotId="DMHsXWCvIKXOCDaSAnwT8p" Bounds="135,105" />
+            <Node Bounds="121,140,163,102" Id="StqnNyHaMxgNehRd25KLSX">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+              </p:NodeReference>
+              <Pin Id="HoADxnwwBL6PqTjIoDl212" Name="Condition" Kind="InputPin" DefaultValue="True" />
+              <Patch Id="JcR8ANQL97ENykjSbdKA8N" ManuallySortedPins="true">
+                <Patch Id="Ul6RMrSlFprLOHxRj6ugT3" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="ClECHGuwsd1NcHbWwiJWzH" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="175,174,97,26" Id="Lbxqi1vuVXINHCLOV4DWB5">
+                  <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRConsumerBase" LastDependency="VL.IO.OpenVR.Core.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="OpenVRConsumerBase" />
+                    <Choice Kind="OperationCallFlag" Name="Update" />
+                  </p:NodeReference>
+                  <Pin Id="TpQZfn7qWNNL6RpVtlZenQ" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MSkxFUXYnf9QQsixW9205m" Name="System" Kind="InputPin" />
+                  <Pin Id="GD7flDxujLKLH0jxYMYvqW" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="HLSrWz9SWQsMYRaAKKAScS" Bounds="135,236" Alignment="Bottom" />
+              <ControlPoint Id="K5VxNXH350xO7zznZSk5zX" Bounds="135,146" Alignment="Top" />
+            </Node>
+            <Node Bounds="133,314,64,26" Id="LrS2ssCKaOxObbiNdccAeH">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="HMDPose" />
+              </p:NodeReference>
+              <Pin Id="OndYPfLJqJjQaVikBYTGIu" Name="Input" Kind="StateInputPin" />
+              <Pin Id="NIUeVMRV2BOOFcYonzWmyU" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="SPxVyWfk7eDO2kKPZ0QCKC" Name="HMDPose" Kind="OutputPin" />
+            </Node>
+            <Pad Id="G1UVrBIJe3oLuWSVyFzr4l" SlotId="DMHsXWCvIKXOCDaSAnwT8p" Bounds="135,293" />
+            <ControlPoint Id="CQZ0N7oQKRnOo6XJwBQi2r" Bounds="194,372" />
+            <Node Bounds="254,314,88,26" Id="ClhOSIoXX0SNcaaA0VGuHa">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="ControllerPoses" />
+              </p:NodeReference>
+              <Pin Id="HibqUs3UCk4QcG7IszCuci" Name="Input" Kind="StateInputPin" />
+              <Pin Id="SNlNjwDvfgbNU4zmoXSxL7" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UC7OxUy2ZbmPTbAPE0jcbw" Name="Controller Poses" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="JXhacxwwKoNN3P57kr9sZm" Bounds="339,372" />
+            <Node Bounds="399,314,92,26" Id="FmkIvvBDQh4PJHtIIxHmVH">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="LighthousePoses" />
+              </p:NodeReference>
+              <Pin Id="Bkt9VASVSX6NHgUjfZ5TDC" Name="Input" Kind="StateInputPin" />
+              <Pin Id="F6EPghyOS1eOo0dlvUkP2b" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="BMdu0lXggMIPJvrwi9W3Qb" Name="Lighthouse Poses" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="K4Ab0fISxtHO73fNOrT3SA" Bounds="488,372" />
+            <Node Bounds="846,314,92,26" Id="JH7cZh0EGYbLHiBBM132E4">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="RenderPoses" />
+              </p:NodeReference>
+              <Pin Id="DDsuCkMWqjcLedC1gi6gkB" Name="Input" Kind="StateInputPin" />
+              <Pin Id="NrKTj3cy0pBMnDTt9V9HSn" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UgXA4dTivhSNetXCecDl78" Name="Render Poses" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="JktisyKRtgCLFGEZXUZldf" Bounds="935,372" />
+            <Node Bounds="995,314,92,26" Id="IO1IJg0zIVtMOeiC2cbG60">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="GamePoses" />
+              </p:NodeReference>
+              <Pin Id="FaUG4bILmL5Mu1bq0QSi3Y" Name="Input" Kind="StateInputPin" />
+              <Pin Id="O9FTyjqO3v3Ps5uZVpRvPv" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="KxAV4C7PrI2M2HljI3LGl3" Name="Game Poses" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="MG56R5ffcTrObQwPkR3BQo" Bounds="1084,372" />
+            <Node Bounds="1144,314,92,26" Id="Q5fus8kb6i2QOaasLcTO7F">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="DeviceSerials" />
+              </p:NodeReference>
+              <Pin Id="CMDJTKeOmZzL7QGqVpg2rw" Name="Input" Kind="StateInputPin" />
+              <Pin Id="CYVHSZrlJbvQFR1V9cWJjN" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Fsur1qoGSExL7tAkEt3xPD" Name="Device Serials" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="IUOZH9KVgRWNk1mmiK813F" Bounds="1233,372" />
+            <Node Bounds="1293,314,92,26" Id="MZ519yl05NQQKeHmrpMOUL">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="DeviceClasses" />
+              </p:NodeReference>
+              <Pin Id="ItFF4j3eNKONCa3qjqXoL8" Name="Input" Kind="StateInputPin" />
+              <Pin Id="FPpAlgbaIlVOOJrfpnVGMD" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UnuZlmqi7ojNuMlRFYyBbW" Name="Device Classes" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="EtcQyG2t5r8NjDpkqaXsB0" Bounds="1382,372" />
+            <Node Bounds="548,314,92,26" Id="JJ0vdfdgXqOL9n6CJhxr0S">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="TrackerPoses" />
+              </p:NodeReference>
+              <Pin Id="BRFOH7UmZSUPZcpUIVaCmt" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Mnrg1Sau1d6N5kZhHvKZqy" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="BGru70WlMChMBGhS3JCxGh" Name="Tracker Poses" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="BSVdZ9WE2lWL5onyZcphWr" Bounds="637,372" />
+            <Node Bounds="697,314,92,26" Id="MDX5OE6Bd83NIcABr9pqFB">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="TrackerSerials" />
+              </p:NodeReference>
+              <Pin Id="DNgbpH3zps8LmjZp4Z922e" Name="Input" Kind="StateInputPin" />
+              <Pin Id="CNSPWCPXOdXLcL38EcwJYV" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Lgv3ZCLS9oHMX6wibrXSvt" Name="Tracker Serials" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="TIcb5qCP2JXN8Y8RSebMeq" Bounds="786,372" />
+            <Node Bounds="1442,314,101,26" Id="LWSTatplqHeMkzajcW1mlI">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="RemainingTimePre" />
+              </p:NodeReference>
+              <Pin Id="GN6FGMiTlwEMbrXGrvZ11c" Name="Input" Kind="StateInputPin" />
+              <Pin Id="MzfxYT4EguoPNS3Ks2eUlw" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="BT48Zk3skMHNnmSqdDimqe" Name="Remaining Time Pre" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="OyWlnnCUHNgPfqwGxScvds" Bounds="1540,372" />
+            <Node Bounds="1600,314,106,26" Id="MeLjMRYIYmTMZjJtwG3Lra">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="RemainingTimePost" />
+              </p:NodeReference>
+              <Pin Id="G7yHt4h65ipLeAjEu09OPh" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Rcn62cJzKZUMtUqBekeRgy" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="QuQaPXs3f5bM9fiwu7GqpI" Name="Remaining Time Post" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="GIcW3wibYksQE5tTM4lMZS" Bounds="1703,372" />
+            <Node Bounds="1801,314,61,26" Id="AAT8qmW6rNjP15wD5U6zHg">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRBase" LastDependency="VL.IO.OpenVR.Core.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRBase" />
+                <Choice Kind="OperationCallFlag" Name="Error" />
+              </p:NodeReference>
+              <Pin Id="Bs9kyumeaCuMI9l2ju91om" Name="Input" Kind="StateInputPin" />
+              <Pin Id="DikoERsenlGLpCVKffDeGd" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="PrGXetfi5M6LXkL1nkOyYH" Name="Error" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="A4wuFKhvl6PNV0kRZp3VPY" Bounds="1859,380" />
+            <Pad Id="IE9RRoaXFnUP5GRKGPW6IG" SlotId="DMHsXWCvIKXOCDaSAnwT8p" Bounds="364,-73" />
+            <Node Bounds="361,-60,77,26" Id="E4oNqS80wblN9r3VjjRxDF">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="SetGetTiming" />
+              </p:NodeReference>
+              <Pin Id="UB0x3L4Dg3vOa5uFivufoi" Name="Input" Kind="StateInputPin" />
+              <Pin Id="OdcvHS1LENSOOaTg4SnxbM" Name="Value" Kind="InputPin" />
+              <Pin Id="FmF1Ol9NKaLOXUuyh9flBN" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="527,-60,94,26" Id="JDUGfSrQ4PYNHzWNTfhu5o">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="SetRefreshSerials" />
+              </p:NodeReference>
+              <Pin Id="Ep0fBhmjuPNLO75ywbKrPq" Name="Input" Kind="StateInputPin" />
+              <Pin Id="P2xXthOBqyLOAnabBNdwmu" Name="Value" Kind="InputPin" />
+              <Pin Id="KbDgP9WF6lLOxD1YgQsiJh" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="710,-60,94,26" Id="DfRl4cmKTgyLOFJWtY67pu">
+              <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRPoser" LastDependency="VL.IO.OpenVR.Nodes.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRPoser" />
+                <Choice Kind="OperationCallFlag" Name="SetWaitForSync" />
+              </p:NodeReference>
+              <Pin Id="Th4jO24RmSWOTafTYbqomH" Name="Input" Kind="StateInputPin" />
+              <Pin Id="VBUqDVvQZFXPSkj8H3b7ps" Name="Value" Kind="InputPin" />
+              <Pin Id="JN6CsBTrwcELBM3MbMZfMX" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <ControlPoint Id="RSxDjyl9i7OPuRvuNZaCV9" Bounds="435,-106" />
+            <ControlPoint Id="AxBoQPOerXBLsvKdlKZNIc" Bounds="618,-108" />
+            <ControlPoint Id="ChpH5cQPedHLX0H8uAU4P2" Bounds="801,-102" />
+          </Canvas>
+          <Patch Id="KzEemn2Nc2qMWwpLsuFldD" Name="Create" ParticipatingElements="C0bTukt5WBuOrn8c7Tf8GN" />
+          <Patch Id="DPuqhngpyenL9aK70iebmj" Name="Update" />
+          <Slot Id="DMHsXWCvIKXOCDaSAnwT8p" Name="Poser" />
+          <Link Id="C0bTukt5WBuOrn8c7Tf8GN" Ids="Gmnny6j8esQNl7zzzadgiP,RF3bv4YUePTOI8Lo7pmJK9" />
+          <Link Id="E8PaSsp6KmsQOiFQpZFejN" Ids="QBRweus2YdZM3mKakdobOj,MSkxFUXYnf9QQsixW9205m" />
+          <Link Id="IGMM7Jn8s3QNpPijKaQ0Ni" Ids="K5VxNXH350xO7zznZSk5zX,HLSrWz9SWQsMYRaAKKAScS" IsFeedback="true" />
+          <Link Id="SysgvPXa3UWMra5SHpBSb3" Ids="M0gRnQUlnNvLAW9HStjBz1,K5VxNXH350xO7zznZSk5zX" />
+          <Link Id="ASNEbxaY09zPzvfw1GLoPW" Ids="K5VxNXH350xO7zznZSk5zX,TpQZfn7qWNNL6RpVtlZenQ" />
+          <Link Id="RA8PBWCJQE4QSVkaj73hOV" Ids="K5VxNXH350xO7zznZSk5zX,HLSrWz9SWQsMYRaAKKAScS" />
+          <Link Id="JceZkiGhWifPDl1dYyLphO" Ids="HLSrWz9SWQsMYRaAKKAScS,G1UVrBIJe3oLuWSVyFzr4l" />
+          <Link Id="PnBOn3NeHvHLExbNxbjVDG" Ids="G1UVrBIJe3oLuWSVyFzr4l,OndYPfLJqJjQaVikBYTGIu" />
+          <Link Id="UvFuo2i2OiqQUTMYMc8NJz" Ids="SPxVyWfk7eDO2kKPZ0QCKC,CQZ0N7oQKRnOo6XJwBQi2r" />
+          <Link Id="G4DHOvtLCfqO5XHiacrI76" Ids="CQZ0N7oQKRnOo6XJwBQi2r,IUudMgKu50WNzDpqOnPmlK" IsHidden="true" />
+          <Patch Id="VMHVORfePRQOWfFFsls3vz" Name="GetHMDPose">
+            <Pin Id="IUudMgKu50WNzDpqOnPmlK" Name="HMD Pose" Kind="OutputPin" />
+          </Patch>
+          <Link Id="NWyLrPYZPMFNtFIvQP4RR9" Ids="G1UVrBIJe3oLuWSVyFzr4l,HibqUs3UCk4QcG7IszCuci" />
+          <Link Id="DNVgpJSbRTBNxX3jHtru7S" Ids="UC7OxUy2ZbmPTbAPE0jcbw,JXhacxwwKoNN3P57kr9sZm" />
+          <Link Id="PFfP0ZET6N0MDEjxhAMZGm" Ids="JXhacxwwKoNN3P57kr9sZm,Jt6Ca5IpA4gMJU1KTOKqLA" IsHidden="true" />
+          <Patch Id="HqjVn2ukCEELQB5SMV73LV" Name="GetControllerPoses">
+            <Pin Id="Jt6Ca5IpA4gMJU1KTOKqLA" Name="Controller Poses" Kind="OutputPin" />
+          </Patch>
+          <Link Id="UcHmW6T8IGrOImuqMhjMPO" Ids="BMdu0lXggMIPJvrwi9W3Qb,K4Ab0fISxtHO73fNOrT3SA" />
+          <Link Id="S8UjNocR57aLoUcTOfYVmh" Ids="K4Ab0fISxtHO73fNOrT3SA,AQTCEPzgQsXLXVwXsks5N3" IsHidden="true" />
+          <Link Id="NfYrZILulPKP5EpBWAE2SZ" Ids="G1UVrBIJe3oLuWSVyFzr4l,Bkt9VASVSX6NHgUjfZ5TDC" />
+          <Patch Id="TMcswjnizOcPRcfHWzcwjG" Name="GetLightHousePoses">
+            <Pin Id="AQTCEPzgQsXLXVwXsks5N3" Name="Lighthouse Poses" Kind="OutputPin" />
+          </Patch>
+          <Link Id="SDheFRqLDP5MVc9AgrKjh2" Ids="UgXA4dTivhSNetXCecDl78,JktisyKRtgCLFGEZXUZldf" />
+          <Link Id="Mmp7AHKLWY6OyH6zhKS4vW" Ids="JktisyKRtgCLFGEZXUZldf,NAjw5AtCRIUOTsDhF2Qusw" IsHidden="true" />
+          <Link Id="FC3p6oKxyirOGa3cFT10Iw" Ids="G1UVrBIJe3oLuWSVyFzr4l,DDsuCkMWqjcLedC1gi6gkB" />
+          <Patch Id="CkIAhe6mx4GP0wh5R5HzmG" Name="GetRenderPoses">
+            <Pin Id="NAjw5AtCRIUOTsDhF2Qusw" Name="Render Poses" Kind="OutputPin" Visibility="Optional" />
+          </Patch>
+          <Link Id="CVpX5fmVfuUOmbZHz32wse" Ids="G1UVrBIJe3oLuWSVyFzr4l,FaUG4bILmL5Mu1bq0QSi3Y" />
+          <Link Id="PhkB2vORYKIPPp5f5ovnFW" Ids="KxAV4C7PrI2M2HljI3LGl3,MG56R5ffcTrObQwPkR3BQo" />
+          <Link Id="HVu56VAEzJVLRJslRFJhN0" Ids="MG56R5ffcTrObQwPkR3BQo,AI5gL7C46CnN9DbZj3r7Bf" IsHidden="true" />
+          <Patch Id="GN8IlxCUQF0QR5kcwgmswa" Name="GetGamePoses">
+            <Pin Id="AI5gL7C46CnN9DbZj3r7Bf" Name="Game Poses" Kind="OutputPin" Visibility="Optional" />
+          </Patch>
+          <Link Id="EDGYPGLaAaWOPT25lMYTkj" Ids="G1UVrBIJe3oLuWSVyFzr4l,CMDJTKeOmZzL7QGqVpg2rw" />
+          <Link Id="BSR7r5NwBkeMm2ZmOwjSY1" Ids="Fsur1qoGSExL7tAkEt3xPD,IUOZH9KVgRWNk1mmiK813F" />
+          <Link Id="Uk1fJTJQHPXNhbmSrYtjNR" Ids="IUOZH9KVgRWNk1mmiK813F,EhRMVgLexGTPCMajeUQh73" IsHidden="true" />
+          <Patch Id="PzTddY9I4lmNlSrtTc4BrI" Name="GetDeviceSerials">
+            <Pin Id="EhRMVgLexGTPCMajeUQh73" Name="Device Serials" Kind="OutputPin" Visibility="Optional" />
+          </Patch>
+          <Link Id="GyfnDuUz0y3O1qRbIme4iP" Ids="G1UVrBIJe3oLuWSVyFzr4l,ItFF4j3eNKONCa3qjqXoL8" />
+          <Link Id="V5wzD9RdDSZLF61uOGLrk0" Ids="EtcQyG2t5r8NjDpkqaXsB0,M3zRN5Qe6jzNGCvZkfRqMO" IsHidden="true" />
+          <Patch Id="Uqx8RBdacDDMztmIvYbCQD" Name="GetDeviceClasses">
+            <Pin Id="M3zRN5Qe6jzNGCvZkfRqMO" Name="Device Classes" Kind="OutputPin" Visibility="Optional" />
+          </Patch>
+          <Link Id="UFEOcXFbUFtMxMBKA0iJgD" Ids="UnuZlmqi7ojNuMlRFYyBbW,EtcQyG2t5r8NjDpkqaXsB0" />
+          <Link Id="NIAChFgTY1HPubuSMFXsDv" Ids="G1UVrBIJe3oLuWSVyFzr4l,BRFOH7UmZSUPZcpUIVaCmt" />
+          <Link Id="E4s08seEZfcPpG6RZ7EYDr" Ids="BGru70WlMChMBGhS3JCxGh,BSVdZ9WE2lWL5onyZcphWr" />
+          <Link Id="B4h9vEUabPGMjpcYIXUzZL" Ids="BSVdZ9WE2lWL5onyZcphWr,Aq55DBMjlQNLmLydJPO2j6" IsHidden="true" />
+          <Patch Id="CXoQo4xnufxNaOe99pL43L" Name="GetTrackerPoses">
+            <Pin Id="Aq55DBMjlQNLmLydJPO2j6" Name="Tracker Poses" Kind="OutputPin" />
+          </Patch>
+          <Link Id="NzJWkqpzFKXLZjhv5PbzQC" Ids="G1UVrBIJe3oLuWSVyFzr4l,DNgbpH3zps8LmjZp4Z922e" />
+          <Link Id="RfQEYmCSFSJM0ThcLnD27G" Ids="Lgv3ZCLS9oHMX6wibrXSvt,TIcb5qCP2JXN8Y8RSebMeq" />
+          <Link Id="CDC6MDQVcUBLvqeqbr6VG3" Ids="TIcb5qCP2JXN8Y8RSebMeq,DTPrz3h8888NqLfUYp7du9" IsHidden="true" />
+          <Patch Id="CqYwHbYIhuHQNcmiDuQb8Z" Name="GetTrackerSerials">
+            <Pin Id="DTPrz3h8888NqLfUYp7du9" Name="Tracker Serials" Kind="OutputPin" />
+          </Patch>
+          <Link Id="FseSAkI5zNkOUGHVG6I9mh" Ids="G1UVrBIJe3oLuWSVyFzr4l,GN6FGMiTlwEMbrXGrvZ11c" />
+          <Link Id="BwstSUtn6ykLP5qDU2A9OC" Ids="BT48Zk3skMHNnmSqdDimqe,OyWlnnCUHNgPfqwGxScvds" />
+          <Link Id="BtEo1pMEr1EMvNjX3bwReH" Ids="OyWlnnCUHNgPfqwGxScvds,LarIuvkl3sPPP0IbguIt45" IsHidden="true" />
+          <Patch Id="Ju6UvHVf1d6MxvwY5QHYve" Name="GetRemainingFrameTimePre">
+            <Pin Id="LarIuvkl3sPPP0IbguIt45" Name="Remaining Time Pre" Kind="OutputPin" Visibility="Optional" />
+          </Patch>
+          <Link Id="E9hIDG7EaVzOaLNgnIH5gd" Ids="G1UVrBIJe3oLuWSVyFzr4l,G7yHt4h65ipLeAjEu09OPh" />
+          <Link Id="IB5iY0iSKpcN6rKUQSXUZ0" Ids="QuQaPXs3f5bM9fiwu7GqpI,GIcW3wibYksQE5tTM4lMZS" />
+          <Link Id="TQO6gbAAR7eQTPTJhfKqUe" Ids="GIcW3wibYksQE5tTM4lMZS,IvLJPt7wkYdP8y34vVPrNt" IsHidden="true" />
+          <Patch Id="DvGSv3QuEHcMUcCaEeWA40" Name="GetRemainingFrameTimePost">
+            <Pin Id="IvLJPt7wkYdP8y34vVPrNt" Name="Remaining Time Post" Kind="OutputPin" Visibility="Optional" />
+          </Patch>
+          <Link Id="M786uGOTy3tMrMDXaehn6z" Ids="G1UVrBIJe3oLuWSVyFzr4l,Bs9kyumeaCuMI9l2ju91om" />
+          <Link Id="ROzsowwI94LPIw754L7pBK" Ids="A4wuFKhvl6PNV0kRZp3VPY,PqyFlKkPS4jMr9F6r4vKI4" IsHidden="true" />
+          <Link Id="Ehj4iKlOpnWQZT55sAFBan" Ids="PrGXetfi5M6LXkL1nkOyYH,A4wuFKhvl6PNV0kRZp3VPY" />
+          <Patch Id="QczFhturm1zOGGL4Tw4tv0" Name="GetError">
+            <Pin Id="PqyFlKkPS4jMr9F6r4vKI4" Name="Error" Kind="OutputPin" Visibility="Optional" />
+          </Patch>
+          <Link Id="SfF2eEZSiHHOH3VwZgClDB" Ids="IE9RRoaXFnUP5GRKGPW6IG,UB0x3L4Dg3vOa5uFivufoi" />
+          <Link Id="VMtwL3WSnlKLdT0GNkJ5EZ" Ids="RSxDjyl9i7OPuRvuNZaCV9,OdcvHS1LENSOOaTg4SnxbM" />
+          <Link Id="UPcggNIHt5XLI6hTKToqTm" Ids="ANTmeXGJ4TUOBeyzESMiwr,RSxDjyl9i7OPuRvuNZaCV9" IsHidden="true" />
+          <Patch Id="NpeD6hfiDrKMxXu7d04oAr" Name="SetGetTiming">
+            <Pin Id="ANTmeXGJ4TUOBeyzESMiwr" Name="Get Timig" Kind="InputPin" />
+          </Patch>
+          <Link Id="KXmAzcD3DvdMUm7I63IqIn" Ids="AxBoQPOerXBLsvKdlKZNIc,P2xXthOBqyLOAnabBNdwmu" />
+          <Link Id="OKM0L7h8iE4N8wklqP12eT" Ids="AtwGyqCr2OAPsQF1XA0Kwy,AxBoQPOerXBLsvKdlKZNIc" IsHidden="true" />
+          <Patch Id="MeY3fzFjr8DPRlaHOPkB0Z" Name="SetRefreshSerials">
+            <Pin Id="AtwGyqCr2OAPsQF1XA0Kwy" Name="Refresh Serials" Kind="InputPin" />
+          </Patch>
+          <Link Id="OttCpqOXSkePBsIG6fQQ75" Ids="IE9RRoaXFnUP5GRKGPW6IG,Ep0fBhmjuPNLO75ywbKrPq" />
+          <Link Id="SI0Sf8yNUYqLNhhiRZdSQD" Ids="IE9RRoaXFnUP5GRKGPW6IG,Th4jO24RmSWOTafTYbqomH" />
+          <Link Id="AetjCWUhJG5Md4jCVwr6g1" Ids="ChpH5cQPedHLX0H8uAU4P2,VBUqDVvQZFXPSkj8H3b7ps" />
+          <Link Id="LwAfE3GELJQMTFxcSxVdmR" Ids="MMcxycSglx1MoVZBljBx6G,ChpH5cQPedHLX0H8uAU4P2" IsHidden="true" />
+          <Patch Id="K9VatHg8pNBLoi0DePaQw4" Name="SetWaitForSync">
+            <Pin Id="MMcxycSglx1MoVZBljBx6G" Name="Wait for Sync" Kind="InputPin" />
+          </Patch>
+          <ProcessDefinition Id="AqGKgUys8hXNUlE0tnglak">
+            <Fragment Id="PB7l7vGt6xjPGqoILYtX12" Patch="KzEemn2Nc2qMWwpLsuFldD" Enabled="true" />
+            <Fragment Id="DdxwRhjmQxHNqb0tn9Xrqu" Patch="NpeD6hfiDrKMxXu7d04oAr" Enabled="true" />
+            <Fragment Id="DTcagEqEf06P4ppcGB4vxN" Patch="MeY3fzFjr8DPRlaHOPkB0Z" Enabled="true" />
+            <Fragment Id="VWSZ8iAzIvaMD40jjZ81sq" Patch="K9VatHg8pNBLoi0DePaQw4" Enabled="true" />
+            <Fragment Id="Pf8jxmcLxlkPqU4J3RV0hV" Patch="DPuqhngpyenL9aK70iebmj" Enabled="true" />
+            <Fragment Id="FSaiXJZzedwLotnSWZfJ5w" Patch="VMHVORfePRQOWfFFsls3vz" Enabled="true" />
+            <Fragment Id="LGzXgv3RInnQDNnzf9iCPA" Patch="HqjVn2ukCEELQB5SMV73LV" Enabled="true" />
+            <Fragment Id="OfAIkX8X3uiNsgpLDCz7Ga" Patch="TMcswjnizOcPRcfHWzcwjG" Enabled="true" />
+            <Fragment Id="CuKIt2M6DgTNK0J0jFOPXt" Patch="CkIAhe6mx4GP0wh5R5HzmG" Enabled="true" />
+            <Fragment Id="IQbdM0qj0xLOaPYbMHdTA8" Patch="GN8IlxCUQF0QR5kcwgmswa" Enabled="true" />
+            <Fragment Id="KcuBHdjuCw5PHDXrvve1Qg" Patch="PzTddY9I4lmNlSrtTc4BrI" Enabled="true" />
+            <Fragment Id="D67Ro1DPVFiNn954sVHOMp" Patch="Uqx8RBdacDDMztmIvYbCQD" Enabled="true" />
+            <Fragment Id="HylgKDSQ2LGOVd5jecZc1i" Patch="CXoQo4xnufxNaOe99pL43L" Enabled="true" />
+            <Fragment Id="NURgdtFkAORMX7GLleyBRv" Patch="CqYwHbYIhuHQNcmiDuQb8Z" Enabled="true" />
+            <Fragment Id="Tb8sAn4wsKNOUJt3hUWA1L" Patch="Ju6UvHVf1d6MxvwY5QHYve" Enabled="true" />
+            <Fragment Id="PXxeYeIUNtUM8tuj9jM8NM" Patch="DvGSv3QuEHcMUcCaEeWA40" Enabled="true" />
+            <Fragment Id="TO8IfAWKDF9PvSyn8FDvK4" Patch="QczFhturm1zOGGL4Tw4tv0" Enabled="true" />
+          </ProcessDefinition>
+        </Patch>
+      </Node>
+    </Canvas>
     <!--
 
     ************************ Application ************************
@@ -14,181 +468,13 @@
         <CategoryReference Kind="Category" Name="Primitive" />
       </p:NodeReference>
       <Patch Id="VjHr7vvfXfTOQcn5kGC1Wr">
-        <Canvas Id="VMrruFBCv6mQGrvwODRT31" CanvasType="Group">
-          <Node Bounds="386,230,87,86" Id="S9gv8YBDRjOO6N3O6aHWr5">
-            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-              <Choice Kind="ProcessStatefulRegion" Name="Cache" />
-            </p:NodeReference>
-            <Pin Id="BH8M8GXZuTRNDjXzhqACgV" Name="Force" Kind="InputPin" />
-            <Pin Id="B7rHyllEcBFOearztv2pf1" Name="Dispose Cached Outputs" Kind="InputPin" />
-            <Pin Id="AlCVsfWl0fZOUff2DGteX1" Name="Has Changed" Kind="OutputPin" />
-            <Patch Id="PzWXJRayb2SNpqzWQ5B2Qz" ManuallySortedPins="true">
-              <Patch Id="BGlfLqoxwXCOW8W8OVa88X" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="KFsI9fscdrtO5XggnXQmXC" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="398,257,63,26" Id="OrJKlvXNO0NNkVk6jhGkcK">
-                <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRInput" LastDependency="VL.IO.OpenVR.Nodes.dll">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="AssemblyCategory" Name="VL" />
-                  <CategoryReference Kind="AssemblyCategory" Name="IO" />
-                  <CategoryReference Kind="AssemblyCategory" Name="ValveOpenVR" />
-                  <CategoryReference Kind="AssemblyCategory" Name="OpenVRInput" />
-                  <Choice Kind="OperationCallFlag" Name="Create" />
-                </p:NodeReference>
-                <Pin Id="AAzCqcN6kbwLeQMYq5wIIk" Name="Output" Kind="StateOutputPin" />
-              </Node>
-            </Patch>
-            <ControlPoint Id="BKfY5lOdcJWMZvzNBAmhx8" Bounds="401,310" Alignment="Bottom" />
-          </Node>
-          <Pad Id="DDtjny54PdvOGaSXwr51cc" Comment="Force" Bounds="369,145,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
-            </p:ValueBoxSettings>
-          </Pad>
-          <Node Bounds="467,409,103,132" Id="EnYL0SeVdu2Okghl6fN0y6">
-            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-              <Choice Kind="ApplicationStatefulRegion" Name="If" />
-            </p:NodeReference>
-            <Pin Id="RggQMB2CDldLbX1RqPNTZG" Name="Condition" Kind="InputPin" />
-            <Patch Id="OfadyD51hNcNwHKo3Hx0CD" ManuallySortedPins="true">
-              <Patch Id="KyLncNJzbUvMnu2aqp7Sym" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="J5Ipf54EwlQMkAHBtpcf6E" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="480,432,76,26" Id="IYzJgsChHMnPt5edxI8ikI">
-                <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRProducer" LastDependency="VL.IO.OpenVR.Core.dll">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="AssemblyCategory" Name="VL" />
-                  <CategoryReference Kind="AssemblyCategory" Name="IO" />
-                  <CategoryReference Kind="AssemblyCategory" Name="ValveOpenVR" />
-                  <CategoryReference Kind="AssemblyCategory" Name="OpenVRProducer" />
-                  <Choice Kind="OperationCallFlag" Name="Update" />
-                </p:NodeReference>
-                <Pin Id="Bk0gYqCPwpuLcSQVrP2UyK" Name="Input" Kind="StateInputPin" />
-                <Pin Id="OY9f8ZSjCosPmwjVODN1dr" Name="Output" Kind="StateOutputPin" />
-              </Node>
-              <Node Bounds="480,480,76,26" Id="NnaS6PrXJGfMrJQqstytyR">
-                <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRProducer" LastDependency="VL.IO.OpenVR.Core.dll">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="AssemblyCategory" Name="OpenVRProducer" />
-                  <Choice Kind="OperationCallFlag" Name="SystemOut" />
-                </p:NodeReference>
-                <Pin Id="O89KpBH8ZyaM1wpZcfiE5e" Name="Input" Kind="StateInputPin" />
-                <Pin Id="HepE1toZRTWPZqzptyLU2c" Name="Output" Kind="StateOutputPin" />
-                <Pin Id="DsrkCSX3qfmLFUPCdsKjgv" Name="System Out" Kind="OutputPin" />
-              </Node>
-            </Patch>
-            <ControlPoint Id="VZR2ml0JnYJP7JyxxdCe6N" Bounds="481,535" Alignment="Bottom" />
-            <ControlPoint Id="CDnFSyQOBguPl3VsnG5WZA" Bounds="481,415" Alignment="Top" />
-            <ControlPoint Id="BTRd6sSyVcaNi48QSnfjHg" Bounds="553,535" Alignment="Bottom" />
-            <ControlPoint Id="E3dwgzWKsxJPeah72hfD1I" Bounds="553,415" Alignment="Top" />
-          </Node>
-          <Node Bounds="396,376,65,19" Id="VgAla2C7MrmOhYdM8vFgno">
-            <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="IsAssigned" />
-            </p:NodeReference>
-            <Pin Id="DC8yph2ibmwN0tKIO5IRMf" Name="X" Kind="InputPin" />
-            <Pin Id="E5DEn1KR0mFOBuB1inPqKV" Name="Result" Kind="OutputPin" />
-            <Pin Id="AH8yL0mzJZTMGPmbbhksJG" Name="Not Assigned" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="478,573,48,19" Id="RfQQSHKXSrUQItuTBtW3Td">
-            <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="CastAs" />
-            </p:NodeReference>
-            <Pin Id="Qm6XZgzzD1OPq37FbNiOks" Name="Input" Kind="StateInputPin" />
-            <Pin Id="Q5VRfWImBB8MisZEE0M3kL" Name="Default" Kind="InputPin" />
-            <Pin Id="G4Gfj9q4IsHPrJxQlzJFsb" Name="Result" Kind="OutputPin" />
-            <Pin Id="D9PqE3UghihP5JPLi1h4qW" Name="Success" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="443,737,211,105" Id="QhnEE9uyfyDOWQtMxtXxGW">
-            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-              <Choice Kind="ApplicationStatefulRegion" Name="If" />
-            </p:NodeReference>
-            <Pin Id="BusSf4ndg31N4cr3s4OdMr" Name="Condition" Kind="InputPin" />
-            <Patch Id="J9xiJefc7X8QLPLRckuBe9" ManuallySortedPins="true">
-              <Patch Id="S13KHYe07icOZb6j8AVmdZ" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="KVhOqLDegzGLdxfdG47vRA" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="455,782,104,26" Id="RdwB6VwSNmILS4bEjrh5Xq">
-                <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRInput" LastDependency="VL.IO.OpenVR.Nodes.dll">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="AssemblyCategory" Name="VL" />
-                  <CategoryReference Kind="AssemblyCategory" Name="IO" />
-                  <CategoryReference Kind="AssemblyCategory" Name="ValveOpenVR" />
-                  <CategoryReference Kind="AssemblyCategory" Name="OpenVRInput" />
-                  <Choice Kind="OperationCallFlag" Name="ControllerPosesOut" />
-                </p:NodeReference>
-                <Pin Id="KryVWAJEl66OqcZdMdN3F9" Name="Input" Kind="StateInputPin" />
-                <Pin Id="LxpzLnj8LF2NIxfwJlI2NZ" Name="Output" Kind="StateOutputPin" />
-                <Pin Id="RpACcl2BfhaQROLaxlUhFE" Name="Controller Poses Out" Kind="OutputPin" />
-              </Node>
-            </Patch>
-            <ControlPoint Id="MqnlmwHfeRzQTnUzc6IHAm" Bounds="556,836" Alignment="Bottom" />
-            <ControlPoint Id="LCCgrwvCqhFLsIH3eKR5Yo" Bounds="554,743" Alignment="Top" />
-          </Node>
-          <Pad Id="BBW7AWGBjPCOxSwSqu2D0B" Comment="" Bounds="536,1055,385,174" ShowValueBox="true" isIOBox="true">
-            <p:Value>
-              <Item>1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1</Item>
-            </p:Value>
-          </Pad>
-          <Node Bounds="272,773,128,208" Id="SOVwDF1eb3DNBbNitSb1LX">
-            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-              <Choice Kind="ApplicationStatefulRegion" Name="If" />
-            </p:NodeReference>
-            <Pin Id="IadzSBIvqTiOjHGsgDOSxt" Name="Condition" Kind="InputPin" />
-            <ControlPoint Id="ASJUdAU4mMAPocXRJk0W6j" Bounds="337,975" Alignment="Bottom" />
-            <ControlPoint Id="UiZIQ1M2yQsPJImxfqP2ur" Bounds="337,779" Alignment="Top" />
-            <Patch Id="QK5DuPHLCMjLtd8t7QxtLR" ManuallySortedPins="true">
-              <Patch Id="L0SbjPpuqdWOMMWLcDb7iF" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="AtIS1oEjN0XNfk6mAJn2Xo" Name="Then" ManuallySortedPins="true" />
-              <Node Bounds="284,821,104,26" Id="INPnX4VoWntOFWKI2iKnxX">
-                <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRInput" LastDependency="VL.IO.OpenVR.Nodes.dll">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <Choice Kind="OperationCallFlag" Name="ControllerPosesOut" />
-                </p:NodeReference>
-                <Pin Id="JTdnPB4dZZdPzAhzrcgSHh" Name="Input" Kind="StateInputPin" />
-                <Pin Id="NVZ5eTCUvKDMlHbSsOtijX" Name="Output" Kind="StateOutputPin" />
-                <Pin Id="BJ6PNdDhfOfMdbR57ZVCXz" Name="Controller Poses Out" Kind="OutputPin" />
-              </Node>
-            </Patch>
-          </Node>
-        </Canvas>
+        <Canvas Id="VMrruFBCv6mQGrvwODRT31" CanvasType="Group" />
         <Patch Id="DfIziMro7zKNfSo8iPdpvc" Name="Create" />
         <Patch Id="QlZaoKfcjDqNxCU5BazcHC" Name="Update" />
         <ProcessDefinition Id="P7BdjNdqtrHPoSUTtlmBGg">
           <Fragment Id="Ts7i5TccfEMMxSMgVPVlwC" Patch="DfIziMro7zKNfSo8iPdpvc" Enabled="true" />
           <Fragment Id="OOVoWfYzRCHNF5Hh75fnp0" Patch="QlZaoKfcjDqNxCU5BazcHC" Enabled="true" />
         </ProcessDefinition>
-        <Link Id="PXET5JL5iFHMEAfa35Dxs3" Ids="DDtjny54PdvOGaSXwr51cc,BH8M8GXZuTRNDjXzhqACgV" />
-        <Link Id="IpmRvvKGcdFNqot14OTOv0" Ids="AAzCqcN6kbwLeQMYq5wIIk,BKfY5lOdcJWMZvzNBAmhx8" />
-        <Link Id="AuQwpT8OK1dO6DGCZyC1mz" Ids="BKfY5lOdcJWMZvzNBAmhx8,DC8yph2ibmwN0tKIO5IRMf" />
-        <Link Id="B8zV1S5E0W1LqQQk70xfce" Ids="E5DEn1KR0mFOBuB1inPqKV,RggQMB2CDldLbX1RqPNTZG" />
-        <Link Id="LQEua28poOKNfPkrsD4YZ5" Ids="BKfY5lOdcJWMZvzNBAmhx8,Bk0gYqCPwpuLcSQVrP2UyK" />
-        <Link Id="ElYiktOrTQ0N9GGeTNNoCB" Ids="CDnFSyQOBguPl3VsnG5WZA,VZR2ml0JnYJP7JyxxdCe6N" IsFeedback="true" />
-        <Link Id="K2Y9eymMgERPXzSowuXAot" Ids="OY9f8ZSjCosPmwjVODN1dr,O89KpBH8ZyaM1wpZcfiE5e" />
-        <Link Id="McA1vKfS8YpMmtOv6irx3l" Ids="VZR2ml0JnYJP7JyxxdCe6N,Qm6XZgzzD1OPq37FbNiOks" />
-        <Link Id="PxNxvGNCUXjPaopx0AbMDg" Ids="G4Gfj9q4IsHPrJxQlzJFsb,KryVWAJEl66OqcZdMdN3F9" />
-        <Link Id="Djkx3gLevfCPwOrQm9o38M" Ids="D9PqE3UghihP5JPLi1h4qW,BusSf4ndg31N4cr3s4OdMr" />
-        <Link Id="ByZ6y0BULXgLC3TU7tiasS" Ids="LCCgrwvCqhFLsIH3eKR5Yo,MqnlmwHfeRzQTnUzc6IHAm" IsFeedback="true" />
-        <Link Id="F589QYZz6gtOJxnqgZV8NS" Ids="RpACcl2BfhaQROLaxlUhFE,MqnlmwHfeRzQTnUzc6IHAm" />
-        <Link Id="MC7sC8F9TGbLxSiXER6dDE" Ids="MqnlmwHfeRzQTnUzc6IHAm,BBW7AWGBjPCOxSwSqu2D0B" />
-        <Link Id="RBlg6nROZn5Npvi2QkJJyp" Ids="G4Gfj9q4IsHPrJxQlzJFsb,JTdnPB4dZZdPzAhzrcgSHh" />
-        <Link Id="CPSBIOWItblMj4W9w2EcrF" Ids="D9PqE3UghihP5JPLi1h4qW,IadzSBIvqTiOjHGsgDOSxt" />
-        <Link Id="OK93fy67WZWPhdxQN6YUZa" Ids="UiZIQ1M2yQsPJImxfqP2ur,ASJUdAU4mMAPocXRJk0W6j" IsFeedback="true" />
-        <Link Id="I5h8Yyy2zJdLRyCT5bPDDz" Ids="BJ6PNdDhfOfMdbR57ZVCXz,ASJUdAU4mMAPocXRJk0W6j" />
-        <Link Id="VpxOS83tQQmMeX0wx4yjqt" Ids="HepE1toZRTWPZqzptyLU2c,VZR2ml0JnYJP7JyxxdCe6N" />
-        <Link Id="U5zXx1r8vXHP0bxRrE3Zuc" Ids="E3dwgzWKsxJPeah72hfD1I,BTRd6sSyVcaNi48QSnfjHg" IsFeedback="true" />
-        <Link Id="Udsz17Ea5rmP6XT63kr1CG" Ids="DsrkCSX3qfmLFUPCdsKjgv,BTRd6sSyVcaNi48QSnfjHg" />
       </Patch>
     </Node>
   </Patch>
