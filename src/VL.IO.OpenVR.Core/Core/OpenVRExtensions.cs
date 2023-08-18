@@ -27,7 +27,8 @@ namespace VL.IO.ValveOpenVR
         //}
 
 
-          public static Matrix ToMatrix(this HmdMatrix34_t m)
+        // hope  that's correct 
+        public static Matrix ToMatrix(this HmdMatrix34_t m)
         {
             return new Matrix()
             {
@@ -37,7 +38,7 @@ namespace VL.IO.ValveOpenVR
 
                 M31 = m.m2,     M32 = m.m6,     M33 = m.m10,   M34 = 0,
 
-                M41 = -m.m3,     M42 = m.m7,    M43 = -m.m11,  M44 = 1
+                M41 = -m.m3,    M42 = m.m7,     M43 = -m.m11,  M44 = 1
             };
         }
 
