@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System.Text;
+using System.Xml.Linq;
 using Valve.VR;
 
 
@@ -40,6 +41,10 @@ namespace VL.IO.ValveOpenVR
         protected CVRSystem _system;
 
 
+        protected bool _refreshSerials = false;
+        public bool RefreshSerials { set => _refreshSerials = value; }
+
+
         public void Update(CVRSystem system)
         {
             if (system != null)
@@ -54,6 +59,23 @@ namespace VL.IO.ValveOpenVR
             }
             
         }
+
+
+        protected string GetSerial(int i)
+        {
+            var error = ETrackedPropertyError.TrackedProp_Success;
+            _serialBuilder.Clear();
+
+            _system.GetStringTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_SerialNumber_String, _serialBuilder, CSerialBuilderSize, ref error);
+
+            if (error == ETrackedPropertyError.TrackedProp_Success)
+                return _serialBuilder.ToString();
+            else
+                return "";
+        }
+
+        const int CSerialBuilderSize = 64;
+        protected StringBuilder _serialBuilder = new StringBuilder(CSerialBuilderSize);
     }
 
 }

@@ -9,12 +9,8 @@ namespace VL.IO.ValveOpenVR
     public class OpenVRPoser : OpenVRConsumerBase
     {
         
-        private bool _refreshSerials = false;
-        public bool RefreshSerials { set => _refreshSerials = value; }
-
         private Matrix _hmdPose;
         public Matrix HMDPose { get => _hmdPose; }
-        
 
         private SpreadBuilder<Matrix> _lighthousePoses;
         public Spread<Matrix> LighthousePoses { get => _lighthousePoses.ToSpread(); }
@@ -46,16 +42,7 @@ namespace VL.IO.ValveOpenVR
 
         private SpreadBuilder<string> _deviceSerials;
         public Spread<string> DeviceSerials { get => _deviceSerials.ToSpread(); }
-
-
-        private float _remainingTimePre;
-        public float RemainingTimePre { get => _remainingTimePre; }
         
-
-        private float _remainingTimePost;
-        public float RemainingTimePost { get => _remainingTimePost; }
-
-
 
         public OpenVRPoser()
         {
@@ -68,24 +55,6 @@ namespace VL.IO.ValveOpenVR
             _deviceClasses = new SpreadBuilder<string>();
             _deviceSerials = new SpreadBuilder<string>();
         }
-
-
-        string GetSerial(int i)
-        {
-            var error = ETrackedPropertyError.TrackedProp_Success;
-            _serialBuilder.Clear();
-
-            _system.GetStringTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_SerialNumber_String, _serialBuilder, CSerialBuilderSize, ref error);
-            
-            if (error == ETrackedPropertyError.TrackedProp_Success)
-                return _serialBuilder.ToString();
-            else
-                return "";
-        }
-
-        const int CSerialBuilderSize = 64;
-        
-        private StringBuilder _serialBuilder = new StringBuilder(CSerialBuilderSize);
 
         public override void Update()
         {
@@ -108,7 +77,10 @@ namespace VL.IO.ValveOpenVR
             _trackerPoses.Clear();
 
             if (refreshSerials)
+            {
+                _deviceSerials.Clear();
                 _trackerSerials.Clear();
+            }
 
             for (int i = 0; i < poseCount; i++)
             {

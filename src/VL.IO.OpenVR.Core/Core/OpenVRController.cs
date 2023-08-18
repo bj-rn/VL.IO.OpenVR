@@ -128,6 +128,7 @@ namespace VL.IO.ValveOpenVR
             public float hairTriggerValue = 0;
             float hairTriggerLimit;
             bool hairTriggerState, hairTriggerPrevState;
+
             void UpdateHairTrigger()
             {
                 hairTriggerPrevState = hairTriggerState;
