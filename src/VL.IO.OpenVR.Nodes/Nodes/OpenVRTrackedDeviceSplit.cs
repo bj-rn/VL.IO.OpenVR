@@ -58,6 +58,11 @@ namespace VL.IO.ValveOpenVR
         public bool GripPress { get => _gripPress; }
 
 
+        private float _batteryPercentage;
+        public float BatteryPerecentage { get => _batteryPercentage; }
+
+
+
         private bool _valid;
         public bool Valid { get => _valid; }
 
@@ -75,8 +80,7 @@ namespace VL.IO.ValveOpenVR
 
         private bool _uninitialized;
         public bool Uninitialized { get => _uninitialized; }
-
-
+        
 
         public override void Update() 
         {
@@ -86,6 +90,7 @@ namespace VL.IO.ValveOpenVR
             _pose = OpenVRManager.GamePoses[_controller.index].mDeviceToAbsoluteTracking.ToMatrix();
 
             _deviceIndex = (int)_controller.index;
+
 
             _deviceSerial = GetSerial(_deviceIndex);
 
@@ -104,6 +109,8 @@ namespace VL.IO.ValveOpenVR
             _systemPress = _controller.GetPress(OpenVRController.ButtonMask.System);
             _applicationMenuPress = _controller.GetPress(OpenVRController.ButtonMask.ApplicationMenu);
             _gripPress = _controller.GetPress(OpenVRController.ButtonMask.Grip);
+
+            _batteryPercentage = BatteryPercentage(_controller.index);
 
             _valid = _controller.valid;
             _connected = _controller.connected;

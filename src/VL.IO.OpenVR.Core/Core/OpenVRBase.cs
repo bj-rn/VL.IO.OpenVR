@@ -61,6 +61,17 @@ namespace VL.IO.ValveOpenVR
         }
 
 
+        protected float BatteryPercentage(uint index)
+        {
+            var error = ETrackedPropertyError.TrackedProp_Success;
+            var value = _system.GetFloatTrackedDeviceProperty(index, ETrackedDeviceProperty.Prop_DeviceBatteryPercentage_Float, ref error);
+
+            if (error == ETrackedPropertyError.TrackedProp_Success)
+                return value;
+            else
+                return 0;
+        }
+
         protected string GetSerial(int i)
         {
             var error = ETrackedPropertyError.TrackedProp_Success;

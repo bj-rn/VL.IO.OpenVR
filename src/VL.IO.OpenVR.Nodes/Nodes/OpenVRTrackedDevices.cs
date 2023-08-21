@@ -46,11 +46,15 @@ namespace VL.IO.ValveOpenVR
 
         private SpreadBuilder<string> _trackerSerials;
         public Spread<string> TrackerSerials { get => _trackerSerials.ToSpread(); }
-
+       
 
         private uint _eventSize = (uint)Marshal.SizeOf(typeof(VREvent_t));
 
         private int _frame = 0;
+
+        private bool _pollEvents = false;
+        public bool PollEvents { set => _pollEvents = value; }
+
 
         public OpenVRTrackedDevices()
         {
@@ -68,18 +72,21 @@ namespace VL.IO.ValveOpenVR
         public override void Update()
         {
 
-            VREvent_t evt = default(VREvent_t);
-            _events.Clear();
-            _deviceIndices.Clear();
+            if (_pollEvents) { 
 
-            while (_system.PollNextEvent(ref evt, _eventSize))
-            {
-                var evtType = (EVREventType)evt.eventType;
+                VREvent_t evt = default(VREvent_t);
 
-                _events.Add(evtType.ToString());
-                _deviceIndices.Add((int)evt.trackedDeviceIndex);
+                _events.Clear();
+                _deviceIndices.Clear();
+
+                while (_system.PollNextEvent(ref evt, _eventSize))
+                {
+                    var evtType = (EVREventType)evt.eventType;
+
+                    _events.Add(evtType.ToString());
+                    _deviceIndices.Add((int)evt.trackedDeviceIndex);
+                }
             }
-
 
             //controller states
             OpenVRController.Update(_frame++);
@@ -116,21 +123,21 @@ namespace VL.IO.ValveOpenVR
             }
 
 
-            var devicecount = OpenVR.k_unMaxTrackedDeviceCount;
+            var devicecount = (int)OpenVR.k_unMaxTrackedDeviceCount;
 
             for (int i = 0; i < devicecount; i++)
             {
-                //if(FOpenVRSystem.GetTrackedDeviceClass((uint)i) != ETrackedDeviceClass.Controller) continue;
-                
+
+                var deviceclass = _system.GetTrackedDeviceClass((uint)i);
+
+                // if (deviceclass != ETrackedDeviceClass.Controller && deviceclass != ETrackedDeviceClass.GenericTracker ) continue;
+
                 var c = OpenVRController.Input(i);
 
                 if (!c.connected || !c.valid) continue;
-               
+
                 _devices.Add(c);
                 _deviceRoles.Add(_system.GetControllerRoleForTrackedDeviceIndex((uint)i));
-                _deviceIndices.Add(i);
-
-                var deviceclass = _system.GetTrackedDeviceClass((uint)i);
 
                 _deviceClasses.Add(deviceclass);
 
@@ -138,8 +145,8 @@ namespace VL.IO.ValveOpenVR
                     _deviceSerials.Add(GetSerial(i));
 
 
-                if (deviceclass == ETrackedDeviceClass.GenericTracker) 
-                { 
+                if (deviceclass == ETrackedDeviceClass.GenericTracker)
+                {
                     _trackers.Add(c);
 
                     if (refreshSerials)
