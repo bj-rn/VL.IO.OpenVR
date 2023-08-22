@@ -1645,6 +1645,98 @@
           </ProcessDefinition>
         </Patch>
       </Node>
+      <!--
+
+    ************************ ETrackedControllerRole ************************
+
+-->
+      <Node Name="ETrackedControllerRole" Bounds="614,129" Id="FF5vYhtKuXeNH1ceTdBRlX">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Valve.VR" LastDependency="VL.IO.OpenVR.Core.dll">
+          <Choice Kind="TypeFlag" Name="ETrackedControllerRole" />
+        </p:TypeAnnotation>
+        <Patch Id="CTUXqh9RWTwP12vSeXTLrn">
+          <Canvas Id="Tb9ecRz0MG5O0iVeOiXKUc" CanvasType="Group">
+            <!--
+
+    ************************ CreateDefault ************************
+
+-->
+            <Node Name="CreateDefault" Bounds="116,129,159,88" Id="HhaU2jAnzrxO1Fml1q9Wqr">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                <Choice Kind="OperationDefinition" Name="Operation" />
+              </p:NodeReference>
+              <Patch Id="NhrjGPvIgpMNnYdqhSDXVO">
+                <ControlPoint Id="DMbTrKK6MysOJF8vBloGB6" Bounds="132,200" />
+                <Link Id="MkfcqHz8Mp9QNxR2MXBMGz" Ids="DMbTrKK6MysOJF8vBloGB6,PucOJWkbRVFPYuEvf8AyMb" IsHidden="true" />
+                <Pad Id="OWagQbSYY5UK9qac0WbJuV" Comment="" Bounds="132,157,76,15" ShowValueBox="true" isIOBox="true" Value="Invalid">
+                  <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                    <Choice Kind="TypeFlag" Name="ETrackedControllerRole" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Link Id="DypU8Z3yWZoNjpJlr4RbK9" Ids="OWagQbSYY5UK9qac0WbJuV,DMbTrKK6MysOJF8vBloGB6" />
+                <Pin Id="PucOJWkbRVFPYuEvf8AyMb" Name="Output" Kind="OutputPin">
+                  <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                    <Choice Kind="TypeFlag" Name="ETrackedControllerRole" />
+                  </p:TypeAnnotation>
+                </Pin>
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="PXIU1Bbe0W8OQT1yxAvXlf" IsHidden="true">
+            <Fragment Id="KBtju02xIgUOdE85w5Z3GT" Patch="HhaU2jAnzrxO1Fml1q9Wqr" Enabled="true" />
+          </ProcessDefinition>
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ ETrackedDeviceClass ************************
+
+-->
+      <Node Name="ETrackedDeviceClass" Bounds="619,227" Id="BXXMaHBBcFAMArOTjIJMSd">
+        <p:NodeReference>
+          <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
+          <CategoryReference Kind="Category" Name="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Valve.VR" LastDependency="VL.IO.OpenVR.Core.dll">
+          <Choice Kind="TypeFlag" Name="ETrackedDeviceClass" />
+        </p:TypeAnnotation>
+        <Patch Id="JR4ixg6HZRiOuEa7KY24iz">
+          <Canvas Id="S9Z6c9NJv8iNETyNzi8Pot" CanvasType="Group">
+            <!--
+
+    ************************ CreateDefault ************************
+
+-->
+            <Node Name="CreateDefault" Bounds="117,128,159,88" Id="U6fdfkPBMFyODVmfpG1coh">
+              <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                <Choice Kind="OperationDefinition" Name="Operation" />
+              </p:NodeReference>
+              <Patch Id="LDdzuPix0DLPLWEWUtJLGA">
+                <ControlPoint Id="Lz9bP9qKoXeL9Z2aCfx8zB" Bounds="133,199" />
+                <Link Id="RNc6nCsnx3kLZNFWR3HqIz" Ids="Lz9bP9qKoXeL9Z2aCfx8zB,NvcywGG7btyNXk5J1R1OAZ" IsHidden="true" />
+                <Pin Id="NvcywGG7btyNXk5J1R1OAZ" Name="Output" Kind="OutputPin">
+                  <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                    <Choice Kind="TypeFlag" Name="ETrackedDeviceClass" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pad Id="BfqmoGfeAMZMfSr2tQUWLC" Comment="" Bounds="133,156,112,15" ShowValueBox="true" isIOBox="true" Value="Invalid">
+                  <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                    <Choice Kind="TypeFlag" Name="ETrackedDeviceClass" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Link Id="KDUsdCsg1PQPdwNtOO6OAF" Ids="BfqmoGfeAMZMfSr2tQUWLC,Lz9bP9qKoXeL9Z2aCfx8zB" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="JEEc2cB6Mw3LHDYJqEgsVr" IsHidden="true">
+            <Fragment Id="LNBDDebjOxVOnRfRvCNqn3" Patch="U6fdfkPBMFyODVmfpG1coh" Enabled="true" />
+          </ProcessDefinition>
+        </Patch>
+      </Node>
     </Canvas>
     <!--
 
