@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="VLk25CHdVSSOWSpc9G7cdL" LanguageVersion="2023.5.2" Version="0.128">
+  <NugetDependency Id="E0nIhcojr7oL8bSrz0jhiJ" Location="VL.CoreLib" Version="2023.5.2" />
+  <Patch Id="DbXg7pOQIdeNWzsvAK93UN">
+    <Canvas Id="RuJ3urRYwfRMFsbdJNowot" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="H4YpL9bUWFMPWpUhRA6jBp">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="GOyAp0U0GwsNeZ67Ey3xhb">
+        <Canvas Id="KeWdQAvPUpLPNvtbnE0B2c" CanvasType="Group">
+          <Node Bounds="69,755,225,19" Id="JyZPFjVINCqMUXt8DFQBQx">
+            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
+            </p:NodeReference>
+            <Pin Id="MtfKxjR08Y3LR2wuAe1YLR" Name="Bounds" Kind="InputPin" DefaultValue="2561, 5, 1918, 1048" />
+            <Pin Id="Tb8Ze1AR5WwPbhJWJuKGlq" Name="Input" Kind="InputPin" />
+            <Pin Id="VXuav5HpTdvOflnOXCfHxP" Name="Camera" Kind="InputPin" />
+            <Pin Id="DuiSh2L6Mj5MRvQOuh7jbW" Name="Enable Default Camera" Kind="InputPin" />
+            <Pin Id="L1XKv7CHNDRLDL5ULOz0I8" Name="Title" Kind="InputPin" />
+            <Pin Id="CZzgzW5GKHLOZM8YSO5t3m" Name="Clear Color" Kind="InputPin" />
+            <Pin Id="SPUPlVwiM1qPhJwufDRgdF" Name="Clear" Kind="InputPin" />
+            <Pin Id="UcWY8fa8331LZv3PfHNkDZ" Name="Post Effects" Kind="InputPin" />
+            <Pin Id="Qxge5Fn4xyfLqQtLAHXuGG" Name="Enable Default Post Effects" Kind="InputPin" />
+            <Pin Id="LODaucfNcJhQM7dMXvHZBf" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
+            <Pin Id="QFtLmbq5ZF9O53AasBzNnf" Name="Enabled" Kind="InputPin" />
+            <Pin Id="OF0n7qpOCAiQJ6sH0uie6u" Name="Present Interval" Kind="InputPin" />
+            <Pin Id="OF2nuAt8V94N88BR4yo29G" Name="Output" Kind="OutputPin" />
+            <Pin Id="S24OUva3IAZP5h3rt2KOsW" Name="Client Bounds" Kind="OutputPin" />
+            <Pin Id="KKRV81dp4tVOf9XcoVizT7" Name="Input Source" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="89,680,85,19" Id="CwwcqDhsUhpLjga3NG9Pch">
+            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="RootScene" />
+            </p:NodeReference>
+            <Pin Id="L3fgp98QufnMquFQ6Co4rJ" Name="Child" Kind="InputPin" />
+            <Pin Id="Q59hUlLNkz4QFwGOro55vi" Name="Child 2" Kind="InputPin" />
+            <Pin Id="AXxfh8EfuMjNEahLZrmj7e" Name="Child 3" Kind="InputPin" />
+            <Pin Id="F8ztemXzPMMM6anCUlppsj" Name="Child 4" Kind="InputPin" />
+            <Pin Id="Cmi4j03eDSZN53aUdNUXTW" Name="Enabled" Kind="InputPin" />
+            <Pin Id="FAn9ezAlMr6MkBWuWrjJ0m" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="87,535,105,19" Id="DK9fVVQBfC5QGvt5YbFV3c">
+            <p:NodeReference LastCategoryFullName="Stride.Models" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="AxisAndGrid" />
+            </p:NodeReference>
+            <Pin Id="OA5FaYnPHRRPA6qtapZZKa" Name="Transformation" Kind="InputPin" />
+            <Pin Id="QDtjb38DGpyOqCz8yt9AQR" Name="Axis" Kind="InputPin" />
+            <Pin Id="FljA7TEd4PSPJw30NQtg97" Name="Grid" Kind="InputPin" />
+            <Pin Id="Fj7aDtZLActLIUcsCsZJX2" Name="Grid Color" Kind="InputPin" />
+            <Pin Id="Gt1jH4zl6VAN7gcPcpPXO7" Name="Radius" Kind="InputPin" />
+            <Pin Id="JVXrEJiZjAFNziOCD9tYgL" Name="Enabled" Kind="InputPin" />
+            <Pin Id="TADKlP702xfQXCGz0ZCGFk" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="149,650,51,19" Id="EbHpA3OJXblNqDs3Ft2uRU">
+            <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Tracker" />
+            </p:NodeReference>
+            <Pin Id="A9iKmk4z7OKMHk35rTxtez" Name="Device" Kind="InputPin" />
+            <Pin Id="DypHI8cSQP8QR19rOl7YZZ" Name="Enabled" Kind="InputPin" />
+            <Pin Id="RKUPAbVdNSoPSQl1tposXj" Name="Entity" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="108,576,185,19" Id="BsExmANT66UOzUAahkv4fp">
+            <p:NodeReference LastCategoryFullName="Stride.Lights" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="DirectionalLight" />
+            </p:NodeReference>
+            <Pin Id="INbkSskyxw5QJRu0VidOIu" Name="Position" Kind="InputPin" />
+            <Pin Id="K4NyBR2XtHgQGV8RTJH3QV" Name="Target" Kind="InputPin" />
+            <Pin Id="JYfC1ev1jpFO5HkmLEv5WL" Name="Color" Kind="InputPin" />
+            <Pin Id="M4TQNL4t8FjLLAyagBFBpD" Name="Intensity" Kind="InputPin" />
+            <Pin Id="IxDuvU9bpKAQYk74mhhlj4" Name="Shadow" Kind="InputPin" />
+            <Pin Id="NHnNyosemHuNDcwvDoYRqr" Name="Enable Default Shadow" Kind="InputPin" />
+            <Pin Id="Nbl8qabbNxkO70JOsFGIlr" Name="Component" Kind="InputPin" />
+            <Pin Id="L4aalExLr6QM9XPEsSMADh" Name="Children" Kind="InputPin" />
+            <Pin Id="EXRGxUPFBC4PNlOT6Bw43u" Name="Name" Kind="InputPin" />
+            <Pin Id="SJD0Lvuv3VMPXsr3YhADqm" Name="Enabled" Kind="InputPin" />
+            <Pin Id="LoHl6Eo97FGLFdh3IoN8iv" Name="Entity" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="285,657,68,19" Id="SV8CgmWDF0PPNO74ziqcB3">
+            <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Basestation" />
+            </p:NodeReference>
+            <Pin Id="GJXjtAB8GJLMnJVLnvxpwP" Name="Device" Kind="InputPin" />
+            <Pin Id="GAgw1KGtRMdNYUMvo705rE" Name="Enabled" Kind="InputPin" />
+            <Pin Id="JBxwPA30cJaLF1eTEUr6mg" Name="Entity" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="130,618,205,19" Id="AonVTxd2mi6OlbHqnbk4pP">
+            <p:NodeReference LastCategoryFullName="Stride.Lights" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SkyboxLight" />
+            </p:NodeReference>
+            <Pin Id="AVQjaZ8vRDeQJaPh7His3N" Name="Transformation" Kind="InputPin" />
+            <Pin Id="TCU7aCJD6dkOtohwyq5W2N" Name="Cube Map" Kind="InputPin" />
+            <Pin Id="Fm7CE5TovHKLvHiXer86Io" Name="Is Specular Only" Kind="InputPin" />
+            <Pin Id="J6jrL0xjZqDO1YJdx3gkxl" Name="Intensity" Kind="InputPin" />
+            <Pin Id="Qdapp2rOWwXNxoKtamznUI" Name="Force Build" Kind="InputPin" />
+            <Pin Id="UX7yI7byqHvOZshFsHKVTO" Name="Background Intensity" Kind="InputPin" />
+            <Pin Id="I1sjz4NIx4nN35G8mXDwBR" Name="Background Enabled" Kind="InputPin" />
+            <Pin Id="LhjN63us5oULcDS226ORIS" Name="Component" Kind="InputPin" />
+            <Pin Id="RmW3OYYNpSpNoCayYQBNAS" Name="Children" Kind="InputPin" />
+            <Pin Id="JXfHnxvsjQoLE2EK9x2ySp" Name="Name" Kind="InputPin" />
+            <Pin Id="BEcrgMap6EQM04eo7wFU7a" Name="Enabled" Kind="InputPin" />
+            <Pin Id="F3wFdPsNi37PZKYagiKa3r" Name="Entity" Kind="OutputPin" />
+          </Node>
+        </Canvas>
+        <Patch Id="Vyq3cbJYDNlPsvAyZQyyyH" Name="Create" />
+        <Patch Id="BZFIvDjZJNvLOG4MPQKzvD" Name="Update" />
+        <ProcessDefinition Id="OHxrDIFjdWCMNbqHscO3tB">
+          <Fragment Id="UFWK0sXpmYyQLsM0kfqXqk" Patch="Vyq3cbJYDNlPsvAyZQyyyH" Enabled="true" />
+          <Fragment Id="IMY9GVu0rcsMOvfN1WIHUU" Patch="BZFIvDjZJNvLOG4MPQKzvD" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="DUH8VKGTpw5OATIX4xFckN" Ids="FAn9ezAlMr6MkBWuWrjJ0m,Tb8Ze1AR5WwPbhJWJuKGlq" />
+        <Link Id="OBkyNPhuWxSMNeXtpER6mX" Ids="TADKlP702xfQXCGz0ZCGFk,L3fgp98QufnMquFQ6Co4rJ" />
+        <Link Id="Iq2V4aPz1DgPsGDD95tnoM" Ids="LoHl6Eo97FGLFdh3IoN8iv,Q59hUlLNkz4QFwGOro55vi" />
+        <Link Id="QqBpWH1KBRLNZbqc1kKPYi" Ids="RKUPAbVdNSoPSQl1tposXj,F8ztemXzPMMM6anCUlppsj" />
+        <Link Id="Ey3KhBsQCosMrMp5TnGtHj" Ids="F3wFdPsNi37PZKYagiKa3r,AXxfh8EfuMjNEahLZrmj7e" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="AQe5RgdsYLKOZN1X6YhKPB" Location="VL.Stride" Version="2023.5.2" />
+  <DocumentDependency Id="Uq255iK00YiN7scoQDXUvn" Location="../VL.IO.OpenVR.vl" />
+</Document>
