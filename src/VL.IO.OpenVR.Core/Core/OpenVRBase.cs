@@ -71,7 +71,7 @@ namespace VL.IO.ValveOpenVR
             angularVelocity = devicePose.vAngularVelocity.ToVector3();
         }
 
-        protected float BatteryPercentage(uint index)
+        protected float GetBatteryPercentage(uint index)
         {
             var error = ETrackedPropertyError.TrackedProp_Success;
             var value = _system.GetFloatTrackedDeviceProperty(index, ETrackedDeviceProperty.Prop_DeviceBatteryPercentage_Float, ref error);

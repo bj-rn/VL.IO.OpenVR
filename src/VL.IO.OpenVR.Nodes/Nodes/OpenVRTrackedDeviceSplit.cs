@@ -10,7 +10,7 @@ namespace VL.IO.ValveOpenVR
         public OpenVRController.Device Controller { set => _controller = value; }
         
 
-        private Matrix _pose;
+        private Matrix _pose = Matrix.Identity;
         public Matrix Pose { get => _pose; }
 
         private Vector3 _velocity;
@@ -19,11 +19,11 @@ namespace VL.IO.ValveOpenVR
         private Vector3 _angularVelocity;
         public Vector3 AngularVelocity { get => _angularVelocity; }
 
-        private int _deviceIndex;
+        private int _deviceIndex = -1;
         public int DeviceIndex { get => _deviceIndex; }
 
 
-        private string _deviceSerial;
+        private string _deviceSerial = "";
         public string DeviceSerial { get => _deviceSerial; }
 
         private ETrackedControllerRole _deviceRole;
@@ -64,7 +64,7 @@ namespace VL.IO.ValveOpenVR
         public bool GripPress { get => _gripPress; }
 
 
-        private float _batteryPercentage;
+        private float _batteryPercentage = 0.0f;
         public float BatteryPercentage { get => _batteryPercentage; }
 
 
@@ -86,7 +86,7 @@ namespace VL.IO.ValveOpenVR
 
         private bool _uninitialized;
         public bool Uninitialized { get => _uninitialized; }
-        
+
 
         public override void Update() 
         {
@@ -119,7 +119,7 @@ namespace VL.IO.ValveOpenVR
             _applicationMenuPress = _controller.GetPress(OpenVRController.ButtonMask.ApplicationMenu);
             _gripPress = _controller.GetPress(OpenVRController.ButtonMask.Grip);
 
-            _batteryPercentage = BatteryPercentage(_controller.index);
+            _batteryPercentage = GetBatteryPercentage(_controller.index);
 
             _valid = _controller.valid;
             _connected = _controller.connected;
