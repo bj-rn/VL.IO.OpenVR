@@ -1245,11 +1245,12 @@
             <Node Bounds="2585,361,112,26" Id="LVtgwO8gioRNrl45d3PpZz">
               <p:NodeReference LastCategoryFullName="VL.IO.ValveOpenVR.OpenVRTrackedDeviceSplit" LastDependency="VL.IO.OpenVR.Nodes.dll">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="BatteryPerecentage" />
+                <CategoryReference Kind="AssemblyCategory" Name="OpenVRTrackedDeviceSplit" />
+                <Choice Kind="OperationCallFlag" Name="BatteryPercentage" />
               </p:NodeReference>
               <Pin Id="O3XXYhKqeEsPUXc5go316w" Name="Input" Kind="StateInputPin" />
               <Pin Id="RSrYFS2sGdlL7gvtnVmLii" Name="Output" Kind="StateOutputPin" />
-              <Pin Id="QZzDhnN5bk9PnhcSKzPT2z" Name="Battery Perecentage" Kind="OutputPin" />
+              <Pin Id="UYVCpkBy9dOOZIu8n5LQqK" Name="Battery Percentage" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="B6pbLLVifbmPIlxPYxIJQ3" Bounds="2694,415" />
             <Node Bounds="861,360,112,26" Id="S962KrTnr79OU14zGnyQen">
@@ -1421,10 +1422,9 @@
             <Pin Id="A2MwEQS0r6OPvOke83PrGO" Name="Device Serial" Kind="OutputPin" />
           </Patch>
           <Link Id="LLq7EeVaSkOOzxHIB00THJ" Ids="Gm242g9sGRlOvov5pF5fX6,O3XXYhKqeEsPUXc5go316w" />
-          <Link Id="MO8941xt5cPNsVvziBVHie" Ids="QZzDhnN5bk9PnhcSKzPT2z,B6pbLLVifbmPIlxPYxIJQ3" />
           <Link Id="MmvSrp4uNehO8NkZXpcn1e" Ids="B6pbLLVifbmPIlxPYxIJQ3,VBf4dofKJ6zOiM98odASDG" IsHidden="true" />
           <Patch Id="PzPs06Xb6AGOIIEKwp0Ale" Name="GetBatteryPercentage">
-            <Pin Id="VBf4dofKJ6zOiM98odASDG" Name="Battery Perecentage" Kind="OutputPin" />
+            <Pin Id="VBf4dofKJ6zOiM98odASDG" Name="Battery Percentage" Kind="OutputPin" />
           </Patch>
           <Link Id="VWEJNsvAljQPf7Kt5VjxhB" Ids="Gm242g9sGRlOvov5pF5fX6,CKfkjjukRQIOsndrig9ipK" />
           <Link Id="J78EUZq2lURNeQLaYez4Sc" Ids="Jil0FUWuBrsNJTiDYdoxnu,DnTPxQlObybPKWNbZuk1AM" />
@@ -1468,6 +1468,7 @@
             <Fragment Id="EAHZHOWA4SlMP1QkHRHOAq" Patch="V3CSD0VVIRiLxrhJws7UO7" Enabled="true" />
           </ProcessDefinition>
           <Link Id="KObMvGsN95rLVRfC463srk" Ids="PGdDzzOcGiYOU3ISorDMY6,HSY9YnUpsxmMGGQ7mJ9Omz" />
+          <Link Id="MvH9KZilnYGQKpbvEFqwfT" Ids="UYVCpkBy9dOOZIu8n5LQqK,B6pbLLVifbmPIlxPYxIJQ3" />
         </Patch>
       </Node>
       <!--

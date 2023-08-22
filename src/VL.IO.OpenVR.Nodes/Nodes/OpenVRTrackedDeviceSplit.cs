@@ -65,7 +65,7 @@ namespace VL.IO.ValveOpenVR
 
 
         private float _batteryPercentage;
-        public float BatteryPerecentage { get => _batteryPercentage; }
+        public float BatteryPercentage { get => _batteryPercentage; }
 
 
 
