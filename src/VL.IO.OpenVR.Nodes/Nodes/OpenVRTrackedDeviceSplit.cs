@@ -13,6 +13,12 @@ namespace VL.IO.ValveOpenVR
         private Matrix _pose;
         public Matrix Pose { get => _pose; }
 
+        private Vector3 _velocity;
+        public Vector3 Velocity { get => _velocity; }
+
+        private Vector3 _angularVelocity;
+        public Vector3 AngularVelocity { get => _angularVelocity; }
+
         private int _deviceIndex;
         public int DeviceIndex { get => _deviceIndex; }
 
@@ -87,10 +93,11 @@ namespace VL.IO.ValveOpenVR
             if (_controller == null)
                 return;
 
-            _pose = OpenVRManager.GamePoses[_controller.index].mDeviceToAbsoluteTracking.ToMatrix();
+            var devicePose = OpenVRManager.GamePoses[_controller.index];
 
+            GetPose(devicePose, out _pose, out _velocity, out _angularVelocity);
+            
             _deviceIndex = (int)_controller.index;
-
 
             _deviceSerial = GetSerial(_deviceIndex);
 

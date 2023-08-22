@@ -3,6 +3,7 @@ using Stride.Core.Mathematics;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
+
 namespace VL.IO.ValveOpenVR
 {
     //the convention horror
@@ -10,7 +11,7 @@ namespace VL.IO.ValveOpenVR
     {
        
 
-        // beta left handed
+        // from beta: left handed
 
         //  public static Matrix ToMatrix(this HmdMatrix34_t m)
         //{
@@ -41,6 +42,22 @@ namespace VL.IO.ValveOpenVR
                 M41 = -m.m3,    M42 = m.m7,     M43 = -m.m11,  M44 = 1
             };
         }
+
+
+        private static Vector3 UnsafeToVector3(this HmdVector3_t vector)
+        {
+            Debug.Assert(Unsafe.SizeOf<Vector3>() == Unsafe.SizeOf<HmdVector3_t>());
+
+            var v = new Vector3();
+
+            Unsafe.As<Vector3, HmdVector3_t>(ref v) = vector;
+
+            return v;
+        }
+
+        public static Vector3 ToVector3(this HmdVector3_t vector)
+        { return UnsafeToVector3(vector); }
+
 
 
         public static Vector3 Pos(this Matrix m)

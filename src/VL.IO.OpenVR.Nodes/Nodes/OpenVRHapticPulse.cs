@@ -26,7 +26,7 @@ namespace VL.IO.ValveOpenVR
                             
 
             /*
-                The parameter you pass into TriggerHapticPulse is measured in microseconds, with the max value(in my tests) being 3999, which is 4ms - each frame at 90Hz is 11ms long.
+                The parameter [Duration] you pass into TriggerHapticPulse is measured in microseconds, with the max value(in my tests) being 3999, which is 4ms - each frame at 90Hz is 11ms long.
                 Because of this, if you're pulsing each frame, the effect of pulse length is felt subjectively as vibration strength.
 
                 If you want longer vibrations, try something like this:
@@ -63,7 +63,6 @@ namespace VL.IO.ValveOpenVR
 
                 // https://github.com/ValveSoftware/openvr/issues/129
                 // https://steamcommunity.com/app/358720/discussions/0/405693392914144440/#c357284767229628161
-
 
             */
 

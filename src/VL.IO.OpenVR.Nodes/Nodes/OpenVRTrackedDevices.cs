@@ -127,7 +127,6 @@ namespace VL.IO.ValveOpenVR
 
             for (int i = 0; i < devicecount; i++)
             {
-
                 var deviceclass = _system.GetTrackedDeviceClass((uint)i);
 
                 // if (deviceclass != ETrackedDeviceClass.Controller && deviceclass != ETrackedDeviceClass.GenericTracker ) continue;
@@ -143,7 +142,6 @@ namespace VL.IO.ValveOpenVR
 
                 if (refreshSerials)
                     _deviceSerials.Add(GetSerial(i));
-
 
                 if (deviceclass == ETrackedDeviceClass.GenericTracker)
                 {

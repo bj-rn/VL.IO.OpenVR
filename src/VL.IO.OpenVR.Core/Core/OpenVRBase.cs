@@ -1,6 +1,8 @@
-﻿using System.Text;
+﻿using Stride.Core.Mathematics;
+using System.Text;
 using System.Xml.Linq;
 using Valve.VR;
+using static Valve.VR.IVRIOBuffer;
 
 
 namespace VL.IO.ValveOpenVR
@@ -60,6 +62,12 @@ namespace VL.IO.ValveOpenVR
             
         }
 
+        protected void GetPose(TrackedDevicePose_t devicePose, out Matrix pose, out Vector3 velocity, out Vector3 angularVelocity) 
+        {
+            pose = devicePose.mDeviceToAbsoluteTracking.ToMatrix();
+            velocity = devicePose.vVelocity.ToVector3();
+            angularVelocity = devicePose.vAngularVelocity.ToVector3();
+        }
 
         protected float BatteryPercentage(uint index)
         {
