@@ -47,8 +47,10 @@ namespace VL.IO.ValveOpenVR
         public bool RefreshSerials { set => _refreshSerials = value; }
 
 
-        public void Update(CVRSystem system)
+        public void UpdateSystem()
         {
+            var system = OpenVRManager.System;
+            
             if (system != null)
             {
                _system = system;

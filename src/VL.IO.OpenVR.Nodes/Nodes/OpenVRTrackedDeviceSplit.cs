@@ -90,9 +90,10 @@ namespace VL.IO.ValveOpenVR
 
         public override void Update() 
         {
-            if (_controller == null)
+            
+            if (_controller == null || OpenVRManager.GamePoses == null)
                 return;
-
+            
             var devicePose = OpenVRManager.GamePoses[_controller.index];
 
             GetPose(devicePose, out _pose, out _velocity, out _angularVelocity);
@@ -100,7 +101,8 @@ namespace VL.IO.ValveOpenVR
             _deviceIndex = (int)_controller.index;
 
             _deviceSerial = GetSerial(_deviceIndex);
-
+            
+            
             _deviceRole = _system.GetControllerRoleForTrackedDeviceIndex(_controller.index);
             _deviceClass = _system.GetTrackedDeviceClass(_controller.index);
 
@@ -126,5 +128,6 @@ namespace VL.IO.ValveOpenVR
             _calibrating = _controller.calibrating;
             _uninitialized = _controller.uninitialized;
         }
+
     }
 }

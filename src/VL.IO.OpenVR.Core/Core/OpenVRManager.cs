@@ -9,7 +9,7 @@ namespace VL.IO.ValveOpenVR
 {
     public class OpenVRManager: IDisposable
     {
-        public CVRSystem System
+        public static CVRSystem System
         {
             get;
             private set;
