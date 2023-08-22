@@ -43,13 +43,10 @@ namespace VL.IO.ValveOpenVR
             };
         }
 
-
         public static Vector3 ToVector3(this HmdVector3_t vector)
         { 
             return new Vector3(vector.v0, vector.v1, vector.v2); 
         }
-
-
 
         public static Vector3 Pos(this Matrix m)
         {
