@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Valve.VR;
+﻿using Valve.VR;
 using Stride.Core.Mathematics;
 using VL.Lib.Collections;
 

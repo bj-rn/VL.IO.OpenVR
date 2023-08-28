@@ -55,11 +55,14 @@ namespace VL.IO.ValveOpenVR
 
                 if (System != null)
                 {
+                    // OpenVR.Compositor.SetTrackingSpace(ETrackingUniverseOrigin.TrackingUniverseStanding);
+
                     //texture size
                     uint sizeX = 0;
                     uint sizeY = 0;
                     System.GetRecommendedRenderTargetSize(ref sizeX, ref sizeY);
                     RecommendedRenderTargetSize = new Int2((int)sizeX, (int)sizeY);
+
                 }
             }
 
