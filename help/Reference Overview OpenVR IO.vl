@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="GOyAp0U0GwsNeZ67Ey3xhb">
         <Canvas Id="KeWdQAvPUpLPNvtbnE0B2c" CanvasType="Group">
-          <Node Bounds="49,753,245,19" Id="JyZPFjVINCqMUXt8DFQBQx">
+          <Node Bounds="100,2558,245,19" Id="JyZPFjVINCqMUXt8DFQBQx">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
@@ -37,7 +37,7 @@
             <Pin Id="S24OUva3IAZP5h3rt2KOsW" Name="Client Bounds" Kind="OutputPin" />
             <Pin Id="KKRV81dp4tVOf9XcoVizT7" Name="Input Source" Kind="OutputPin" />
           </Node>
-          <Node Bounds="89,680,125,19" Id="CwwcqDhsUhpLjga3NG9Pch">
+          <Node Bounds="140,2504,105,19" Id="CwwcqDhsUhpLjga3NG9Pch">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
@@ -47,12 +47,11 @@
             <Pin Id="Q59hUlLNkz4QFwGOro55vi" Name="Child 2" Kind="InputPin" />
             <Pin Id="AXxfh8EfuMjNEahLZrmj7e" Name="Child 3" Kind="InputPin" />
             <Pin Id="F8ztemXzPMMM6anCUlppsj" Name="Child 4" Kind="InputPin" />
-            <Pin Id="GUhawPl5LB1QQT5F7wJEpN" Name="Child 5" Kind="InputPin" />
-            <Pin Id="J4aTp1mDMbePc08TcNRjF4" Name="Child 6" Kind="InputPin" />
+            <Pin Id="PGCzjOCcn1TLPDpxTjR0qF" Name="Child 5" Kind="InputPin" />
             <Pin Id="Cmi4j03eDSZN53aUdNUXTW" Name="Enabled" Kind="InputPin" />
             <Pin Id="FAn9ezAlMr6MkBWuWrjJ0m" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="88,449,105,19" Id="DK9fVVQBfC5QGvt5YbFV3c">
+          <Node Bounds="139,2374,105,19" Id="DK9fVVQBfC5QGvt5YbFV3c">
             <p:NodeReference LastCategoryFullName="Stride.Models" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="AxisAndGrid" />
@@ -65,7 +64,7 @@
             <Pin Id="JVXrEJiZjAFNziOCD9tYgL" Name="Enabled" Kind="InputPin" />
             <Pin Id="TADKlP702xfQXCGz0ZCGFk" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="109,490,185,19" Id="BsExmANT66UOzUAahkv4fp">
+          <Node Bounds="160,2415,185,19" Id="BsExmANT66UOzUAahkv4fp">
             <p:NodeReference LastCategoryFullName="Stride.Lights" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="DirectionalLight" />
@@ -82,7 +81,7 @@
             <Pin Id="SJD0Lvuv3VMPXsr3YhADqm" Name="Enabled" Kind="InputPin" />
             <Pin Id="LoHl6Eo97FGLFdh3IoN8iv" Name="Entity" Kind="OutputPin" />
           </Node>
-          <Node Bounds="129,525,205,19" Id="AonVTxd2mi6OlbHqnbk4pP">
+          <Node Bounds="180,2450,205,19" Id="AonVTxd2mi6OlbHqnbk4pP">
             <p:NodeReference LastCategoryFullName="Stride.Lights" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SkyboxLight" />
@@ -100,27 +99,14 @@
             <Pin Id="BEcrgMap6EQM04eo7wFU7a" Name="Enabled" Kind="InputPin" />
             <Pin Id="F3wFdPsNi37PZKYagiKa3r" Name="Entity" Kind="OutputPin" />
           </Node>
-          <Node Bounds="106,32,49,19" Id="Fbto7U4gTuRNjhSZp37ZFe">
+          <Node Bounds="102,135,49,19" Id="Fbto7U4gTuRNjhSZp37ZFe">
             <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="System" />
             </p:NodeReference>
+            <Pin Id="QxidUOpdUvrLPn7foBN9pD" Name="Tracking Space" Kind="InputPin" />
           </Node>
-          <Node Bounds="106,145,125,19" Id="OdzEJW8CUHVQcR6IvgAkka">
-            <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="TrackedDevices" />
-            </p:NodeReference>
-            <Pin Id="AWCG5av2913NF6rjPdzXTc" Name="Refresh Serials" Kind="InputPin" />
-            <Pin Id="BTcGjgTRd7nM8o5rdDvwja" Name="Devices" Kind="OutputPin" />
-            <Pin Id="EosaE3e0IwsLdx5p1NNyPf" Name="Device Classes" Kind="OutputPin" />
-            <Pin Id="VwE0NiRZ5ZQLJYb8w4RLgv" Name="Device Roles" Kind="OutputPin" />
-            <Pin Id="QUtvyhSok1bMyzTXXGh57p" Name="Controller Left" Kind="OutputPin" />
-            <Pin Id="IBaEFeF3X9ROe6cMM4OlCW" Name="Controller Right" Kind="OutputPin" />
-            <Pin Id="V3bW4P72GIkNw8fFGZlTHi" Name="Trackers" Kind="OutputPin" />
-            <Pin Id="MJBtGO8JihPNRawNXRx9Wr" Name="Tracker Serials" Kind="OutputPin" />
-          </Node>
-          <Node Bounds="443,330,398,19" Id="HOhP8EPry9gNTxWznrpnft">
+          <Node Bounds="243,1359,576,19" Id="HOhP8EPry9gNTxWznrpnft">
             <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Poser" />
@@ -136,12 +122,7 @@
             <Pin Id="AcPtlE0AdqsOwpu2evu7aM" Name="Tracker Angular Velocities" Kind="OutputPin" />
             <Pin Id="FIkmOAeqE2NP6BpQb41wei" Name="Tracker Serials" Kind="OutputPin" />
           </Node>
-          <Pad Id="PspEa407uK7LasNjAEpIvy" Comment="Device Classes" Bounds="128,247,112,95" ShowValueBox="true" isIOBox="true">
-            <p:Value>
-              <Item>Invalid</Item>
-            </p:Value>
-          </Pad>
-          <Node Bounds="186,192,325,19" Id="NwuaeaPocQMQBdlrRFw3rI">
+          <Node Bounds="1440,1536,771,19" Id="NwuaeaPocQMQBdlrRFw3rI">
             <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Split (TrackedDevice)" />
@@ -165,7 +146,7 @@
             <Pin Id="L31TYWVvMOYPBVtAlDOqMy" Name="System Press" Kind="OutputPin" />
             <Pin Id="N34rhupwbspLAYZo81fyzt" Name="Battery Percentage" Kind="OutputPin" />
           </Node>
-          <Node Bounds="627,385,92,63" Id="OgxFIbHHeeyPDtd18OtPX2">
+          <Node Bounds="517,1417,92,63" Id="OgxFIbHHeeyPDtd18OtPX2">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -176,7 +157,7 @@
               <Patch Id="Crf2KnxCwH3Pp8MQDIXdmJ" Name="Create" ManuallySortedPins="true" />
               <Patch Id="UUg16a9Tbs8LCd3VBpjrGP" Name="Update" ManuallySortedPins="true" />
               <Patch Id="NLTqW3AlzxgQWwtzr7VCRj" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="639,408,68,19" Id="A0CVuIRQmAkNUWcvoSUQvJ">
+              <Node Bounds="529,1440,68,19" Id="A0CVuIRQmAkNUWcvoSUQvJ">
                 <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Basestation (Simple)" />
@@ -186,10 +167,10 @@
                 <Pin Id="JZcn16yrO48Lf1WmLQ8uPU" Name="Entity" Kind="OutputPin" />
               </Node>
             </Patch>
-            <ControlPoint Id="UDw5hPSzniFPGyQaHWJzZ5" Bounds="641,391" Alignment="Top" />
-            <ControlPoint Id="BQB6H0CP2CEM9oWiy8xVB2" Bounds="641,442" Alignment="Bottom" />
+            <ControlPoint Id="UDw5hPSzniFPGyQaHWJzZ5" Bounds="531,1423" Alignment="Top" />
+            <ControlPoint Id="BQB6H0CP2CEM9oWiy8xVB2" Bounds="531,1474" Alignment="Bottom" />
           </Node>
-          <Node Bounds="619,467,65,19" Id="NgMvYmgqdvBO603mWBuInA">
+          <Node Bounds="509,1499,65,19" Id="NgMvYmgqdvBO603mWBuInA">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
@@ -201,30 +182,31 @@
             <Pin Id="VasRZrOoz3vNDdYSkgUUAf" Name="Enabled" Kind="InputPin" />
             <Pin Id="P2iSsa0X0RNQXuqZy8YNE8" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="479,389,92,63" Id="BF586NZJwBlQGkvjDu7Jyd">
+          <Node Bounds="302,1417,92,68" Id="BF586NZJwBlQGkvjDu7Jyd">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="Primitive" />
               <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
             </p:NodeReference>
             <Pin Id="KEh6OsLqv2VMCzHwhZk08y" Name="Break" Kind="OutputPin" />
-            <ControlPoint Id="J6qKtADQvr4MbS1PA4Y8d1" Bounds="493,395" Alignment="Top" />
-            <ControlPoint Id="Ol2B8mi23qXPYzdruQiefg" Bounds="493,446" Alignment="Bottom" />
+            <ControlPoint Id="J6qKtADQvr4MbS1PA4Y8d1" Bounds="316,1423" Alignment="Top" />
+            <ControlPoint Id="Ol2B8mi23qXPYzdruQiefg" Bounds="316,1479" Alignment="Bottom" />
             <Patch Id="GyoKnWoSTlVO9pB4Jsels0" ManuallySortedPins="true">
               <Patch Id="IjMviXlmRXxOz9rws2ubvo" Name="Create" ManuallySortedPins="true" />
               <Patch Id="Ai28IdMeNUJNeowJUiSf9L" Name="Update" ManuallySortedPins="true" />
               <Patch Id="HpXKWeNcr5YLsxfIE5bJBK" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="491,412,68,19" Id="MYEMzPIClWXMTqEQuK8KGL">
+              <Node Bounds="314,1440,68,19" Id="MYEMzPIClWXMTqEQuK8KGL">
                 <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Controller (Simple)" />
                 </p:NodeReference>
                 <Pin Id="LhiZAmn9LkZQEsKPDY5Ss4" Name="Transformation" Kind="InputPin" />
+                <Pin Id="SyIzNb8EgcBMGEWVCXj1mI" Name="Enabled" Kind="InputPin" />
                 <Pin Id="AjyEpU52OakMRRvtyIfCJ2" Name="Entity" Kind="OutputPin" />
               </Node>
             </Patch>
           </Node>
-          <Node Bounds="471,470,65,19" Id="S8gf713b7uBMfNr52UZESg">
+          <Node Bounds="294,1499,65,19" Id="S8gf713b7uBMfNr52UZESg">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
@@ -236,7 +218,7 @@
             <Pin Id="RCQZHiAnORiQAfzj1p1xzw" Name="Enabled" Kind="InputPin" />
             <Pin Id="GAJ2tYhdxIxQXSn2ajLiDl" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="795,386,92,63" Id="Hq4sZ04M1XBLoZYQLsKKXc">
+          <Node Bounds="661,1416,92,63" Id="Hq4sZ04M1XBLoZYQLsKKXc">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -247,7 +229,7 @@
               <Patch Id="N7P6gSK5tpLODbyik4Cv7k" Name="Create" ManuallySortedPins="true" />
               <Patch Id="MiEDydEnmVqN5HcijQMF5x" Name="Update" ManuallySortedPins="true" />
               <Patch Id="GQxXtNnSySpQO7bsaqaUgy" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="807,409,68,19" Id="KTtAwGp5R1kLYVAOvrZfl0">
+              <Node Bounds="673,1439,68,19" Id="KTtAwGp5R1kLYVAOvrZfl0">
                 <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Tracker (Simple)" />
@@ -257,10 +239,10 @@
                 <Pin Id="LJtcjjgQAmzM4PP8px9s2e" Name="Entity" Kind="OutputPin" />
               </Node>
             </Patch>
-            <ControlPoint Id="F9bT9kYQNcFP4rg8xgMRZV" Bounds="809,392" Alignment="Top" />
-            <ControlPoint Id="VQRoA2ezrMpPmCv1cVV9lt" Bounds="809,443" Alignment="Bottom" />
+            <ControlPoint Id="F9bT9kYQNcFP4rg8xgMRZV" Bounds="675,1422" Alignment="Top" />
+            <ControlPoint Id="VQRoA2ezrMpPmCv1cVV9lt" Bounds="675,1473" Alignment="Bottom" />
           </Node>
-          <Node Bounds="787,469,65,19" Id="NPk1Z9Ky5l6QVHVmouQjdn">
+          <Node Bounds="653,1498,65,19" Id="NPk1Z9Ky5l6QVHVmouQjdn">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
@@ -272,7 +254,7 @@
             <Pin Id="UjKk42P9CtOLrxd1Wtfo6u" Name="Enabled" Kind="InputPin" />
             <Pin Id="RLTq5SU2yYYQKQtveHIrHi" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="EMld8HUr1UZPGYwyOsJiXY" Bounds="159,42,168,19" ShowValueBox="true" isIOBox="true" Value="needed, initializes OpenVR">
+          <Pad Id="EMld8HUr1UZPGYwyOsJiXY" Bounds="152,142,224,66" ShowValueBox="true" isIOBox="true" Value="Mandatory  &#xD;&#xA;Initializes OpenVR&#xD;&#xA;Currently also updates the poses">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -281,7 +263,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="NwXtymncDzNNfM42Y979sc" Bounds="478,309,261,19" ShowValueBox="true" isIOBox="true" Value="if only poses / transformations are needed">
+          <Pad Id="NwXtymncDzNNfM42Y979sc" Bounds="39,1350,188,42" ShowValueBox="true" isIOBox="true" Value="If only poses / transformations are needed. &gt;">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -290,7 +272,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="DMFrZ7BOfwxNpPYBWkZ9bl" Bounds="246,102,302,91" ShowValueBox="true" isIOBox="true" Value="use that one if  buttons/triggers are needed&#xD;&#xA;if you need input from tracker pogo pins the tracker needs to configured as handheld. It then no longer is listed as tracker but as controller unfortunately.">
+          <Pad Id="DMFrZ7BOfwxNpPYBWkZ9bl" Bounds="942,1344,221,45" ShowValueBox="true" isIOBox="true" Value="Use that one if  more information like buttons/triggers are needed. &gt;&#xD;&#xA;">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -298,6 +280,570 @@
               <p:fontsize p:Type="Int32">9</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="243,1499,38,19" Id="HmfrWboetzMNfgaQ90bjb1">
+            <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HMD (Simple)" />
+            </p:NodeReference>
+            <Pin Id="KnezZxxxRT6MSfXTocfdy6" Name="Transformation" Kind="InputPin" />
+            <Pin Id="UvBZ5OiBNpOOV97vtwFUEt" Name="Enabled" Kind="InputPin" />
+            <Pin Id="T2VuMREQNnHLDPCyccX97k" Name="Entity" Kind="OutputPin" />
+          </Node>
+          <Pad Id="REeROuHZR6XP317H9osIAI" Comment="Enabled" Bounds="158,1458,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="223,1559,125,19" Id="FR4EA5qg2UUPEk0uvYUlSI">
+            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Group" />
+            </p:NodeReference>
+            <Pin Id="ExLovqzXjDMMfDP8dcZEPE" Name="Transformation" Kind="InputPin" />
+            <Pin Id="UnxsCDgjVgrN5KvsmBuMAv" Name="Child" Kind="InputPin" />
+            <Pin Id="VNP6zB75ALYLwJ5z8fE5As" Name="Child 2" Kind="InputPin" />
+            <Pin Id="R2zsWWKIyFiMen2qyWkSQ4" Name="Child 3" Kind="InputPin" />
+            <Pin Id="PigOnoIUhp3N846TBxXGRo" Name="Child 4" Kind="InputPin" />
+            <Pin Id="Lxm8zhwlTjQNsqfv8W63eS" Name="Name" Kind="InputPin" />
+            <Pin Id="FEXg5CCkvCULvfOGLUd88H" Name="Enabled" Kind="InputPin" />
+            <Pin Id="ONdZKSiTleiPLfeupSFSum" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="ExE4mne4EvZOyojMwiicUO" Bounds="1502,1322,468,113" ShowValueBox="true" isIOBox="true" Value="If you need input from pogo pins, the tracker needs to configured as handheld. It then no longer is listed as tracker but as controller unfortunately.&#xD;&#xA;&#xD;&#xA;Check for more info:&#xD;&#xA;https://github.com/ValveSoftware/steamvr_unity_plugin/issues/152&#xD;&#xA;https://github.com/ValveSoftware/steamvr_unity_plugin/issues/484">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="PAY4Qtyg4o2Oxn8Xt2fRLF" Comment="Tracking Space" Bounds="104,96,200,17" ShowValueBox="true" isIOBox="true" Value="TrackingUniverseStanding">
+            <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+              <Choice Kind="TypeFlag" Name="TrackingUniverseOrigin" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="201,2303,45,19" Id="JTrwZ6OY3yyMOeC0i54c1s">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Switch (Boolean)" />
+            </p:NodeReference>
+            <Pin Id="U8ZpywVkqGDLbm7AtvvvgZ" Name="Condition" Kind="InputPin" />
+            <Pin Id="KAcbdJzV2Z1OIvOOTKmS0h" Name="Input" Kind="InputPin" />
+            <Pin Id="UGJASaoU1JrQPPyCQBwvsY" Name="Input 2" Kind="InputPin" />
+            <Pin Id="K2i0ZtR0RlELIMVbq5eWBd" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="1174,1355,145,19" Id="AF3tVcxvKyrOyT3l4jj6pk">
+            <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="TrackedDevices" />
+            </p:NodeReference>
+            <Pin Id="QxFZaSvMC5mOLzqIw6eqfw" Name="Refresh Serials" Kind="InputPin" />
+            <Pin Id="O2DfaqWo7GNP9DTuBNTHS3" Name="Devices" Kind="OutputPin" />
+            <Pin Id="OIdhorM55BPOfE1TyU9ZLw" Name="Device Classes" Kind="OutputPin" />
+            <Pin Id="FtKXrwHFdBMMD0uX3Onvo9" Name="Device Roles" Kind="OutputPin" />
+            <Pin Id="Vht8l8baPzLNp4AkRVgClu" Name="Controller Left" Kind="OutputPin" />
+            <Pin Id="GSZGfgnPm1aQLtiOztkDnL" Name="Controller Right" Kind="OutputPin" />
+            <Pin Id="J5nuqMCuaApPEkXpcCCeOP" Name="Trackers" Kind="OutputPin" />
+            <Pin Id="IpfvpDtPRNgPOkjZyw70bJ" Name="Tracker Serials" Kind="OutputPin" />
+            <Pin Id="VJErO4n3COhN0JH9FvHUKu" Name="Error" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="980,1541,318,704" Id="DVsmnPE0i2wOEWETM3vyq2">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="AOHrvptrOGFNYSQWex85C5" Name="Break" Kind="OutputPin" />
+            <ControlPoint Id="As8giiSjIDsNkkkcaqOKpK" Bounds="1176,1547" Alignment="Top" />
+            <ControlPoint Id="OFWyQDSAhc6L8O8tDyOlzI" Bounds="1034,1547" Alignment="Top" />
+            <ControlPoint Id="AicwQkWwiBpPRvUVQoxqkw" Bounds="1208,2239" Alignment="Bottom" />
+            <Patch Id="D6SC5fkj9HcLVf3pedjboM" ManuallySortedPins="true">
+              <Patch Id="AwB5fllB6ziOLT1aWeRcBT" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="C8KkDOQmgEBMV4au2XXrTs" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="Q0wGbwCb17dNOuVipsClO3" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="1032,1636,25,19" Id="DTUkfXTn2fdOPvy2LtRnWK">
+                <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="=" />
+                </p:NodeReference>
+                <Pin Id="DNlZcG3t1fiOlOrRtbU3SY" Name="Input" Kind="InputPin" />
+                <Pin Id="KAYKdvCVAB5PzYQRiP2ZAt" Name="Input 2" Kind="InputPin" />
+                <Pin Id="I2Yadm7HIVWOIk0ZQmcMEC" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Pad Id="IYkhvChoYZPOcuX3xedC0L" Comment="" Bounds="1054,1604,112,15" ShowValueBox="true" isIOBox="true" Value="HMD">
+                <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                  <Choice Kind="TypeFlag" Name="TrackedDeviceClass" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Node Bounds="1163,1667,93,98" Id="OtoRQiMvodYMZ9rTnrhXOr">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="Mw4rNRnOmhLPsGdLR8RbW2" Name="Condition" Kind="InputPin" />
+                <Patch Id="A7gDkrFntR6LyjF4pJfdUk" ManuallySortedPins="true">
+                  <Patch Id="S5URelo0frjPlqrVTO43v9" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="TPr19RNxm4wPmxTzjzjYOr" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="1206,1718,38,19" Id="A7jQIw7ohWBO6aUjp73qyH">
+                    <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <Choice Kind="ProcessAppFlag" Name="HMD" />
+                    </p:NodeReference>
+                    <Pin Id="U6B7cyZgQFAOFK8ekuEvUt" Name="Device" Kind="InputPin" />
+                    <Pin Id="ANC7JVgZpBSQAkFCVuOJmB" Name="Enabled" Kind="InputPin" />
+                    <Pin Id="K7ZlRdbshqlP5wfNIL5Oal" Name="Entity" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="B8n9BJi9XtsNJCXX1kTOpL" Bounds="1177,1673" Name="D" Alignment="Top" />
+                <ControlPoint Id="Ol11gbvdewPPWjPliB9Hrf" Bounds="1177,1759" Name="D" Alignment="Bottom" />
+                <ControlPoint Id="Sya45hay12sPCeKiNjJKbK" Bounds="1208,1759" Name="E" Alignment="Bottom" />
+                <ControlPoint Id="FYYsgSPDamNONRiKRBEr77" Bounds="1214,1673" Name="E" Alignment="Top" />
+              </Node>
+              <Node Bounds="1163,1807,117,103" Id="SvXVtstw0HyPwCDgt6XTB1">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="H0EeXxqQx80P7ABay0sjG5" Name="Condition" Kind="InputPin" />
+                <ControlPoint Id="GMuW9oR2p54LJyBJIAGchk" Bounds="1177,1813" Name="D" Alignment="Top" />
+                <ControlPoint Id="A9mVLFJz5sgQVLSgFA8gFK" Bounds="1177,1904" Name="D" Alignment="Bottom" />
+                <ControlPoint Id="Gy8zKhvmtUUM4eK1ERSWZe" Bounds="1208,1904" Name="E" Alignment="Bottom" />
+                <ControlPoint Id="VN7LgVeckgRN6omU5ZrRLp" Bounds="1208,1813" Name="E" Alignment="Top" />
+                <Patch Id="QXhbaBAAK2yQN9Gekdhtkm" ManuallySortedPins="true">
+                  <Patch Id="Vb4G8IQ60NpNYSgClA8GbF" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="QEPofFUZQrGPbUy1sNF3UB" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="1206,1858,62,19" Id="JXXmCihuzbKLjYpJapnCLB">
+                    <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Debug" NeedsToBeDirectParent="true" />
+                      <Choice Kind="ProcessAppFlag" Name="Controller" />
+                    </p:NodeReference>
+                    <Pin Id="Nao1IPk3aDAPPzINDoBTuJ" Name="Device" Kind="InputPin" />
+                    <Pin Id="P2SSgmWzWH9PisPXJdo9v9" Name="Enabled" Kind="InputPin" />
+                    <Pin Id="InBkyWYdtuUN6cwg6AtBtI" Name="Entity" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+              </Node>
+              <Node Bounds="1021,1775,25,19" Id="AFVwySaxxyRLfBtc4EV0Xj">
+                <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="=" />
+                </p:NodeReference>
+                <Pin Id="NN9RcjPgkjwOM7wzpSO2jY" Name="Input" Kind="InputPin" />
+                <Pin Id="R4A4dceC9kKLywh5vqsL45" Name="Input 2" Kind="InputPin" />
+                <Pin Id="QryRqpDfBdnLklGAZzGctW" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Pad Id="CPIsc3ow8iBPbyu6YgXLUC" Comment="" Bounds="1043,1743,112,15" ShowValueBox="true" isIOBox="true" Value="Controller">
+                <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                  <Choice Kind="TypeFlag" Name="TrackedDeviceClass" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Node Bounds="1163,1950,117,103" Id="JXALMoF0jSvOOAF2TXNPCu">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="TYKjvdIJQNONyUDrdS6RrL" Name="Condition" Kind="InputPin" />
+                <ControlPoint Id="BEBPGW2k6w5QYmh5Q7W3cf" Bounds="1177,1956" Name="D" Alignment="Top" />
+                <ControlPoint Id="UKVjTui2OQ5LTR0dJ5LH2r" Bounds="1177,2047" Name="D" Alignment="Bottom" />
+                <ControlPoint Id="IdD4IR5YZE3MpIVUzTGVwj" Bounds="1208,2047" Name="E" Alignment="Bottom" />
+                <ControlPoint Id="S1KTsxWUFhVMbAAeKALJH6" Bounds="1208,1956" Name="E" Alignment="Top" />
+                <Patch Id="OuRNxx7risZL810UYTSqZi" ManuallySortedPins="true">
+                  <Patch Id="VbUQcbnenKdMhF6WBTqmZx" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="QqZ0EyUSt6UMhqSoMm8QJe" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="1206,2001,62,19" Id="Gy1N3nyf6wwMo2hTNefsiF">
+                    <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Debug" NeedsToBeDirectParent="true" />
+                      <Choice Kind="ProcessAppFlag" Name="Tracker" />
+                    </p:NodeReference>
+                    <Pin Id="BOto7GiWg3LPf9ottO18Vm" Name="Device" Kind="InputPin" />
+                    <Pin Id="AgdztDYmuw6OTbaIg4fdqW" Name="Enabled" Kind="InputPin" />
+                    <Pin Id="FVea6yO9MP2OLQkc5US2HY" Name="Entity" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+              </Node>
+              <Node Bounds="1163,2098,123,103" Id="UWwAoINtIwcOf4rZQObkif">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="I5knhOpz0ScNJ73k0nmL6E" Name="Condition" Kind="InputPin" />
+                <ControlPoint Id="S6zgwyhNI4uMSOFc0uBOjj" Bounds="1177,2104" Name="D" Alignment="Top" />
+                <ControlPoint Id="Lb1WkDfrwmdLy5WkkdNh1N" Bounds="1177,2195" Name="D" Alignment="Bottom" />
+                <ControlPoint Id="Tl7qR1s0rcbMgEmlFClfr3" Bounds="1208,2195" Name="E" Alignment="Bottom" />
+                <ControlPoint Id="Ssw2lzI711PMzMRGYoGYKJ" Bounds="1208,2104" Name="E" Alignment="Top" />
+                <Patch Id="AOCZaxcSLtePjlMDeNkEsP" ManuallySortedPins="true">
+                  <Patch Id="Ilc0mifQkhGQVJdkcOHEij" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="OQAR5rABs66OdoADpPbbU2" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="1206,2149,68,19" Id="SmGZxF8PaGDO1iSMH8cHYF">
+                    <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Debug" NeedsToBeDirectParent="true" />
+                      <Choice Kind="ProcessAppFlag" Name="Basestation" />
+                    </p:NodeReference>
+                    <Pin Id="ReOHn3VBqlHLpdoY2mZynu" Name="Device" Kind="InputPin" />
+                    <Pin Id="PRncZUzZpKMPP7xY1dVyYb" Name="Enabled" Kind="InputPin" />
+                    <Pin Id="CN840Gn64GWMIgXJBvhlZE" Name="Entity" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+              </Node>
+              <ControlPoint Id="Cxrpb7mqjoeLDpXEumAaC1" Bounds="1022,1583" />
+              <Node Bounds="1007,1919,25,19" Id="Qpnsn13BxtRLPYlqWL1Uzx">
+                <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="=" />
+                </p:NodeReference>
+                <Pin Id="RvDvw4dOEFmPul3YH5hBiX" Name="Input" Kind="InputPin" />
+                <Pin Id="B77BJdueSk7MJVg9bluCFY" Name="Input 2" Kind="InputPin" />
+                <Pin Id="KXsnX1sTH3LPapweIKX6xp" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Pad Id="OORvH5DcQKnMX85YZDmzQc" Comment="" Bounds="1029,1887,112,15" ShowValueBox="true" isIOBox="true" Value="GenericTracker">
+                <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                  <Choice Kind="TypeFlag" Name="TrackedDeviceClass" />
+                </p:TypeAnnotation>
+              </Pad>
+              <ControlPoint Id="EqnPHrSvqMtPoGfqtWjbPh" Bounds="1009,1606" />
+              <Node Bounds="993,2068,25,19" Id="CVhmAPqUvWQPvWy5qx3AiO">
+                <p:NodeReference LastCategoryFullName="Math" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="=" />
+                </p:NodeReference>
+                <Pin Id="KwA2oJQmRNzPdunZyW7EMQ" Name="Input" Kind="InputPin" />
+                <Pin Id="NF11ND4UhGPOKLFs3TDmh3" Name="Input 2" Kind="InputPin" />
+                <Pin Id="GaYA6ISQKIPLDHFTdwpZVZ" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Pad Id="MnpaqrfSupaMCKPUFmDNAm" Comment="" Bounds="1015,2036,112,15" ShowValueBox="true" isIOBox="true" Value="TrackingReference">
+                <p:TypeAnnotation LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+                  <Choice Kind="TypeFlag" Name="TrackedDeviceClass" />
+                </p:TypeAnnotation>
+              </Pad>
+              <ControlPoint Id="IsxcHNBFGREL18L4WamJg6" Bounds="994,1633" />
+            </Patch>
+          </Node>
+          <Node Bounds="1186,2273,65,19" Id="Oql3kfQYZIaMShUFg5UIeU">
+            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true" />
+              <Choice Kind="ProcessAppFlag" Name="Group (Spectral)" />
+            </p:NodeReference>
+            <Pin Id="CVtjg26T3GxNktviOIrS0o" Name="Transformation" Kind="InputPin" />
+            <Pin Id="QZLG5tZmMdLOVlYHSL0v2s" Name="Children" Kind="InputPin" />
+            <Pin Id="LP5vF82oXOuLPemxVVTaoy" Name="Name" Kind="InputPin" />
+            <Pin Id="HLlTlKb7mBcM17yUTGMpqA" Name="Enabled" Kind="InputPin" />
+            <Pin Id="UApOeFSXjiyP41D6w4FXxE" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="H17dAufoFb0LJsr3WbQg1P" Comment="Device Classes" Bounds="1033,1419,112,111" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:maxvisibleentries p:Type="Int32">8</p:maxvisibleentries>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>Invalid</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="HCP2NDmtAvLN0y51QEdrRa" Comment="Enabled" Bounds="1309,1704,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="CHfKC04P0KAOGvtRsuoU9t" Comment="Simple | Verbose" Bounds="85,2264,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+              <p:fontsize p:Type="Int32">14</p:fontsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="1480,1465,52,19" Id="JB80zqBAyQRQdKrwx8iZsW">
+            <p:NodeReference LastCategoryFullName="Collections.Interfaces.IReadOnlyList" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="MutableInterfaceType" Name="IReadOnlyList" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="GetSlice" />
+            </p:NodeReference>
+            <Pin Id="DNF3J9rDIKANyadLpYINvB" Name="Input" Kind="StateInputPin" />
+            <Pin Id="UN2xcyRiHxGNmcDynW7jv1" Name="Default Value" Kind="InputPin" />
+            <Pin Id="RHiADomcA56NbiRqsWtdmB" Name="Index" Kind="InputPin" />
+            <Pin Id="R3usrY6KofWNqPfDI4nzWg" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="JEkOa5crAGKLSp04FGUzNk" Comment="Trackers" Bounds="1276,1413,10,10" ShowValueBox="true" isIOBox="true">
+            <p:Value />
+          </Pad>
+          <Pad Id="VZmkYURUANrN1ZCteUHP7j" Comment="Device Serial" Bounds="1490,2298,80,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="S1X83QMICpPOm0WaSf8buO" Comment="Device Class" Bounds="1586,2258,112,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RIwSKEmkG5dNU9cEr4JYik" Comment="Device Role" Bounds="1539,2277,76,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="TeIrwDOz9tAPfvT8otld61" Comment="Pose" Bounds="1633,2188,166,61" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:precision p:Type="Int32">3</p:precision>
+              <p:stepsize p:Type="Single">0.01</p:stepsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="SPrC15qxUoLPBOHLKSy8zl" Comment="Velocity" Bounds="1682,2128,50,43" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:precision p:Type="Int32">3</p:precision>
+              <p:stepsize p:Type="Single">0.01</p:stepsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="KU4fxABVTT7LphYPqsIo0R" Comment="Angular Velocity" Bounds="1729,2072,53,44" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:precision p:Type="Int32">3</p:precision>
+              <p:stepsize p:Type="Single">0.01</p:stepsize>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="OpOjtIxkr5XQEubNZoExtJ" Comment="Trigger Touch" Bounds="1778,2027,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DYNbTgHSDZRQOe0EHI2ZoR" Comment="Trigger Press" Bounds="1825,1983,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DXBFk3tptzZLNOoeyyRA6L" Comment="Trigger Axis" Bounds="1873,1952,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="MwPzDvw1iIdNoFRn5mlOO6" Comment="Touchpad Touch" Bounds="1921,1910,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="UolCt4Z6qO9Mk6zbSRDg3h" Comment="Touchpad Press" Bounds="1968,1862,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="AFQ5OAKlKjtPLi1uYhVYiV" Comment="Touchpad Axis" Bounds="2017,1817,35,28" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="S2WuCDU8KXJPYaKPdAHNv6" Comment="Application Menu Press" Bounds="2063,1767,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="OJcjEx7KCfBLDZ5JXqH2Lj" Comment="Grip Press" Bounds="2112,1714,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="P9UkgzSoDoIN4q82sbVwsY" Comment="System Press" Bounds="2160,1637,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Izqw4Y80bwXLssHMKScvab" Comment="Battery Percentage" Bounds="2208,1576,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="PntAeHuEeacLbuKWSOOqBg" Bounds="2205,1713,263,46" ShowValueBox="true" isIOBox="true" Value="There are two grip buttons but there is no distinction between those">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DE2cDGXXECHL7agGfiC91t" Bounds="2271,1636,203,55" ShowValueBox="true" isIOBox="true" Value="System Press seems to be reserved / exclusive and it doesn't trigger ...">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="1440,1500,45,19" Id="PI1XyIBpiEFMoHaZ8Slg8q">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Switch (Boolean)" />
+            </p:NodeReference>
+            <Pin Id="I9XZyYO59JLMusrVmXOSIP" Name="Condition" Kind="InputPin" />
+            <Pin Id="HYtS3FkiUPHNaw1gl36GnB" Name="Input" Kind="InputPin" />
+            <Pin Id="KFRArntTCIxNdcPhgwcqfh" Name="Input 2" Kind="InputPin" />
+            <Pin Id="P5zdq7Aagk7PHEdOfgERgs" Name="Output" Kind="OutputPin" />
+          </Node>
+          <ControlPoint Id="KRK321fJV1ROVis49MKFtf" Bounds="1256,1442" />
+          <Pad Id="IlwBXHa5sqsPHS1aDIftha" Comment="Controller | Tracker" Bounds="1223,1459,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="399,1213,253,81" Id="NUb7e0ZWK82MkfbkTlYALG">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Comment" />
+            </p:NodeReference>
+            <Patch Id="I3QpRzfevuIPEedynAnHow" ManuallySortedPins="true">
+              <Patch Id="Ixkj6U72NS1LT2uyE8xOAJ" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="AfxsyG34PjbQBCRahSmT45" Name="Update" ManuallySortedPins="true" />
+              <Node Bounds="598,1255,42,19" Id="QQUFJ8X8Cm1Lm5I9uwzPyn">
+                <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Scene (Simple)" />
+                </p:NodeReference>
+                <Pin Id="OaxcnGJYLyzN5NGlTBTtIa" Name="Enabled" Kind="InputPin" />
+                <Pin Id="MnVMM3fiUg3LKhpn8CDfOC" Name="Output" Kind="OutputPin" />
+              </Node>
+              <Pad Id="JOlZpLevywZMDQVCWEHdsc" Bounds="415,1241,203,37" ShowValueBox="true" isIOBox="true" Value="For debugging you get all the nodes below  packaged as:">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:fontsize p:Type="Int32">9</p:fontsize>
+                  <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                </p:ValueBoxSettings>
+              </Pad>
+            </Patch>
+          </Node>
+          <Node Bounds="1070,1196,224,107" Id="JgmY5WwwC6zM1Fpc5w5f4L">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Comment" />
+            </p:NodeReference>
+            <Patch Id="Tz8Jqf1usCZNyy5ltV6jdn" ManuallySortedPins="true">
+              <Patch Id="VAa847BZDJiPabl6qBqmOI" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="EwU7JdG2yXbQVzfi2d9vht" Name="Update" ManuallySortedPins="true" />
+              <Node Bounds="1211,1264,42,19" Id="MI4MWXeJxiQOKcFALqe0NT">
+                <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Scene (Verbose)" />
+                </p:NodeReference>
+                <Pin Id="KPfj4V9yvvFPiMoGMEptdF" Name="Enabled" Kind="InputPin" />
+                <Pin Id="Mbx53sWtL7cLbyb11bPld9" Name="Output" Kind="OutputPin" />
+              </Node>
+              <Pad Id="AfXsp8LU8bAP4sjkkjgg9q" Bounds="1086,1224,189,57" ShowValueBox="true" isIOBox="true" Value="For more verbose debugging you get all the nodes below  packaged as:">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:fontsize p:Type="Int32">9</p:fontsize>
+                  <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                </p:ValueBoxSettings>
+              </Pad>
+            </Patch>
+          </Node>
+          <Node Bounds="1892,2181,715,172" Id="QswXqq55CwSP2JcfzvblyE">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Control" />
+              <Choice Kind="ProcessAppFlag" Name="Comment" />
+            </p:NodeReference>
+            <Patch Id="LxowImEZzwiMzQRzuEjMe2" ManuallySortedPins="true">
+              <Patch Id="LnZIx08LlzsNPalnfmp8pA" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="Gk6bkGtnRLGMtd7gidLW6C" Name="Update" ManuallySortedPins="true" />
+              <Pad Id="LPjDHbxz2dTPUjclfIirBh" Bounds="1908,2209,253,40" ShowValueBox="true" isIOBox="true" Value="Beware that trackers are rotated by 90°&#xD;&#xA;Check inside :">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:fontsize p:Type="Int32">9</p:fontsize>
+                  <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                </p:ValueBoxSettings>
+              </Pad>
+              <Node Bounds="2027,2224,51,19" Id="FXid5v5C1ZANSrvWVlEeJO">
+                <p:NodeReference LastCategoryFullName="VL.IO.OpenVR.Debug" LastDependency="VL.IO.OpenVR.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Tracker (Simple)" />
+                </p:NodeReference>
+                <Pin Id="BUqJY5GoZBgP1jKFJtrfxA" Name="Transformation" Kind="InputPin" />
+                <Pin Id="Ec7R5dedQpFLKHvvdnkyJg" Name="Enabled" Kind="InputPin" />
+                <Pin Id="T5ON8bHBHfmQctQMG7xEzM" Name="Entity" Kind="OutputPin" />
+              </Node>
+              <Pad Id="FDo5MLZK22DMgt4iND9cPG" Bounds="1913,2288,675,52" ShowValueBox="true" isIOBox="true" Value="For more info refer to (p. 28) of the dev guide:&#xD;&#xA;https://developer.vive.com/documents/850/HTC_Vive_Tracker_3.0_Developer_Guidelines_v1.1_06022021.pdf">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="String" />
+                </p:TypeAnnotation>
+                <p:ValueBoxSettings>
+                  <p:fontsize p:Type="Int32">9</p:fontsize>
+                  <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                </p:ValueBoxSettings>
+              </Pad>
+            </Patch>
+          </Node>
+          <Pad Id="JpIXpfw3mfFLhBYe2yR7mO" Bounds="1982,1320,664,219" ShowValueBox="true" isIOBox="true" Value="If VIVE Tracker (3.0) turns off by itself, it could be due to one of the following reasons:&#xD;&#xA;&#xD;&#xA;    - The battery is drained.&#xD;&#xA;    - Pairing has timed out after being idle for more than 30 seconds.&#xD;&#xA;    - No movement has occurred for more than 5 minutes.&#xD;&#xA;&#xD;&#xA;Note: You can set how long VIVE Tracker (3.0) waits idle before turning off. &#xD;&#xA;In SteamVR, click &gt; Settings &gt; Startup / Shutdown, and then set the time in Turn off controllers after. &#xD;&#xA;&#xD;&#xA;Tracker 3.0 FAQ:&#xD;&#xA;https://www.vive.com/au/support/tracker3/">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="2863,1536,69,19" Id="VoFfSqAQxd5OCGguQIuZsQ">
+            <p:NodeReference LastCategoryFullName="VL.IO.OpenVR" LastDependency="VL.IO.OpenVR.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HapticPulse" />
+            </p:NodeReference>
+            <Pin Id="JS9m78ZWBdWL63zDkz6MOl" Name="Device" Kind="InputPin" />
+            <Pin Id="HXt4DjiFpZ5Ms6oFOyua6b" Name="Duration" Kind="InputPin" />
+            <Pin Id="D4iDuzWh3nHN9knkwSSChL" Name="Pulse" Kind="InputPin" />
+          </Node>
+          <Pad Id="S66RApblkgLNkiKNRu2WVm" Comment="Pulse" Bounds="3011,1476,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="H41BAwMzpQiO5wvGnl0VT8" Comment="Duration" Bounds="2897,1478,35,15" ShowValueBox="true" isIOBox="true" Value="0.01">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="JWUh4YeHRxDLkuUizmgXVS" Bounds="2853,1580,830,727" ShowValueBox="true" isIOBox="true" Value="https://github.com/ValveSoftware/openvr/issues/129&#xD;&#xA;https://steamcommunity.com/app/358720/discussions/0/405693392914144440/#c357284767229628161&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;The parameter [Duration] you pass into HapticPulse is measured in microseconds, with the max value(in my tests) being 3999, which is 4ms - each frame at 90Hz is 11ms long.&#xD;&#xA;Because of this, if you're pulsing each frame, the effect of pulse length is felt subjectively as vibration strength.&#xD;&#xA;&#xD;&#xA;If you want longer vibrations, try something like this:&#xD;&#xA;&#xD;&#xA;length is how long the vibration should go for&#xD;&#xA;strength is vibration strength from 0-1&#xD;&#xA;&#xD;&#xA;IEnumerator LongVibration(float length, float strength)&#xD;&#xA;{&#xD;&#xA;    for (float i = 0; i &lt; length; i += Time.deltaTime)&#xD;&#xA;    {&#xD;&#xA;        SteamVR_Controller.Input([index]).TriggerHapticPulse((ushort)Mathf.Lerp(0, 3999, strength));&#xD;&#xA;        yield return null;&#xD;&#xA;    }&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;And for pulsed vibrations&#xD;&#xA;&#xD;&#xA;vibrationCount is how many vibrations&#xD;&#xA;vibrationLength is how long each vibration should go for&#xD;&#xA;gapLength is how long to wait between vibrations&#xD;&#xA;strength is vibration strength from 0-1&#xD;&#xA;&#xD;&#xA;IEnumerator LongVibration(int vibrationCount, float vibrationLength, float gapLength, float strength)&#xD;&#xA;{&#xD;&#xA;    strength = Mathf.Clamp01(strength);&#xD;&#xA;    &#xD;&#xA;    for (int i = 0; i &lt; vibrationCount; i++)&#xD;&#xA;    {&#xD;&#xA;        if (i != 0) yield return new WaitForSeconds(gapLength);&#xD;&#xA;        yield return StartCoroutine(LongVibration(vibrationLength, strength));&#xD;&#xA;    }&#xD;&#xA;}">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="NE3lhYzVCUeLUiRgyDVEdR" Bounds="2888,1450,87,19" ShowValueBox="true" isIOBox="true" Value="1.0 = 3999">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="VVxOGu8EniSPoPESwx23Wu" Bounds="3108,1494,204,69" ShowValueBox="true" isIOBox="true" Value="HapticPulse can also be used to trigger the digital out (pogo pin 1) of the vive tracker">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="GA1VaLIoTZIN63AtzKs534" Bounds="446,98,1240,920" ShowValueBox="true" isIOBox="true" Value="How to setup SteamVR to be able to use trackers without HMD.&#xD;&#xA;&#xD;&#xA;1. Close SteamVR if it's currently running.&#xD;&#xA;&#xD;&#xA;2. Open this file in a text/code editor:&#xD;&#xA;   C:\Program Files (x86)\Steam\config\steamvr.vrsettings&#xD;&#xA;&#xD;&#xA;3. Add this to the “steamvr” section:&#xD;&#xA;   &quot;forcedDriver&quot;: &quot;null&quot;,&#xD;&#xA;   &quot;activateMultipleDrivers&quot;: &quot;true&quot;&#xD;&#xA;&#xD;&#xA;4. Then open:&#xD;&#xA;   C:\Program Files (x86)\Steam\steamapps\common\SteamVR\drivers\null\resources\settings\default.vrsettings&#xD;&#xA;&#xD;&#xA;5. Change the value for “enable” from false to true.&#xD;&#xA;&#xD;&#xA;6. *Warning: I found that having the borderless mirror window open can cause Windows to crash during Play Mode in Unity.&#xD;&#xA;    To avoid this, remove the following lines of code from default.vrsettings:&#xD;&#xA;    &quot;windowX&quot;: 0,&#xD;&#xA;    &quot;windowY&quot;: 0,&#xD;&#xA;    &quot;windowWidth&quot;: 2160,&#xD;&#xA;    &quot;windowHeight&quot;: 1200,&#xD;&#xA;    &#xD;&#xA;    You can always select “Display VR View” from the SteamVR menu if you ever need to see the null HMD view separately. That one won't crash. &#xD;&#xA;    (Neat feature for when you're trying to figure out if SteamVR can see your trackers but Unity can't - you'll be able to see them floating in there)&#xD;&#xA;&#xD;&#xA;7.  Launch SteamVR. You should now have a “Standing by” status message instead of the annoying “Headset not detected”.&#xD;&#xA;    (If you're still getting HMD complaints at this point, either you're too far in the future and things have slightly changed, or your SteamVR needs an update.)&#xD;&#xA;&#xD;&#xA;8. Right-click the SteamVR status window, select Developer &gt; Developer Settings, then scroll down to the Room and Tracking section and click “Quick Calibrate”. &#xD;&#xA;    This will get rid of the “Please perform room setup” popup.&#xD;&#xA;&#xD;&#xA;9.  You can dismiss the headset notice about Direct Display Mode.&#xD;&#xA;&#xD;&#xA;10. (Recommended) In Settings under the Video tab, enable Show Advanced Settings, then set “Pause VR when headset is idle” to Off.&#xD;&#xA;&#xD;&#xA;11. (Recommended by a few forums due to a memory leak?) In Settings under the General tab, disable SteamVR Home.&#xD;&#xA;&#xD;&#xA;The base stations don't seem to talk to SteamVR the way that trackers do - their SteamVR indicators only started lighting up once I got the trackers working. They're basically just (distinguishable, thanks to being on different channels) beacons of light that the trackers look at in order to orient themselves - like boats. So if your base stations aren't being found after you followed their setup, just troubleshoot the trackers.&#xD;&#xA;&#xD;&#xA;For the trackers,  you do need a Bluetooth dongle - typically 1 for each tracker. Vive sends one dongle with each tracker, but it looks like Tundra ships you a bundle of trackers with one super dongle that can talk to all 3 or 4 of them, which is awesome. (In Vive's case, one dongle can't handle what 2+ trackers are saying.) In your case, you'd need 1 super dongle for 4 trackers, 2 supers for 8 trackers, or 8 of the small dongles for all 8 of the trackers (which you probably won't have enough USB slots for.)&#xD;&#xA;&#xD;&#xA;Make sure you have the dongle(s) plugged into your PC, then go to SteamVR &gt; Devices &gt; Pair Controller and select Tracker (or &quot;I want to pair a different type of controller&quot; if that's still there) from the options. It'll walk you through the rest on-screen - pretty much just pressing and holding the power button for each tracker until it goes into pairing mode, like connecting earbuds to your phone. &#xD;&#xA;&#xD;&#xA;Sauce: https://www.reddit.com/r/SteamVR/comments/vum0lh/im_in_need_of_help_using_steamvr_without_a_vive/?rdt=47110">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Overlay Id="HwHacHYrM44LpZgxWluFs9" Name="System &amp; Setup" Bounds="-3,2,1780,1072" />
+          <Node Bounds="419,2450,285,19" Id="OzA2ANFr95xN4GynhzMzeP">
+            <p:NodeReference LastCategoryFullName="Stride.Cameras" LastDependency="VL.Stride.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="OrbitCamera" />
+            </p:NodeReference>
+            <Pin Id="NiC5F7KJJ7lPmXUujpBrLN" Name="Components" Kind="InputPin" />
+            <Pin Id="H4uRLu2gyv4LdD6RllPQP1" Name="Children" Kind="InputPin" />
+            <Pin Id="IEthZpLX8sXMOuXhyOfWxU" Name="Initial Interest" Kind="InputPin" />
+            <Pin Id="HrjAYXy1mU9NIA2oFIi1cq" Name="Initial Yaw" Kind="InputPin" />
+            <Pin Id="ViDASYMEVkhNNcQzJAF5mG" Name="Initial Pitch" Kind="InputPin" />
+            <Pin Id="IbkSawUWvjHLcvazevm1fa" Name="Initial Distance" Kind="InputPin" />
+            <Pin Id="PIP1mTL7kNZNgJSfXy5hBS" Name="Initial Vertical Field Of View" Kind="InputPin" />
+            <Pin Id="SGH0DUq1IQVLdn01oJ0YeV" Name="Projection" Kind="InputPin" />
+            <Pin Id="VMWofNqcapKMODmwtu9beK" Name="Near Clip Plane" Kind="InputPin" />
+            <Pin Id="LMGJrMVu19PLiKppReMIFy" Name="Far Clip Plane" Kind="InputPin" />
+            <Pin Id="H1LWvwAsI84L3OkTZOUDLN" Name="Aspect Ratio" Kind="InputPin" />
+            <Pin Id="FmQujYeWQZCPvIptQgtfNn" Name="Use Custom Aspect Ratio" Kind="InputPin" />
+            <Pin Id="SVQdzQyj5VIPHlJSgvRAq2" Name="Show Helper" Kind="InputPin" />
+            <Pin Id="JNZkE2jFVTKOIXJENbGn3x" Name="Reset" Kind="InputPin" />
+            <Pin Id="HImIY2Yi7XdLl3X5fFq0rn" Name="Enabled" Kind="InputPin" />
+            <Pin Id="Npaf8e6hUO8LxuIThB6Neq" Name="Output" Kind="OutputPin" />
+            <Pin Id="VMf2TwelIG5Ln16KWMBrsW" Name="Position" Kind="OutputPin" />
+            <Pin Id="B71GjFwCnXJOTOUrXcuieg" Name="Frustum" Kind="OutputPin" />
+            <Pin Id="VzBcXjwUGzWPpUpjzmdnPV" Name="Inverse View" Kind="OutputPin" />
+            <Pin Id="CR376VxzeQaNQKEZrWuk8Z" Name="Camera Component" Kind="OutputPin" />
+          </Node>
+          <Pad Id="P8CTTOpQt93OBh15xITkje" Comment="Initial Yaw" Bounds="481,2413,35,15" ShowValueBox="true" isIOBox="true" Value="0.5">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Float32" />
+            </p:TypeAnnotation>
           </Pad>
         </Canvas>
         <Patch Id="Vyq3cbJYDNlPsvAyZQyyyH" Name="Create" />
@@ -310,8 +856,6 @@
         <Link Id="OBkyNPhuWxSMNeXtpER6mX" Ids="TADKlP702xfQXCGz0ZCGFk,L3fgp98QufnMquFQ6Co4rJ" />
         <Link Id="Iq2V4aPz1DgPsGDD95tnoM" Ids="LoHl6Eo97FGLFdh3IoN8iv,Q59hUlLNkz4QFwGOro55vi" />
         <Link Id="Ey3KhBsQCosMrMp5TnGtHj" Ids="F3wFdPsNi37PZKYagiKa3r,AXxfh8EfuMjNEahLZrmj7e" />
-        <Link Id="LS7iq9JW0kELRNQcTIqcah" Ids="EosaE3e0IwsLdx5p1NNyPf,PspEa407uK7LasNjAEpIvy" />
-        <Link Id="GSDluOltC6SLnqbUQgsoV0" Ids="IBaEFeF3X9ROe6cMM4OlCW,NTnvjmsg1RZOBfe3jEN55r" />
         <Link Id="EfFLOYULfDtNH9g7shjKwM" Ids="CzFld30vF30OHKIMWYIfjk,UDw5hPSzniFPGyQaHWJzZ5" />
         <Link Id="UKHaIduyHWkLzsc7WhQhfR" Ids="UDw5hPSzniFPGyQaHWJzZ5,JY2TaZvYAFANzS1sNmDnNJ" />
         <Link Id="UrfWpsR7fHbNWgIE5Enf6D" Ids="JZcn16yrO48Lf1WmLQ8uPU,BQB6H0CP2CEM9oWiy8xVB2" />
@@ -320,13 +864,94 @@
         <Link Id="IdNo09yK6NEL56NesTXQXj" Ids="AjyEpU52OakMRRvtyIfCJ2,Ol2B8mi23qXPYzdruQiefg" />
         <Link Id="Klug8Nps0pBLxFWlDPNMD0" Ids="TOaKc0SRpCIQL59FgObhQB,J6qKtADQvr4MbS1PA4Y8d1" />
         <Link Id="TPO0CD5caMlM8D3ES73i6P" Ids="Ol2B8mi23qXPYzdruQiefg,MPlDPO9QEzJL6rr5hUkT22" />
-        <Link Id="PvjuEILXTc7QUSWt6BLyvU" Ids="GAJ2tYhdxIxQXSn2ajLiDl,F8ztemXzPMMM6anCUlppsj" />
-        <Link Id="P3k1sZXgBauOYrxT9lX1cM" Ids="P2iSsa0X0RNQXuqZy8YNE8,GUhawPl5LB1QQT5F7wJEpN" />
         <Link Id="RwPb2ZZeDHFMz8lcr4QBqU" Ids="F9bT9kYQNcFP4rg8xgMRZV,VbqvlYB88ekPs8lHELoAHD" />
         <Link Id="L6RYSseEEi0LtEIPshCW8D" Ids="LJtcjjgQAmzM4PP8px9s2e,VQRoA2ezrMpPmCv1cVV9lt" />
         <Link Id="LN8FvTbV6WpPYbWW71Xr5t" Ids="VQRoA2ezrMpPmCv1cVV9lt,KnllPNzbynaPiCh09XyAT3" />
         <Link Id="IEwx8LFaJzvMXFaRLRy4ep" Ids="JyiOUl2KuAiPFVzjy5VM5l,F9bT9kYQNcFP4rg8xgMRZV" />
-        <Link Id="J5t2hYtcFY3N2Q25W1UO7B" Ids="RLTq5SU2yYYQKQtveHIrHi,J4aTp1mDMbePc08TcNRjF4" />
+        <Link Id="QG7UsfCpM2NN3IW0qrpJtS" Ids="PlznKNtNd16MJ2V08hWhE8,KnezZxxxRT6MSfXTocfdy6" />
+        <Link Id="KEhkDBZFFdlMjb33AjHAAG" Ids="REeROuHZR6XP317H9osIAI,UvBZ5OiBNpOOV97vtwFUEt" />
+        <Link Id="CMh111aLlFXN5VnXn2Z1Wx" Ids="T2VuMREQNnHLDPCyccX97k,UnxsCDgjVgrN5KvsmBuMAv" />
+        <Link Id="OvYSftbBg1mPatDPn6bWrh" Ids="GAJ2tYhdxIxQXSn2ajLiDl,VNP6zB75ALYLwJ5z8fE5As" />
+        <Link Id="DwkJLfATaprMdyz7b8UhM1" Ids="P2iSsa0X0RNQXuqZy8YNE8,R2zsWWKIyFiMen2qyWkSQ4" />
+        <Link Id="CeYZfObCrewNLT4dsFXMeQ" Ids="RLTq5SU2yYYQKQtveHIrHi,PigOnoIUhp3N846TBxXGRo" />
+        <Link Id="EjWRg2pg4ZKLzPqO6QBuyB" Ids="PAY4Qtyg4o2Oxn8Xt2fRLF,QxidUOpdUvrLPn7foBN9pD" />
+        <Link Id="L1adDjl5TzzMTLOGfpfIcl" Ids="K2i0ZtR0RlELIMVbq5eWBd,F8ztemXzPMMM6anCUlppsj" />
+        <Link Id="VLDqODXxmCrMw63t7zqfSb" Ids="ONdZKSiTleiPLfeupSFSum,KAcbdJzV2Z1OIvOOTKmS0h" />
+        <Link Id="N42M1FJMgYhOq2qtuRxGa1" Ids="O2DfaqWo7GNP9DTuBNTHS3,As8giiSjIDsNkkkcaqOKpK" />
+        <Link Id="VQHafG7cOVpPYVVhcdlIHd" Ids="OFWyQDSAhc6L8O8tDyOlzI,DNlZcG3t1fiOlOrRtbU3SY" />
+        <Link Id="L7upxQmbSbuO4DC03tBNPt" Ids="IYkhvChoYZPOcuX3xedC0L,KAYKdvCVAB5PzYQRiP2ZAt" />
+        <Link Id="Oj40m5ASJaCLe6dZ4mvXxz" Ids="I2Yadm7HIVWOIk0ZQmcMEC,Mw4rNRnOmhLPsGdLR8RbW2" />
+        <Link Id="EOVEO7aUyeUMwlyqRRqoAP" Ids="B8n9BJi9XtsNJCXX1kTOpL,Ol11gbvdewPPWjPliB9Hrf" IsFeedback="true" />
+        <Link Id="TrFN4Fbx2m5OKcPkLOTHHW" Ids="As8giiSjIDsNkkkcaqOKpK,B8n9BJi9XtsNJCXX1kTOpL" />
+        <Link Id="EeIAw52z4kNPLQ5D5rVs18" Ids="B8n9BJi9XtsNJCXX1kTOpL,U6B7cyZgQFAOFK8ekuEvUt" />
+        <Link Id="C1qRWqkTFkXLCAccmm7wLB" Ids="B8n9BJi9XtsNJCXX1kTOpL,Ol11gbvdewPPWjPliB9Hrf" />
+        <Link Id="T1aN0cAEL6oLMHiZl5LDzA" Ids="FYYsgSPDamNONRiKRBEr77,Sya45hay12sPCeKiNjJKbK" IsFeedback="true" />
+        <Link Id="GVdikTFuBcCNgk8mSPaDQX" Ids="K7ZlRdbshqlP5wfNIL5Oal,Sya45hay12sPCeKiNjJKbK" />
+        <Link Id="Fh57vwkwxOdPjAv8QekZkm" Ids="GMuW9oR2p54LJyBJIAGchk,A9mVLFJz5sgQVLSgFA8gFK" IsFeedback="true" />
+        <Link Id="ARbfWDa5G0dPzHSzbP6PhE" Ids="GMuW9oR2p54LJyBJIAGchk,Nao1IPk3aDAPPzINDoBTuJ" />
+        <Link Id="FpQfGfh9tFaLEFMeKHfman" Ids="GMuW9oR2p54LJyBJIAGchk,A9mVLFJz5sgQVLSgFA8gFK" />
+        <Link Id="EcmOdOTNbO2MiRo9u0TyMo" Ids="VN7LgVeckgRN6omU5ZrRLp,Gy8zKhvmtUUM4eK1ERSWZe" IsFeedback="true" />
+        <Link Id="FkzWoxame3xMR4BX3n4wYX" Ids="InBkyWYdtuUN6cwg6AtBtI,Gy8zKhvmtUUM4eK1ERSWZe" />
+        <Link Id="RrdDY9MgN7lLjwq7yNj1p2" Ids="Ol11gbvdewPPWjPliB9Hrf,GMuW9oR2p54LJyBJIAGchk" />
+        <Link Id="MhGS8dpH4LHMBNKooDNRYD" Ids="Sya45hay12sPCeKiNjJKbK,VN7LgVeckgRN6omU5ZrRLp" />
+        <Link Id="MWt2uKQTUZ8QPaCM5Go2PR" Ids="CPIsc3ow8iBPbyu6YgXLUC,R4A4dceC9kKLywh5vqsL45" />
+        <Link Id="JC4W8sg0FurM41uwYV3eDD" Ids="BEBPGW2k6w5QYmh5Q7W3cf,UKVjTui2OQ5LTR0dJ5LH2r" IsFeedback="true" />
+        <Link Id="KpGpSQlSKilNtqZGVSKbIT" Ids="BEBPGW2k6w5QYmh5Q7W3cf,BOto7GiWg3LPf9ottO18Vm" />
+        <Link Id="G433LUbMgj8O8jvgNyZ9c5" Ids="BEBPGW2k6w5QYmh5Q7W3cf,UKVjTui2OQ5LTR0dJ5LH2r" />
+        <Link Id="OeFrfabEOa1PejhOjacvXq" Ids="S1KTsxWUFhVMbAAeKALJH6,IdD4IR5YZE3MpIVUzTGVwj" IsFeedback="true" />
+        <Link Id="IUKCz3KuHdcOcrBoe7hKfD" Ids="FVea6yO9MP2OLQkc5US2HY,IdD4IR5YZE3MpIVUzTGVwj" />
+        <Link Id="CAQfhP6sKY0LOqUAnBExrR" Ids="S6zgwyhNI4uMSOFc0uBOjj,Lb1WkDfrwmdLy5WkkdNh1N" IsFeedback="true" />
+        <Link Id="TCGDn5x4cWROSfuxHJ3j63" Ids="S6zgwyhNI4uMSOFc0uBOjj,ReOHn3VBqlHLpdoY2mZynu" />
+        <Link Id="FCK6nPWsPlwMliDyMOTqDW" Ids="S6zgwyhNI4uMSOFc0uBOjj,Lb1WkDfrwmdLy5WkkdNh1N" />
+        <Link Id="Fhw9LMQXIIzLmNXgijoRxE" Ids="Ssw2lzI711PMzMRGYoGYKJ,Tl7qR1s0rcbMgEmlFClfr3" IsFeedback="true" />
+        <Link Id="JsXC0QpIIkaMSJ6S0lHhx6" Ids="CN840Gn64GWMIgXJBvhlZE,Tl7qR1s0rcbMgEmlFClfr3" />
+        <Link Id="QvridxAHKNLNrLrsIpcHOQ" Ids="A9mVLFJz5sgQVLSgFA8gFK,BEBPGW2k6w5QYmh5Q7W3cf" />
+        <Link Id="OWBpbqTfnrIMFaHaiMz1Jb" Ids="Gy8zKhvmtUUM4eK1ERSWZe,S1KTsxWUFhVMbAAeKALJH6" />
+        <Link Id="FqrSNKfcz3aLnh86oHvAEm" Ids="UKVjTui2OQ5LTR0dJ5LH2r,S6zgwyhNI4uMSOFc0uBOjj" />
+        <Link Id="OiodEMOU5t3QSTMQUW2Zmu" Ids="IdD4IR5YZE3MpIVUzTGVwj,Ssw2lzI711PMzMRGYoGYKJ" />
+        <Link Id="ETcE50n3vU8LLmHZ9Z34fR" Ids="QryRqpDfBdnLklGAZzGctW,H0EeXxqQx80P7ABay0sjG5" />
+        <Link Id="DMyxbPN1M8FMW5eHaX2LXK" Ids="OFWyQDSAhc6L8O8tDyOlzI,Cxrpb7mqjoeLDpXEumAaC1,NN9RcjPgkjwOM7wzpSO2jY" />
+        <Link Id="UHlu6htmGl5QdZvk92LpEU" Ids="OORvH5DcQKnMX85YZDmzQc,B77BJdueSk7MJVg9bluCFY" />
+        <Link Id="JWFqJTkrat0LcIdYxZO6nl" Ids="OFWyQDSAhc6L8O8tDyOlzI,EqnPHrSvqMtPoGfqtWjbPh,RvDvw4dOEFmPul3YH5hBiX" />
+        <Link Id="SubyVf05zXWQGGEYmd7dsI" Ids="KXsnX1sTH3LPapweIKX6xp,TYKjvdIJQNONyUDrdS6RrL" />
+        <Link Id="C1dcdggoJddPKKEmTYrBI1" Ids="MnpaqrfSupaMCKPUFmDNAm,NF11ND4UhGPOKLFs3TDmh3" />
+        <Link Id="V5Ceoab3vw3Mg1CEFzYXvB" Ids="GaYA6ISQKIPLDHFTdwpZVZ,I5knhOpz0ScNJ73k0nmL6E" />
+        <Link Id="OycBAHokqS9LAMpJsmja17" Ids="OFWyQDSAhc6L8O8tDyOlzI,IsxcHNBFGREL18L4WamJg6,KwA2oJQmRNzPdunZyW7EMQ" />
+        <Link Id="HUI7xw0D8rBPi1wy6zq1uX" Ids="Tl7qR1s0rcbMgEmlFClfr3,AicwQkWwiBpPRvUVQoxqkw" />
+        <Link Id="SIwDzTG57HsPolN0fPJmYD" Ids="AicwQkWwiBpPRvUVQoxqkw,QZLG5tZmMdLOVlYHSL0v2s" />
+        <Link Id="D1ci617slvdQB2SCMTIyws" Ids="OIdhorM55BPOfE1TyU9ZLw,H17dAufoFb0LJsr3WbQg1P" />
+        <Link Id="LD02n2nQNRMNT7NhF8I8Hl" Ids="HCP2NDmtAvLN0y51QEdrRa,ANC7JVgZpBSQAkFCVuOJmB" />
+        <Link Id="TBrjLIohMSLP3JiuECEQMC" Ids="H17dAufoFb0LJsr3WbQg1P,OFWyQDSAhc6L8O8tDyOlzI" />
+        <Link Id="J1XDlC6NdRDMPb476Rmwlj" Ids="UApOeFSXjiyP41D6w4FXxE,UGJASaoU1JrQPPyCQBwvsY" />
+        <Link Id="Kp5WSoUSXHKL6ldcWW5ARO" Ids="CHfKC04P0KAOGvtRsuoU9t,U8ZpywVkqGDLbm7AtvvvgZ" />
+        <Link Id="AcXtw0ZfcFJMmn8ONFh06x" Ids="J5nuqMCuaApPEkXpcCCeOP,JEkOa5crAGKLSp04FGUzNk" />
+        <Link Id="EIX1slgLInwP6LsmvXuaEp" Ids="JEkOa5crAGKLSp04FGUzNk,DNF3J9rDIKANyadLpYINvB" />
+        <Link Id="J6ExhqbPqHwOh2FvSmsFmD" Ids="FcXkY2chDNcMTP1kMdefZH,VZmkYURUANrN1ZCteUHP7j" />
+        <Link Id="GmkGpRMrYBpL0tA6XyrOhz" Ids="AZevP5Y7lDsN1hksVNAjKZ,S1X83QMICpPOm0WaSf8buO" />
+        <Link Id="F8dOak8PpJyQbs4Hbxo0Vx" Ids="EWu7slagEwdNhom42vOvSp,RIwSKEmkG5dNU9cEr4JYik" />
+        <Link Id="SskNkHz3QYgMIqaxGFtnIC" Ids="RMfmJFreT8YOwzAi5EsMqB,TeIrwDOz9tAPfvT8otld61" />
+        <Link Id="DRtxXbgiHzFMlo7ed7IwMh" Ids="Itd6Sn2tEGmNNUMzVWLd8D,SPrC15qxUoLPBOHLKSy8zl" />
+        <Link Id="NwD7fuLr5GfLWSb79mObaW" Ids="Q50KiJCSGBIQGt4JcIDbXE,KU4fxABVTT7LphYPqsIo0R" />
+        <Link Id="By5K2JoYmrmLGQV1WPBqg0" Ids="EXoPj1q9O0hN3GIrNDLdLX,OpOjtIxkr5XQEubNZoExtJ" />
+        <Link Id="JdAafQhnwtHOKZ1Wc824We" Ids="GHKQQZaoCpXOYEvQCOR0Gu,DYNbTgHSDZRQOe0EHI2ZoR" />
+        <Link Id="C281rQP4ILJMNmmUPffTNv" Ids="C4UzDC4Z7bTPc9u71CKvDc,DXBFk3tptzZLNOoeyyRA6L" />
+        <Link Id="HzBkESmp38FNEWJWagbTD5" Ids="Uqu8sFIMiNZNokA0bUcMrh,MwPzDvw1iIdNoFRn5mlOO6" />
+        <Link Id="P1Mernrbal1QQjfAnTQkyh" Ids="E8ZS6hgkZGoNHEfG41UkbA,UolCt4Z6qO9Mk6zbSRDg3h" />
+        <Link Id="PGNPsoOi66BPtj36amZuUb" Ids="CC1IjEeuPzFLEgHNnQNwvH,AFQ5OAKlKjtPLi1uYhVYiV" />
+        <Link Id="Q6zxCv8QnNpPBYGp35ADpo" Ids="I4hy4rv8NecP6vIElbFOS3,S2WuCDU8KXJPYaKPdAHNv6" />
+        <Link Id="B1SPwaRHEdhQTsWGc5aysf" Ids="LQGreVjcDjWPSSfCtOiwf0,OJcjEx7KCfBLDZ5JXqH2Lj" />
+        <Link Id="QYKe8LBnfy4NI5aOTGyANY" Ids="L31TYWVvMOYPBVtAlDOqMy,P9UkgzSoDoIN4q82sbVwsY" />
+        <Link Id="OV88qXu3SmFPRDhUmzL3GS" Ids="N34rhupwbspLAYZo81fyzt,Izqw4Y80bwXLssHMKScvab" />
+        <Link Id="BTUS6tqSLyMOnRMG3OH9Kr" Ids="R3usrY6KofWNqPfDI4nzWg,KFRArntTCIxNdcPhgwcqfh" />
+        <Link Id="NE685JkWuDrK9kCvawZemW" Ids="P5zdq7Aagk7PHEdOfgERgs,NTnvjmsg1RZOBfe3jEN55r" />
+        <Link Id="UmJiFxdTavkMxxl7jdvjos" Ids="GSZGfgnPm1aQLtiOztkDnL,KRK321fJV1ROVis49MKFtf,HYtS3FkiUPHNaw1gl36GnB" />
+        <Link Id="C3Vlud3RdjQOsCRWxtg9iw" Ids="IlwBXHa5sqsPHS1aDIftha,I9XZyYO59JLMusrVmXOSIP" />
+        <Link Id="UwNzL6iHLRXQagNkc58XwE" Ids="S66RApblkgLNkiKNRu2WVm,D4iDuzWh3nHN9knkwSSChL" />
+        <Link Id="GRti8kuujkQM2zB7QXiMgF" Ids="H41BAwMzpQiO5wvGnl0VT8,HXt4DjiFpZ5Ms6oFOyua6b" />
+        <Link Id="CDPeCXn7VLTOKUfzUvzqUY" Ids="P5zdq7Aagk7PHEdOfgERgs,JS9m78ZWBdWL63zDkz6MOl" />
+        <Link Id="N8Nkcg8pFsSN5d3v6bCRfB" Ids="Npaf8e6hUO8LxuIThB6Neq,PGCzjOCcn1TLPDpxTjR0qF" />
+        <Link Id="BEDQloDgsuBOYuZPd18zgh" Ids="P8CTTOpQt93OBh15xITkje,HrjAYXy1mU9NIA2oFIi1cq" />
+        <Link Id="ISAnbZ9ctCCP0IPQBiz5Ry" Ids="Npaf8e6hUO8LxuIThB6Neq,VXuav5HpTdvOflnOXCfHxP" />
       </Patch>
     </Node>
   </Patch>
