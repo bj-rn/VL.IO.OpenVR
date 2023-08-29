@@ -51,12 +51,13 @@ namespace VL.IO.ValveOpenVR
         private uint _eventSize = (uint)Marshal.SizeOf(typeof(VREvent_t));
 
         private int _frame = 0;
+        public bool PollEvents
+        {
+            get;
+            set;
+        }
 
-        private bool _pollEvents = false;
-        public bool PollEvents { set => _pollEvents = value; }
-
-
-        public OpenVRTrackedDevices()
+    public OpenVRTrackedDevices()
         {
             _events = new SpreadBuilder<string>();
             _deviceIndices = new SpreadBuilder<int>();
@@ -72,7 +73,7 @@ namespace VL.IO.ValveOpenVR
         public override void Update()
         {
 
-            if (_pollEvents) { 
+            if (PollEvents) { 
 
                 VREvent_t evt = default(VREvent_t);
 
@@ -98,7 +99,7 @@ namespace VL.IO.ValveOpenVR
             _trackers.Clear();
 
 
-            var refreshSerials = _refreshSerials || _firstFrame;
+            var refreshSerials = RefreshSerials || _firstFrame;
 
             if (refreshSerials)
             {
@@ -128,8 +129,6 @@ namespace VL.IO.ValveOpenVR
             for (int i = 0; i < devicecount; i++)
             {
                 var deviceclass = _system.GetTrackedDeviceClass((uint)i);
-
-                // if (deviceclass != ETrackedDeviceClass.Controller && deviceclass != ETrackedDeviceClass.GenericTracker ) continue;
 
                 var c = OpenVRController.Input(i);
 

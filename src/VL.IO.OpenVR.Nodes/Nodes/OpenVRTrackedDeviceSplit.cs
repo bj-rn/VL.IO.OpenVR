@@ -1,132 +1,200 @@
 ﻿using Valve.VR;
 using Stride.Core.Mathematics;
+using System.Runtime.Intrinsics.X86;
 
 namespace VL.IO.ValveOpenVR
 {
     public class OpenVRTrackedDeviceSplit: OpenVRConsumerBase
     {
-
-        private OpenVRController.Device _controller;
-        public OpenVRController.Device Controller { set => _controller = value; }
-        
+        public OpenVRController.Device Controller
+        {
+            get;
+            set;
+        }
 
         private Matrix _pose = Matrix.Identity;
-        public Matrix Pose { get => _pose; }
+        public Matrix Pose
+        {
+            get => _pose;
+        }
 
         private Vector3 _velocity;
-        public Vector3 Velocity { get => _velocity; }
+        public Vector3 Velocity
+        {
+            get => _velocity;
+        }
 
         private Vector3 _angularVelocity;
-        public Vector3 AngularVelocity { get => _angularVelocity; }
+        public Vector3 AngularVelocity
+        {
+            get => _angularVelocity;
+        }
 
-        private int _deviceIndex = -1;
-        public int DeviceIndex { get => _deviceIndex; }
+        public int DeviceIndex
+        {
+            get;
+            private set;
+        }
 
+        public string DeviceSerial
+        {
+            get;
+            private set;
+        }
 
-        private string _deviceSerial = "";
-        public string DeviceSerial { get => _deviceSerial; }
+        public ETrackedControllerRole DeviceRole
+        {
+            get;
+            private set;
+        }
 
-        private ETrackedControllerRole _deviceRole;
-        public ETrackedControllerRole DeviceRole { get => _deviceRole; }
+        public ETrackedDeviceClass DeviceClass
+        {
+            get;
+            private set;
+        }
 
+        public bool TriggerTouch
+        {
+            get;
+            private set;
+        }
 
-        private ETrackedDeviceClass _deviceClass;
-        public ETrackedDeviceClass DeviceClass { get => _deviceClass; }
+        public bool TriggerPress
+        {
+            get;
+            private set;
+        }
 
-        private bool _triggerTouch;
-        public bool TriggerTouch { get => _triggerTouch; }
-        
-        
-        private bool _triggerPress;
-        public bool TriggerPress { get => _triggerPress; }
+        public double TriggerAxis
+        {
+            get;
+            private set;
+        }
 
-        private double _triggerAxis;
-        public double TriggerAxis { get => _triggerAxis; }
+        public bool TouchpadTouch
+        {
+            get;
+            private set;
+        }
 
+        public bool TouchpadPress
+        {
+            get;
+            private set;
+        }
 
-        private bool _touchpadTouch;
-        public bool TouchpadTouch { get => _touchpadTouch; }
+        public Vector2 TouchpadAxis
+        {
+            get;
+            private set;
+        }
 
-        private bool _touchpadPress;
-        public bool TouchpadPress { get => _touchpadPress; }
+        public bool SystemPress
+        {
+            get;
+            private set;
+        }
 
-        private Vector2 _touchpadAxis;
-        public Vector2 TouchpadAxis { get => _touchpadAxis; }
+        public bool ApplicationMenuPress
+        {
+            get;
+            private set;
+        }
 
+        public bool GripPress
+        {
+            get;
+            private set;
+        }
 
-        private bool _systemPress;
-        public bool SystemPress { get => _systemPress; }
+        public float BatteryPercentage
+        {
+            get;
+            private set;
+        }
 
-        private bool _applicationMenuPress;
-        public bool ApplicationMenuPress { get => _applicationMenuPress; }
+        public bool Valid
+        {
+            get;
+            private set;
+        }
 
-        private bool _gripPress;
-        public bool GripPress { get => _gripPress; }
+        public bool Connected
+        {
+            get;
+            private set;
+        }
 
+        public bool HasTracking
+        {
+            get;
+            private set;
+        }
 
-        private float _batteryPercentage = 0.0f;
-        public float BatteryPercentage { get => _batteryPercentage; }
+        public bool OutOfRange
+        {
+            get;
+            private set;
+        }
 
+        public bool Calibrating
+        {
+            get;
+            private set;
+        }
 
+        public bool Uninitialized
+        {
+            get;
+            private set;
+        }
 
-        private bool _valid;
-        public bool Valid { get => _valid; }
-
-        private bool _connected;
-        public bool Connected { get => _connected; }
-
-        private bool _hasTracking;
-        public bool HasTracking { get => _hasTracking; }
-
-        private bool  _outOfRange;
-        public bool OutOfRange { get => _outOfRange; }
-
-        private bool _calibrating;
-        public bool Calibrating { get => _calibrating; }
-
-        private bool _uninitialized;
-        public bool Uninitialized { get => _uninitialized; }
-
+        public OpenVRTrackedDeviceSplit() 
+        {
+            DeviceSerial = "";
+            BatteryPercentage = 0.0f;
+        }
 
         public override void Update() 
         {
             
-            if (_controller == null || OpenVRManager.GamePoses == null)
+            if (Controller == null || OpenVRManager.GamePoses == null)
                 return;
             
-            var devicePose = OpenVRManager.GamePoses[_controller.index];
+            var devicePose = OpenVRManager.GamePoses[Controller.index];
 
             GetPose(devicePose, out _pose, out _velocity, out _angularVelocity);
             
-            _deviceIndex = (int)_controller.index;
+            DeviceIndex = (int)Controller.index;
 
-            _deviceSerial = GetSerial(_deviceIndex);
+            DeviceSerial = GetSerial(DeviceIndex);
             
             
-            _deviceRole = _system.GetControllerRoleForTrackedDeviceIndex(_controller.index);
-            _deviceClass = _system.GetTrackedDeviceClass(_controller.index);
+            DeviceRole = _system.GetControllerRoleForTrackedDeviceIndex(Controller.index);
+            DeviceClass = _system.GetTrackedDeviceClass(Controller.index);
 
-            _triggerTouch = _controller.GetTouch(OpenVRController.ButtonMask.Trigger);
-            _triggerPress = _controller.GetPress(OpenVRController.ButtonMask.Trigger);
-            _triggerAxis = _controller.hairTriggerValue;
+            TriggerTouch = Controller.GetTouch(OpenVRController.ButtonMask.Trigger);
+            TriggerPress = Controller.GetPress(OpenVRController.ButtonMask.Trigger);
+            TriggerAxis = Controller.hairTriggerValue;
 
 
-            _touchpadTouch = _controller.GetTouch(OpenVRController.ButtonMask.Touchpad);
-            _touchpadPress = _controller.GetPress(OpenVRController.ButtonMask.Touchpad);
-            _touchpadAxis = _controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+            TouchpadTouch = Controller.GetTouch(OpenVRController.ButtonMask.Touchpad);
+            TouchpadPress = Controller.GetPress(OpenVRController.ButtonMask.Touchpad);
+            TouchpadAxis = Controller.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
 
-            _systemPress = _controller.GetPress(OpenVRController.ButtonMask.System);
-            _applicationMenuPress = _controller.GetPress(OpenVRController.ButtonMask.ApplicationMenu);
-            _gripPress = _controller.GetPress(OpenVRController.ButtonMask.Grip);
+            SystemPress = Controller.GetPress(OpenVRController.ButtonMask.System);
+            ApplicationMenuPress = Controller.GetPress(OpenVRController.ButtonMask.ApplicationMenu);
+            GripPress = Controller.GetPress(OpenVRController.ButtonMask.Grip);
 
-            _batteryPercentage = GetBatteryPercentage(_controller.index);
+            BatteryPercentage = GetBatteryPercentage(Controller.index);
 
-            _valid = _controller.valid;
-            _connected = _controller.connected;
-            _hasTracking = _controller.hasTracking;
-            _outOfRange = _controller.outOfRange;
-            _calibrating = _controller.calibrating;
-            _uninitialized = _controller.uninitialized;
+            Valid = Controller.valid;
+            Connected = Controller.connected;
+            HasTracking = Controller.hasTracking;
+            OutOfRange = Controller.outOfRange;
+            Calibrating = Controller.calibrating;
+            Uninitialized = Controller.uninitialized;
         }
 
     }

@@ -1,28 +1,32 @@
-﻿using System.Text;
-using Valve.VR;
-using Stride.Core.Mathematics;
-using VL.Lib.Collections;
-
+﻿using Valve.VR;
 
 namespace VL.IO.ValveOpenVR
 {
     public class OpenVRSystem : OpenVRConsumerBase
     {
-        private bool _waitForSync = false;
-        public bool WaitForSync { set => _waitForSync = value; }
+        public bool WaitForSync
+        {
+            get;
+            set;
+        }
 
+        public bool GetTiming
+        {
+            get;
+            set;
+        }
 
-        private bool _getTiming = false;
-        public bool GetTiming { set => _getTiming = value; }
+        public float RemainingTimePre
+        {
+            get;
+            private set;
+        }
 
-
-        private float _remainingTimePre;
-        public float RemainingTimePre { get => _remainingTimePre; }
-
-
-        private float _remainingTimePost;
-        public float RemainingTimePost { get => _remainingTimePost; }
-
+        public float RemainingTimePost
+        {
+            get;
+            private set;
+        }
 
 
         public OpenVRSystem()
@@ -37,14 +41,14 @@ namespace VL.IO.ValveOpenVR
             var renderPoses = new TrackedDevicePose_t[poseCount];
             var gamePoses = new TrackedDevicePose_t[poseCount];
 
-            if (_getTiming)
-                _remainingTimePre = OpenVR.Compositor.GetFrameTimeRemaining();
+            if (GetTiming)
+                RemainingTimePre = OpenVR.Compositor.GetFrameTimeRemaining();
             else
-                _remainingTimePre = 0;
+                RemainingTimePre = 0;
 
             var error = default(EVRCompositorError);
 
-            if (_waitForSync)
+            if (WaitForSync)
                 error = OpenVR.Compositor.WaitGetPoses(renderPoses, gamePoses);
             else
                 error = OpenVR.Compositor.GetLastPoses(renderPoses, gamePoses);
@@ -52,14 +56,19 @@ namespace VL.IO.ValveOpenVR
             SetStatus(error);
             if (error != EVRCompositorError.None) return;
 
-            if (_getTiming)
-                _remainingTimePost = OpenVR.Compositor.GetFrameTimeRemaining();
+            if (GetTiming)
+                RemainingTimePost = OpenVR.Compositor.GetFrameTimeRemaining();
             else
-                _remainingTimePost = 0;
+                RemainingTimePost = 0;
 
             OpenVRManager.RenderPoses = renderPoses;
             OpenVRManager.GamePoses = gamePoses;
+        }
 
+        public void SetTrackingSpace(ETrackingUniverseOrigin origin) 
+        { 
+            if (_system != null)
+                OpenVR.Compositor.SetTrackingSpace(origin);
         }
 
     }

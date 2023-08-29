@@ -1,37 +1,37 @@
 ﻿using Stride.Core.Mathematics;
 using System.Text;
-using System.Xml.Linq;
 using Valve.VR;
-using static Valve.VR.IVRIOBuffer;
 
 
 namespace VL.IO.ValveOpenVR
 {
     public abstract class OpenVRBase
     {
-        
-        private String error;
-        public string Error { get => error; }
+        public string Error
+        {
+            get;
+            private set;
+        }
 
         public abstract void Update();
 
         protected void SetStatus(object toString)
         {
             if (toString is EVRInitError)
-                error = OpenVR.GetStringForHmdError((EVRInitError)toString);
+                Error = OpenVR.GetStringForHmdError((EVRInitError)toString);
             else if (toString is EVRCompositorError)
             {
                 var e = (EVRCompositorError)toString;
 
                 if (e == EVRCompositorError.TextureIsOnWrongDevice)
-                    error = "Texture on wrong device. Set your graphics driver to use the same video card for vvvv as the headset is plugged into.";
+                    Error = "Texture on wrong device. Set your graphics driver to use the same video card for vvvv as the headset is plugged into.";
                 else if (e == EVRCompositorError.TextureUsesUnsupportedFormat)
-                    error = "Unsupported texture format. Make sure texture uses RGBA, is not compressed and has no mipmaps.";
+                    Error = "Unsupported texture format. Make sure texture uses RGBA, is not compressed and has no mipmaps.";
                 else
-                    error = e.ToString();
+                    Error = e.ToString();
             }
             else
-                error = toString.ToString();
+                Error = toString.ToString();
         }
     }
 
@@ -42,9 +42,15 @@ namespace VL.IO.ValveOpenVR
 
         protected CVRSystem _system;
 
+        public bool RefreshSerials
+        {
+            get;
+            set;
+        }
 
-        protected bool _refreshSerials = false;
-        public bool RefreshSerials { set => _refreshSerials = value; }
+
+        const int CSerialBuilderSize = 64;
+        protected StringBuilder _serialBuilder = new StringBuilder(CSerialBuilderSize);
 
 
         public void UpdateSystem()
@@ -59,7 +65,7 @@ namespace VL.IO.ValveOpenVR
             }
             else
             {
-                SetStatus("OpenVR is not initialized");
+               SetStatus("OpenVR is not initialized, a System node needs to be present in your patch");
             }
             
         }
@@ -94,9 +100,6 @@ namespace VL.IO.ValveOpenVR
             else
                 return "";
         }
-
-        const int CSerialBuilderSize = 64;
-        protected StringBuilder _serialBuilder = new StringBuilder(CSerialBuilderSize);
     }
 
 }

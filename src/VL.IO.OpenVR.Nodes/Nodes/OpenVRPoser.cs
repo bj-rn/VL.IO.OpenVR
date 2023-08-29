@@ -7,9 +7,11 @@ namespace VL.IO.ValveOpenVR
 {
     public class OpenVRPoser : OpenVRConsumerBase
     {
-        
-        private Matrix _hmdPose;
-        public Matrix HMDPose { get => _hmdPose; }
+        public Matrix HMDPose
+        {
+            get;
+            private set;
+        }
 
         private SpreadBuilder<Matrix> _lighthousePoses;
         public Spread<Matrix> LighthousePoses { get => _lighthousePoses.ToSpread(); }
@@ -97,7 +99,7 @@ namespace VL.IO.ValveOpenVR
             var poseCount = (int)OpenVR.k_unMaxTrackedDeviceCount;
             var renderPoses = OpenVRManager.RenderPoses;
             var gamePoses = OpenVRManager.GamePoses;
-            var refreshSerials = _refreshSerials || _firstFrame;
+            var refreshSerials = RefreshSerials || _firstFrame;
 
             _renderPoses.Clear();
 
@@ -163,7 +165,7 @@ namespace VL.IO.ValveOpenVR
                 }
             }
 
-            _hmdPose = _renderPoses[0];
+            HMDPose = _renderPoses[0];
         }
 
     }
