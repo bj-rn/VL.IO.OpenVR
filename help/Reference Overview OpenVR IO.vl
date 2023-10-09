@@ -129,6 +129,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="System" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="CAqKKGCYUP6PBf5CIamGDY" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="ArwYBXYNj22OhxvLgVIiCT" Name="Get Timing" Kind="InputPin" IsHidden="true" />
             <Pin Id="SN4fUXXNE4HLowoqgdAykp" Name="Wait for Sync" Kind="InputPin" IsHidden="true" />
@@ -143,6 +144,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Poser" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="HlZcQuQ0RiqOePJ7qCGoXU" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="Jm3AcEYKsk3NYOgRCWoMVK" Name="Refresh Serials" Kind="InputPin" />
             <Pin Id="ANQtj5ksOhXOImqlIcme6e" Name="Update" Kind="InputPin" IsHidden="true" />
@@ -166,6 +168,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Split (TrackedDevice)" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="CH1KffYmX0mQVwZtpMspNh" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="NTnvjmsg1RZOBfe3jEN55r" Name="Device" Kind="InputPin" />
             <Pin Id="Ci7LFXX6UOZPUPF71UPnqm" Name="Update" Kind="InputPin" IsHidden="true" />
@@ -212,6 +215,7 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Basestation (Simple)" />
                 </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                 <Pin Id="RFiIUpFkcwnNqaFRyx6Gtb" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="JY2TaZvYAFANzS1sNmDnNJ" Name="Transformation" Kind="InputPin" />
                 <Pin Id="SMjljDfm70gMM6FRF9HUZp" Name="Enabled" Kind="InputPin" />
@@ -250,6 +254,7 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Controller (Simple)" />
                 </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                 <Pin Id="KGVYeeDa7FIOsVp1FvDgQM" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="LhiZAmn9LkZQEsKPDY5Ss4" Name="Transformation" Kind="InputPin" />
                 <Pin Id="SyIzNb8EgcBMGEWVCXj1mI" Name="Enabled" Kind="InputPin" />
@@ -288,6 +293,7 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Tracker (Simple)" />
                 </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                 <Pin Id="HI1qVlzkWqRNdFZvn7bOgP" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="VbqvlYB88ekPs8lHELoAHD" Name="Transformation" Kind="InputPin" />
                 <Pin Id="L1E3Mrk7eiJMoMKcDSJVL7" Name="Enabled" Kind="InputPin" />
@@ -340,6 +346,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="HMD (Simple)" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="R3tb7LGuyLDMLnhQrMxfz0" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="KnezZxxxRT6MSfXTocfdy6" Name="Transformation" Kind="InputPin" />
             <Pin Id="UvBZ5OiBNpOOV97vtwFUEt" Name="Enabled" Kind="InputPin" />
@@ -399,6 +406,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="TrackedDevices" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="MvLrLcBYABBQKvED1esfWL" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="QxFZaSvMC5mOLzqIw6eqfw" Name="Refresh Serials" Kind="InputPin" />
             <Pin Id="IYGEK1ddYVEOAmGMWPKPHu" Name="Poll Events" Kind="InputPin" IsHidden="true" />
@@ -463,6 +471,7 @@
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="ProcessAppFlag" Name="HMD" />
                     </p:NodeReference>
+                    <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                     <Pin Id="Jj2L4iqcuOnLxNhLvO0hId" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="U6B7cyZgQFAOFK8ekuEvUt" Name="Device" Kind="InputPin" />
                     <Pin Id="ANC7JVgZpBSQAkFCVuOJmB" Name="Enabled" Kind="InputPin" />
@@ -490,6 +499,7 @@
                       <CategoryReference Kind="Category" Name="Debug" NeedsToBeDirectParent="true" />
                       <Choice Kind="ProcessAppFlag" Name="Controller" />
                     </p:NodeReference>
+                    <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                     <Pin Id="H1r7LQKuZ7mNi24vssTFj1" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="Nao1IPk3aDAPPzINDoBTuJ" Name="Device" Kind="InputPin" />
                     <Pin Id="P2SSgmWzWH9PisPXJdo9v9" Name="Enabled" Kind="InputPin" />
@@ -531,6 +541,7 @@
                       <CategoryReference Kind="Category" Name="Debug" NeedsToBeDirectParent="true" />
                       <Choice Kind="ProcessAppFlag" Name="Tracker" />
                     </p:NodeReference>
+                    <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                     <Pin Id="Tm9H3ts1opEM3slXtib9VZ" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="BOto7GiWg3LPf9ottO18Vm" Name="Device" Kind="InputPin" />
                     <Pin Id="AgdztDYmuw6OTbaIg4fdqW" Name="Enabled" Kind="InputPin" />
@@ -558,6 +569,7 @@
                       <CategoryReference Kind="Category" Name="Debug" NeedsToBeDirectParent="true" />
                       <Choice Kind="ProcessAppFlag" Name="Basestation" />
                     </p:NodeReference>
+                    <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                     <Pin Id="UW5wkwHm6loLwu7S63HSY4" Name="Node Context" Kind="InputPin" IsHidden="true" />
                     <Pin Id="ReOHn3VBqlHLpdoY2mZynu" Name="Device" Kind="InputPin" />
                     <Pin Id="PRncZUzZpKMPP7xY1dVyYb" Name="Enabled" Kind="InputPin" />
@@ -735,6 +747,7 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Scene (Simple)" />
                 </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                 <Pin Id="CylrqtAW6oBLxcWEovFMKK" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="OaxcnGJYLyzN5NGlTBTtIa" Name="Enabled" Kind="InputPin" />
                 <Pin Id="DWyX18HJ65iLH2MZmq9dA7" Name="Enable HMD" Kind="InputPin" IsHidden="true" />
@@ -765,6 +778,7 @@
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Scene (Verbose)" />
                 </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
                 <Pin Id="GboLhxy7NluQbD5aopdwdf" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="KPfj4V9yvvFPiMoGMEptdF" Name="Enabled" Kind="InputPin" />
                 <Pin Id="PpJ4n77eef1MscpqNJNXWW" Name="Enable HMD" Kind="InputPin" IsHidden="true" />
@@ -835,6 +849,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="HapticPulse" />
             </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="AoPBwle1MpLO6YftSmoFhd" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="JS9m78ZWBdWL63zDkz6MOl" Name="Device" Kind="InputPin" />
             <Pin Id="HXt4DjiFpZ5Ms6oFOyua6b" Name="Duration" Kind="InputPin" />
