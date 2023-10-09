@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>VL.IO.OpenVR</id>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <title>VL.IO.OpenVR</title>
     <authors>bj-rn</authors>
     <owners>bj-rn</owners>
@@ -14,6 +14,7 @@
     <description>A VL wrapper for Valve's OpenVR that enables the use of Vive trackers inside vvvv without a HMD.</description>
     <copyright>Copyright © 2023 bj-rn</copyright>
     <tags>VL, vvvv, Valve, Vive, OpenVR, VR, Tracker, Tundra</tags>
+  </metadata>
    <files>
     <file src="..\lib\net6.0\*.dll" target="lib\net6.0" />
     <file src="..\lib\net6.0\x64\*.*" target="lib\net6.0\x64" />
