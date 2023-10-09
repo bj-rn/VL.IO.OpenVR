@@ -13,7 +13,7 @@ Try it with vvvv, the visual live-programming environment for .NET
 Download: http://visualprogramming.net
 
 
-## How to setup _SteamVR_ to be able to use trackers without HMD.
+## How to setup _SteamVR_ to be able to use trackers without HMD
 
 1. Close _SteamVR_ if it's currently running.
 
