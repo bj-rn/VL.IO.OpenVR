@@ -14,7 +14,7 @@ Download: http://visualprogramming.net
 
 
 ## How to setup _SteamVR_ to be able to use trackers without HMD
-__¡Note!__ those changes will likely be overwritten by _SteamVR_ updates. There are supposed to be user specific settings that are left untouched 
+__¡Note!__ the changes below will likely be overwritten by _SteamVR_ updates. There are supposed to be user specific settings that are left untouched 
 by updates but I couldn't find any detailed info on that.
 
 1. Close _SteamVR_ if it's currently running.
