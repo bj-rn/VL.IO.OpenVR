@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>VL.IO.OpenVR</id>
-    <version>0.2.0</version>
+    <version>1.0.0</version>
     <title>VL.IO.OpenVR</title>
     <authors>bj-rn</authors>
     <owners>bj-rn</owners>
