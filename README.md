@@ -1,6 +1,6 @@
 # VL.IO.OpenVR
 
-A VL wrapper for Valve's [OpenVR](https://github.com/ValveSoftware/openvr) that enables the use of [Vive trackers](https://www.vive.com/au/support/tracker3/category_howto/tracker.html) inside vvvv without a HMD. It heavily leans on [VVVV.OpenVR](https://github.com/tebjan/VVVV.OpenVR) by [Tebjan Halm](https://github.com/tebjan).
+A VL wrapper for Valve's [OpenVR](https://github.com/ValveSoftware/openvr) that enables the use of [Vive trackers](https://www.vive.com/au/support/tracker3/category_howto/tracker.html) inside vvvv without a HMD. It heavily borrows from [VVVV.OpenVR](https://github.com/tebjan/VVVV.OpenVR) by [Tebjan Halm](https://github.com/tebjan).
 
 
 ## Using the library
