@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="VLk25CHdVSSOWSpc9G7cdL" LanguageVersion="2023.5.3-0192-g8dd4ea9c96" Version="0.128">
-  <NugetDependency Id="E0nIhcojr7oL8bSrz0jhiJ" Location="VL.CoreLib" Version="2023.5.3-0192-g8dd4ea9c96" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="VLk25CHdVSSOWSpc9G7cdL" LanguageVersion="2024.6.3" Version="0.128">
+  <NugetDependency Id="E0nIhcojr7oL8bSrz0jhiJ" Location="VL.CoreLib" Version="2024.6.3" />
   <Patch Id="DbXg7pOQIdeNWzsvAK93UN">
     <Canvas Id="RuJ3urRYwfRMFsbdJNowot" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -21,7 +21,7 @@
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
             </p:NodeReference>
             <Pin Id="DiaprnGRzd2QaXaZpsRVom" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="MtfKxjR08Y3LR2wuAe1YLR" Name="Bounds" Kind="InputPin" DefaultValue="1639.2, 116, 1024, 576" />
+            <Pin Id="MtfKxjR08Y3LR2wuAe1YLR" Name="Bounds" Kind="InputPin" DefaultValue="1638.6666, 116, 1024, 576" />
             <Pin Id="IYYjX3NIu0NPVzB3poMdl4" Name="Bound to Document" Kind="InputPin" DefaultValue="True" />
             <Pin Id="UuWGXexEHqROmwdeVXlkTM" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
             <Pin Id="Sba4UVIMKbVN18xQ3WsZmM" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
@@ -36,6 +36,7 @@
             <Pin Id="UcWY8fa8331LZv3PfHNkDZ" Name="Post Effects" Kind="InputPin" />
             <Pin Id="Qxge5Fn4xyfLqQtLAHXuGG" Name="Enable Default Post Effects" Kind="InputPin" />
             <Pin Id="IRhtezZYLLCMZgUVsXsxqH" Name="Render Group Mask" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DumpCAaWyW4M0lXlHtiTwl" Name="Commands" Kind="InputPin" IsHidden="true" />
             <Pin Id="LODaucfNcJhQM7dMXvHZBf" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
             <Pin Id="FRBCuPopZpgQCEYvAdsYWU" Name="Model Effect Name" Kind="InputPin" IsHidden="true" />
             <Pin Id="FtZ3sV66L7nNpxG9uqqVtB" Name="Additional Scene Renderers" Kind="InputPin" IsHidden="true" />
@@ -762,6 +763,7 @@
                   <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 </p:ValueBoxSettings>
               </Pad>
+              <Patch Id="GZJeKo5G8jFPJYjIDn92Zk" Name="Dispose" />
             </Patch>
           </Node>
           <Node Bounds="1070,1196,224,107" Id="JgmY5WwwC6zM1Fpc5w5f4L">
@@ -793,6 +795,7 @@
                   <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 </p:ValueBoxSettings>
               </Pad>
+              <Patch Id="Eg6HW7aZ35gLvWbj0V07h9" Name="Dispose" />
             </Patch>
           </Node>
           <Node Bounds="1892,2181,715,172" Id="QswXqq55CwSP2JcfzvblyE">
@@ -833,6 +836,7 @@
                   <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                 </p:ValueBoxSettings>
               </Pad>
+              <Patch Id="FE4OXvo7TSULvfuuPdBEkc" Name="Dispose" />
             </Patch>
           </Node>
           <Pad Id="JpIXpfw3mfFLhBYe2yR7mO" Bounds="1982,1320,664,219" ShowValueBox="true" isIOBox="true" Value="If VIVE Tracker (3.0) turns off by itself, it could be due to one of the following reasons:&#xD;&#xA;&#xD;&#xA;    - The battery is drained.&#xD;&#xA;    - Pairing has timed out after being idle for more than 30 seconds.&#xD;&#xA;    - No movement has occurred for more than 5 minutes.&#xD;&#xA;&#xD;&#xA;Note: You can set how long VIVE Tracker (3.0) waits idle before turning off. &#xD;&#xA;In SteamVR, click &gt; Settings &gt; Startup / Shutdown, and then set the time in Turn off controllers after. &#xD;&#xA;&#xD;&#xA;Tracker 3.0 FAQ:&#xD;&#xA;https://www.vive.com/au/support/tracker3/">
@@ -1055,6 +1059,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="AQe5RgdsYLKOZN1X6YhKPB" Location="VL.Stride" Version="2023.5.3-0192-g8dd4ea9c96" />
+  <NugetDependency Id="AQe5RgdsYLKOZN1X6YhKPB" Location="VL.Stride" Version="2024.6.3" />
   <DocumentDependency Id="Uq255iK00YiN7scoQDXUvn" Location="../VL.IO.OpenVR.vl" />
+  <NugetDependency Id="NbqWaXe48O2OrphHdL7Yae" Location="VL.Stride.TextureFX" Version="2024.6.3" />
 </Document>

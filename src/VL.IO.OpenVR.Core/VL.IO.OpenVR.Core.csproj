@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <ImplicitUsings>enable</ImplicitUsings>
     <OutputPath>..\..\lib</OutputPath> 
@@ -11,7 +11,7 @@
     <Compile Include="..\OpenVR-SDK\headers\openvr_api.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>
-    <PackageReference Include="Stride.Core.Mathematics" Version="4.1.0.1838" />
+    <PackageReference Include="Stride.Core.Mathematics" Version="4.2.0.2122" />
   </ItemGroup>
 
 </Project>
