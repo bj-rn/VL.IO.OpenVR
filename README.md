@@ -92,3 +92,5 @@ For more info please refer to:
 ### [MIT](https://github.com/bj-rn/VL.IO.MouseKeyGlobal/blob/master/LICENSE)
 
 <sub>Depends on [Valve's OpenVR SDK](https://github.com/ValveSoftware/openvr) please see their [license](https://github.com/ValveSoftware/openvr/blob/master/LICENSE) for further details.</sub>
+---
+[Support me on Ko-fi](https://ko-fi.com/Q5Q61EQB8X)
